@@ -1,0 +1,377 @@
+pid,plabel,item_id,bloom,position,code,n_turns,answer,key,correct,idk,adopt_delta_s,llm_answer,answer_form,mapping_difficulty,extract_confidence,excerpt,cat,llm_committed,llm_correct,adopted,prompt_chars,verbatim_paste,asked_reasoning,bare_answer_demand
+P002,P01,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,1,B,B,1,False,18.849,B,descriptive,nontrivial,high,the second scatterplot from the left ... matches the 2nd image,ana,True,1.0,1.0,26,False,False,False
+P002,P01,pcp_und_fa_1,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,5.051,B,descriptive,trivial,high,the carbohydrate axis is reversed/inverted,und,True,1.0,1.0,82,True,False,False
+P002,P01,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,2.585,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,62,True,False,False
+P002,P01,pcp_ana_fa_1,Analyze,5,FULL_OUTSOURCING,1,D,D,1,False,8.586,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,167,True,False,False
+P002,P01,pcp_rem_fa_2,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,2.437,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,61,True,False,False
+P005,P02,pcp_und_fa_1,Understand,0,FULL_OUTSOURCING,2,B,B,1,False,10.941,B,descriptive,trivial,high,the option that says chart (b) has the carbohydrate axis reversed/flipped,und,True,1.0,1.0,31,False,False,False
+P005,P02,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,8.586,D,clean_option,,high,The best choice is D,ana,True,1.0,1.0,18,False,False,False
+P005,P02,pcp_und_fa_2,Understand,2,FULL_OUTSOURCING,2,B,B,1,False,4.076,B,descriptive,trivial,high,It is the malaria cases and poverty rate that have been reordered,und,True,1.0,1.0,135,False,False,False
+P005,P02,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,1,B,B,1,False,11.616,B,descriptive,nontrivial,high,Answer: the 2nd scatterplot,ana,True,1.0,1.0,18,False,False,False
+P005,P02,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,2.107,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,18,False,False,False
+P005,P02,pcp_eval_fa_10,Evaluate,5,FULL_OUTSOURCING,3,A,A,1,False,6.976,A,clean_option,,high,1) color legend not properly labeled,eval,True,1.0,1.0,158,False,False,False
+P005,P02,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,2.953,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,18,False,False,False
+P005,P02,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,2,C,A,0,False,2.581,C,clean_option,,high,T2: c) the slopes of the edges is too high,eval,True,0.0,1.0,158,False,False,False
+P007,P03,pcp_rem_fa_1,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,8.441,A,descriptive,trivial,high,Yes - this is a parallel coordinates plot.,rem,True,1.0,1.0,13,False,False,False
+P007,P03,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,6.105,D,clean_option,,high,So the answer is D.,ana,True,1.0,1.0,13,False,False,False
+P007,P03,pcp_eval_fa_11,Evaluate,2,FULL_OUTSOURCING,2,E,A,0,True,27.379,,no_answer,,high,Please upload the chart and the answer choices.,eval,False,,,34,False,False,False
+P007,P03,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,18.273,B,descriptive,trivial,high,carbohydrate has been flipped/inverted (0 at the top...),und,True,1.0,1.0,14,False,False,False
+P007,P03,pcp_eval_fa_10,Evaluate,5,FULL_OUTSOURCING,1,A,A,1,False,28.956,,descriptive,unmappable,high,far too cluttered/overplotted (matches no option),eval,False,,,14,False,False,False
+P007,P03,pcp_ana_fa_2,Analyze,7,FULL_OUTSOURCING,1,B,B,1,False,28.776,B,descriptive,nontrivial,high,The correct choice is the second scatterplot,ana,True,1.0,1.0,16,False,False,False
+P011,P04,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,1,B,B,1,False,22.405,B,descriptive,nontrivial,high,the 2nd scatterplot ... image 2,ana,True,1.0,1.0,33,False,False,False
+P011,P04,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,8.846,D,clean_option,,high,The correct answer is D.,ana,True,1.0,1.0,33,False,False,False
+P011,P04,pcp_rem_fa_2,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,8.048,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,33,False,False,False
+P011,P04,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,B,A,0,False,5.687,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,0.0,33,False,False,False
+P011,P04,pcp_und_fa_2,Understand,5,FULL_OUTSOURCING,1,A,B,0,False,9.66,B,descriptive,nontrivial,high,chart (b) swaps the middle and right variables (Poverty <-> Malaria 2013),und,True,1.0,0.0,33,False,False,False
+P011,P04,pcp_eval_fa_10,Evaluate,6,FULL_OUTSOURCING,1,C,A,0,False,43.6,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,False,False,False
+P014,P05,pcp_eval_fa_10,Evaluate,0,FULL_OUTSOURCING,1,A,A,1,False,73.66,,descriptive,unmappable,high,overplotting/clutter; secondary: generic title (matches no option),eval,False,,,27,False,False,False
+P014,P05,pcp_eval_fa_11,Evaluate,1,FULL_OUTSOURCING,1,A,A,1,False,23.589,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,32,True,False,False
+P014,P05,pcp_und_fa_2,Understand,2,FULL_OUTSOURCING,1,C,B,0,False,66.709,B,descriptive,nontrivial,high,chart (b) reorders the variables (last two swapped),und,True,1.0,0.0,82,True,False,False
+P014,P05,pcp_rem_fa_1,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,7.041,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,50,True,False,False
+P014,P05,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,D,D,1,False,7.597,D,clean_option,,high,Answer: D (explicitly rejects C as non-adjacent),ana,True,1.0,1.0,167,True,False,False
+P014,P05,pcp_und_fa_1,Understand,5,FULL_OUTSOURCING,1,B,B,1,False,25.333,B,descriptive,trivial,high,carbohydrate axis is reversed/inverted,und,True,1.0,1.0,82,True,False,False
+P014,P05,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,12.122,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,50,True,False,False
+P014,P05,pcp_ana_fa_2,Analyze,7,FULL_OUTSOURCING,1,B,B,1,False,39.893,B,descriptive,nontrivial,high,that is the second scatterplot from the left,ana,True,1.0,1.0,86,True,False,False
+P019,P06,pcp_eval_fa_11,Evaluate,1,FULL_OUTSOURCING,1,A,A,1,False,25.186,,descriptive,unmappable,high,overplotting/clutter + colors low contrast (matches no option),eval,False,,,34,False,False,False
+P019,P06,pcp_eval_fa_10,Evaluate,4,FULL_OUTSOURCING,1,D,A,0,False,19.745,,descriptive,unmappable,high,overplotting/clutter; generic title; normalized axes (no option match),eval,False,,,33,False,False,False
+P019,P06,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,B,B,1,False,26.232,B,descriptive,nontrivial,high,second image from the left ... 2nd scatterplot,ana,True,1.0,1.0,86,True,False,False
+P019,P06,pcp_rem_fa_1,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,5.407,A,descriptive,trivial,high,Yes. ...characteristic of a parallel coordinates plot,rem,True,1.0,1.0,50,True,False,False
+P022,P07,pcp_rem_fa_2,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,2.228,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,50,True,False,False
+P022,P07,pcp_eval_fa_10,Evaluate,1,FULL_OUTSOURCING,1,A,A,1,False,23.621,,no_answer,,high,I need to see the chart first.,eval,False,,,30,True,False,False
+P022,P07,pcp_rem_fa_1,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,1.868,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,50,True,False,False
+P022,P07,pcp_und_fa_1,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,11.104,,no_answer,,high,I need to see charts (a) and (b) first.,und,False,,,82,True,False,False
+P022,P07,pcp_ana_fa_2,Analyze,4,FULL_OUTSOURCING,1,C,B,0,False,10.683,,no_answer,,high,Please upload the parallel coordinates plot and the candidate scatterplot images.,ana,False,,,86,True,False,False
+P022,P07,pcp_und_fa_2,Understand,6,FULL_OUTSOURCING,1,B,B,1,False,21.404,,no_answer,,high,I need to see charts (a) and (b) first.,und,False,,,82,True,False,False
+P025,P08,pcp_und_fa_2,Understand,0,FULL_OUTSOURCING,1,B,B,1,False,63.107,B,descriptive,nontrivial,high,rearrange the middle and right axes (Poverty <-> Malaria 2013),und,True,1.0,1.0,82,True,False,False
+P025,P08,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,4.57,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P025,P08,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,8.66,A,descriptive,trivial,high,Yes. ...exactly a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P025,P08,pcp_eval_fa_11,Evaluate,3,FULL_OUTSOURCING,1,C,A,0,False,56.455,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P025,P08,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,17.552,B,descriptive,trivial,high,the carbohydrate axis is reversed/inverted,und,True,1.0,1.0,82,True,False,False
+P025,P08,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,B,B,1,False,38.7,B,descriptive,nontrivial,high,second image from the left ... the 2nd plot,ana,True,1.0,1.0,86,True,False,False
+P025,P08,pcp_eval_fa_10,Evaluate,6,FULL_OUTSOURCING,1,E,A,0,True,69.144,,descriptive,unmappable,high,severe overplotting / clutter (matches no option),eval,False,,,30,True,False,False
+P025,P08,pcp_rem_fa_1,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,2.679,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,50,True,False,False
+P027,P09,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,1,B,A,0,False,119.969,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,23,False,False,False
+P027,P09,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,2,D,D,1,False,8.441,D,clean_option,,high,T2: D,ana,True,1.0,1.0,44,False,False,False
+P027,P09,pcp_ana_fa_2,Analyze,2,FULL_OUTSOURCING,1,B,B,1,False,21.226,B,descriptive,nontrivial,high,the 2nd scatterplot ... Second image from the left.,ana,True,1.0,1.0,22,False,False,False
+P027,P09,pcp_und_fa_2,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,45.223,B,descriptive,nontrivial,high,the last two axes are swapped (Poverty <-> Malaria 2013),und,True,1.0,1.0,22,False,False,False
+P027,P09,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,48.491,B,descriptive,trivial,high,the carbohydrate (g) axis is reversed/inverted,und,True,1.0,1.0,26,False,False,False
+P027,P09,pcp_eval_fa_10,Evaluate,5,FULL_OUTSOURCING,1,D,A,0,False,104.406,,descriptive,unmappable,high,too cluttered/overplotted (matches no option),eval,False,,,26,False,False,False
+P027,P09,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,135.188,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,22,False,False,False
+P027,P09,pcp_rem_fa_1,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,6.013,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,22,False,False,False
+P032,P10,pcp_und_fa_2,Understand,0,FULL_OUTSOURCING,2,B,B,1,False,46.595,B,descriptive,nontrivial,med,T2: choose the answer that says axes arranged in a different order (T1 detail uniquely implies B),und,True,1.0,1.0,38,False,False,False
+P032,P10,pcp_und_fa_1,Understand,1,FULL_OUTSOURCING,1,B,B,1,False,18.054,B,descriptive,trivial,high,chart (b) flips the carbohydrate scale,und,True,1.0,1.0,22,False,False,False
+P032,P10,pcp_ana_fa_1,Analyze,2,FULL_OUTSOURCING,1,D,D,1,False,5.569,D,clean_option,,high,So the answer is D.,ana,True,1.0,1.0,91,False,False,False
+P032,P10,pcp_rem_fa_2,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,3.724,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,48,False,False,False
+P032,P10,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,2.259,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,48,False,False,False
+P032,P10,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,D,B,0,False,23.759,D,descriptive,nontrivial,high,The 4th scatterplot from the left ... the 4th image.,ana,True,0.0,1.0,86,True,False,False
+P032,P10,pcp_eval_fa_11,Evaluate,6,FULL_OUTSOURCING,1,A,A,1,False,26.827,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P032,P10,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,1,C,A,0,False,24.866,,descriptive,unmappable,high,overplotting/clutter; generic title (matches no option),eval,False,,,30,True,False,False
+P038,P11,pcp_rem_fa_2,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,20.522,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,24,False,False,False
+P038,P11,pcp_ana_fa_1,Analyze,3,FULL_OUTSOURCING,1,D,D,1,False,10.652,D,clean_option,,high,The right answer is D.,ana,True,1.0,1.0,24,False,False,False
+P038,P11,pcp_rem_fa_1,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,1.237,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,24,False,False,False
+P041,P12,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,1,B,A,0,False,51.478,,descriptive,unmappable,high,overplotting/clutter + colors overlap (matches no option),eval,False,,,24,False,False,False
+P041,P12,pcp_rem_fa_1,Remember,1,FULL_OUTSOURCING,1,A,A,1,False,14.01,A,descriptive,trivial,high,So the correct answer is: Yes.,rem,True,1.0,1.0,24,False,False,False
+P041,P12,pcp_und_fa_2,Understand,2,FULL_OUTSOURCING,1,A,B,0,False,31.641,B,descriptive,nontrivial,high,the last two axes are swapped (Poverty <-> Malaria 2013),und,True,1.0,0.0,24,False,False,False
+P041,P12,pcp_eval_fa_10,Evaluate,3,FULL_OUTSOURCING,1,C,A,0,False,12.806,,descriptive,unmappable,high,severely overplotted / spaghetti plot (matches no option),eval,False,,,1,False,False,False
+P041,P12,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,54.411,B,descriptive,trivial,high,carbohydrate axis reversed/inverted,und,True,1.0,1.0,1,False,False,False
+P041,P12,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,2,B,B,1,False,11.413,B,descriptive,nontrivial,high,the second scatterplot from the left (stated twice),ana,True,1.0,1.0,87,True,False,False
+P041,P12,pcp_ana_fa_1,Analyze,6,FULL_OUTSOURCING,1,D,D,1,False,37.237,D,clean_option,,high,So the answer is D.,ana,True,1.0,1.0,1,False,False,False
+P041,P12,pcp_rem_fa_2,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,8.909,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,1,False,False,False
+P042,P13,pcp_eval_fa_10,Evaluate,0,FULL_OUTSOURCING,2,D,A,0,False,11.657,D,clean_option,,high,The best choice is: nothing wrong with the chart.,eval,True,0.0,1.0,207,False,False,False
+P042,P13,pcp_rem_fa_1,Remember,1,FULL_OUTSOURCING,2,A,A,1,False,18.579,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,63,True,True,False
+P042,P13,pcp_und_fa_1,Understand,2,FULL_OUTSOURCING,1,B,B,1,False,13.669,B,descriptive,trivial,high,chart (b) has the carbohydrate axis reversed,und,True,1.0,1.0,43,True,False,False
+P042,P13,pcp_rem_fa_2,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,2.244,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,48,False,False,False
+P042,P13,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,D,D,1,False,10.633,D,clean_option,,high,D.,ana,True,1.0,1.0,147,True,False,False
+P042,P13,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,3,A,A,1,False,9.381,,hedged_multiple,,med,"T2 'B - too cluttered' then T3 'I don't know what A, B, or C say' (letter retracted)",eval,False,,,153,False,True,False
+P042,P13,pcp_und_fa_2,Understand,6,FULL_OUTSOURCING,1,C,B,0,False,7.793,C,clean_option,,high,c. the fever or malaria... (letter contradicts its own middle/right-swap reasoning),und,True,0.0,1.0,217,True,False,False
+P042,P13,pcp_ana_fa_2,Analyze,7,FULL_OUTSOURCING,1,B,B,1,False,60.69,B,descriptive,nontrivial,high,the second scatterplot from the left ... So the answer is: the second scatterplot.,ana,True,1.0,1.0,77,True,False,False
+P046,P14,pcp_eval_fa_10,Evaluate,5,FULL_OUTSOURCING,3,A,A,1,False,11.809,A,clean_option,,high,T3: The best option is: the color legend is not properly labeled,eval,True,1.0,1.0,224,False,True,False
+P046,P14,pcp_ana_fa_2,Analyze,7,FULL_OUTSOURCING,1,B,B,1,False,143.486,B,descriptive,nontrivial,high,the second scatterplot from the left ... the 2nd image,ana,True,1.0,1.0,103,True,False,False
+P050,P15,pcp_ana_fa_1,Analyze,0,FULL_OUTSOURCING,1,D,D,1,False,10.818,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,34,False,False,False
+P050,P15,pcp_eval_fa_10,Evaluate,1,FULL_OUTSOURCING,1,E,A,0,True,20.798,,descriptive,unmappable,high,severe overplotting (matches no option),eval,False,,,19,False,False,False
+P050,P15,pcp_und_fa_1,Understand,2,FULL_OUTSOURCING,1,B,B,1,False,9.082,B,descriptive,trivial,high,carbohydrate axis reversed/inverted,und,True,1.0,1.0,19,False,False,False
+P050,P15,pcp_rem_fa_1,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,5.269,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,19,False,False,False
+P050,P15,pcp_ana_fa_2,Analyze,4,FULL_OUTSOURCING,2,B,B,1,False,19.821,B,descriptive,nontrivial,high,T2: the second image ... second scatterplot,ana,True,1.0,1.0,38,False,False,False
+P050,P15,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,1,B,A,0,False,10.011,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,19,False,False,False
+P050,P15,pcp_und_fa_2,Understand,6,FULL_OUTSOURCING,1,B,B,1,False,15.079,B,descriptive,nontrivial,high,the middle and right axes are swapped (Poverty <-> Malaria 2013),und,True,1.0,1.0,19,False,False,False
+P050,P15,pcp_rem_fa_2,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,3.251,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,18,False,False,False
+P052,P16,pcp_und_fa_2,Understand,0,FULL_OUTSOURCING,1,B,B,1,False,29.164,B,descriptive,nontrivial,high,the middle and right axes are swapped,und,True,1.0,1.0,26,False,False,False
+P052,P16,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,C,D,0,False,74.599,D,clean_option,,high,The correct answer is D.,ana,True,1.0,0.0,23,False,False,False
+P052,P16,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,1,B,A,0,False,57.248,,descriptive,unmappable,high,normalization unclear + overplotting (matches no option),eval,False,,,23,False,False,False
+P052,P16,pcp_eval_fa_11,Evaluate,3,FULL_OUTSOURCING,1,A,A,1,False,43.566,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,23,False,False,False
+P052,P16,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,3.253,A,descriptive,trivial,high,Yes. ...a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P052,P16,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,B,B,1,False,35.321,B,descriptive,nontrivial,high,the middle scatterplot ... the second (middle) image,ana,True,1.0,1.0,86,True,False,False
+P052,P16,pcp_und_fa_1,Understand,6,FULL_OUTSOURCING,1,B,B,1,False,39.5,B,descriptive,trivial,high,chart (b) reverses the carbohydrate axis,und,True,1.0,1.0,82,True,False,False
+P052,P16,pcp_rem_fa_2,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,4.814,A,descriptive,trivial,high,Yes. ...characteristic of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P055,P17,pcp_rem_fa_1,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,7.273,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,6,False,False,False
+P055,P17,pcp_und_fa_1,Understand,1,FULL_OUTSOURCING,1,B,B,1,False,31.849,B,descriptive,trivial,high,carbohydrate axis is reversed/inverted,und,True,1.0,1.0,6,False,False,False
+P055,P17,pcp_ana_fa_2,Analyze,2,FULL_OUTSOURCING,1,B,B,1,False,36.654,B,descriptive,nontrivial,high,the second image ... the 2nd option,ana,True,1.0,1.0,6,False,False,False
+P055,P17,pcp_ana_fa_1,Analyze,3,FULL_OUTSOURCING,1,D,D,1,False,23.364,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,6,False,False,False
+P055,P17,pcp_rem_fa_2,Remember,4,FULL_OUTSOURCING,2,A,A,1,False,6.668,A,descriptive,trivial,high,Yes. It is a parallel coordinates plot. (reaffirmed after 'u sure?'),rem,True,1.0,1.0,13,False,False,False
+P055,P17,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,3,A,A,1,False,14.884,,descriptive,unmappable,high,"clutter, then normalized axes, then colors blend - none matches a listed option",eval,False,,,38,False,False,False
+P055,P17,pcp_eval_fa_10,Evaluate,6,FULL_OUTSOURCING,2,B,A,0,False,20.574,,descriptive,unmappable,med,"T2 'axis titles are also a problem (inconsistent)' - but titles exist, so not option B (missing); no option matches",eval,False,,,18,False,False,False
+P055,P17,pcp_und_fa_2,Understand,7,FULL_OUTSOURCING,2,C,B,0,False,66.084,B,descriptive,nontrivial,high,the last two axes are swapped; T2 reaffirms axis order changed,und,True,1.0,0.0,28,False,False,False
+P057,P18,pcp_rem_fa_1,Remember,1,FULL_OUTSOURCING,1,A,A,1,False,7.095,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P057,P18,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,1,C,A,0,False,30.378,,descriptive,unmappable,high,overplotting / spaghetti chart (matches no option),eval,False,,,30,True,False,False
+P057,P18,pcp_ana_fa_1,Analyze,5,FULL_OUTSOURCING,1,D,D,1,False,18.25,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P059,P19,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,1,A,A,1,False,33.87,,descriptive,unmappable,high,cluttered / overplotting (matches no option),eval,False,,,62,False,False,False
+P059,P19,pcp_ana_fa_1,Analyze,2,FULL_OUTSOURCING,1,D,D,1,False,5.123,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P059,P19,pcp_rem_fa_1,Remember,3,FULL_OUTSOURCING,2,A,A,1,False,2.559,A,descriptive,trivial,high,"Yes (reaffirmed: 'Yes, I'm sure.')",rem,True,1.0,1.0,63,True,False,False
+P059,P19,pcp_rem_fa_2,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,2.051,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P059,P19,pcp_ana_fa_2,Analyze,6,VERIFICATION_ONLY,1,C,B,0,False,5.074,C,clean_option,,high,Yes - C (the third scatterplot) matches ... So C is correct. (confirms user candidate),ana,True,0.0,1.0,95,True,False,False
+P059,P19,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,1,D,A,0,False,9.491,,descriptive,unmappable,high,overplotting; too cluttered to be readable (matches no option),eval,False,,,41,False,False,False
+P062,P20,pcp_eval_fa_10,Evaluate,6,FULL_OUTSOURCING,3,E,A,0,True,21.126,D,clean_option,,high,T3: D. There is nothing wrong with this chart,eval,True,0.0,0.0,220,False,False,False
+P063,P21,pcp_eval_fa_10,Evaluate,0,FULL_OUTSOURCING,1,E,A,0,True,50.345,,descriptive,unmappable,high,severely overplotted (matches no option),eval,False,,,29,True,False,False
+P063,P21,pcp_rem_fa_1,Remember,1,FULL_OUTSOURCING,1,A,A,1,False,5.821,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,50,True,False,False
+P063,P21,pcp_ana_fa_1,Analyze,2,FULL_OUTSOURCING,1,D,D,1,False,22.119,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,167,True,False,False
+P063,P21,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,1,B,B,1,False,23.249,B,descriptive,nontrivial,high,Answer: the second scatterplot from the left.,ana,True,1.0,1.0,86,True,False,False
+P063,P21,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,22.72,B,descriptive,trivial,high,the carbohydrate axis is flipped/inverted,und,True,1.0,1.0,82,True,False,False
+P063,P21,pcp_rem_fa_2,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,10.625,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P063,P21,pcp_und_fa_2,Understand,6,FULL_OUTSOURCING,1,B,B,1,False,434.164,B,descriptive,nontrivial,high,the last two axes are swapped (Poverty <-> Malaria 2013),und,True,1.0,1.0,82,True,False,False
+P063,P21,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,1,C,A,0,False,24.306,,descriptive,unmappable,high,overplotting (matches no option),eval,False,,,33,True,False,False
+P067,P22,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,1,B,B,1,False,31.608,B,descriptive,nontrivial,high,the second scatterplot from the left ... the 2nd image,ana,True,1.0,1.0,26,False,False,False
+P067,P22,pcp_und_fa_2,Understand,1,FULL_OUTSOURCING,1,C,B,0,False,12.926,B,descriptive,nontrivial,high,the last two axes are swapped,und,True,1.0,0.0,31,False,False,False
+P067,P22,pcp_rem_fa_2,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,6.743,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,34,False,False,False
+P067,P22,pcp_ana_fa_1,Analyze,6,FULL_OUTSOURCING,1,D,D,1,False,5.196,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,24,False,False,False
+P068,P23,pcp_ana_fa_1,Analyze,0,FULL_OUTSOURCING,1,D,D,1,False,11.271,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,19,False,False,False
+P068,P23,pcp_rem_fa_2,Remember,1,FULL_OUTSOURCING,1,A,A,1,False,4.275,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,19,False,False,False
+P068,P23,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,2,E,A,0,True,9.378,,descriptive,unmappable,high,too cluttered / overplotting (matches no option; stated twice),eval,False,,,56,True,False,False
+P068,P23,pcp_rem_fa_1,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,4.489,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P068,P23,pcp_ana_fa_2,Analyze,4,FULL_OUTSOURCING,1,B,B,1,False,22.262,B,descriptive,nontrivial,high,the second image from the left ... second scatterplot from the left,ana,True,1.0,1.0,19,False,False,False
+P068,P23,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,2,B,A,0,False,13.104,,descriptive,unmappable,high,overplotting + unclear scales (matches no option),eval,False,,,53,True,False,False
+P068,P23,pcp_und_fa_2,Understand,6,FULL_OUTSOURCING,1,C,B,0,False,22.523,B,descriptive,nontrivial,high,rearranging the middle and right axes,und,True,1.0,0.0,82,True,False,False
+P068,P23,pcp_und_fa_1,Understand,7,FULL_OUTSOURCING,2,B,B,1,False,3.65,B,descriptive,trivial,high,T2: Yes - the carbohydrate (g) axis is flipped/inverted (confirms option text),und,True,1.0,1.0,123,True,False,False
+P073,P24,pcp_und_fa_2,Understand,0,FULL_OUTSOURCING,1,B,B,1,False,98.954,B,descriptive,nontrivial,high,the last two axes are swapped,und,True,1.0,1.0,24,False,False,False
+P073,P24,pcp_rem_fa_1,Remember,1,FULL_OUTSOURCING,1,A,A,1,False,15.677,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,24,False,False,False
+P073,P24,pcp_und_fa_1,Understand,2,FULL_OUTSOURCING,1,B,B,1,False,6.208,B,descriptive,trivial,high,chart (b) flips the carbohydrate axis,und,True,1.0,1.0,24,False,False,False
+P073,P24,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,1,B,B,1,False,19.62,B,descriptive,nontrivial,high,The correct choice is the second scatterplot ... the second image,ana,True,1.0,1.0,24,False,False,False
+P073,P24,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,D,D,1,False,45.396,D,clean_option,,high,The correct answer is D.,ana,True,1.0,1.0,24,False,False,False
+P073,P24,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,1,A,A,1,False,55.68,,descriptive,unmappable,high,cluttered with too many overlapping lines (matches no option),eval,False,,,24,False,False,False
+P073,P24,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,22.68,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,24,False,False,False
+P073,P24,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,1,D,A,0,False,22.065,,descriptive,unmappable,high,badly overplotted / too cluttered (matches no option),eval,False,,,24,False,False,False
+P081,P25,pcp_und_fa_2,Understand,0,FULL_OUTSOURCING,1,B,B,1,False,19.571,B,descriptive,nontrivial,high,the last two axes are swapped,und,True,1.0,1.0,46,True,False,False
+P081,P25,pcp_eval_fa_11,Evaluate,1,FULL_OUTSOURCING,1,A,A,1,False,35.087,,descriptive,unmappable,high,overplotting/clutter + similar colors etc (matches no option),eval,False,,,37,False,False,False
+P081,P25,pcp_rem_fa_1,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,6.049,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,35,False,False,False
+P081,P25,pcp_eval_fa_10,Evaluate,3,FULL_OUTSOURCING,4,E,A,0,True,9.994,B,descriptive,nontrivial,med,"guided elimination: T2 legend correct, T3 axis titles not complete enough, T4 data present -> implies titles option",eval,True,0.0,0.0,115,False,False,False
+P081,P25,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,C,B,0,False,20.797,C,descriptive,nontrivial,high,The third scatterplot from the left ... the 3rd image.,ana,True,0.0,1.0,59,True,False,False
+P081,P25,pcp_ana_fa_1,Analyze,7,FULL_OUTSOURCING,1,D,D,1,False,5.327,D,clean_option,,high,Chart D.,ana,True,1.0,1.0,85,False,False,False
+P082,P26,pcp_rem_fa_1,Remember,3,FULL_OUTSOURCING,2,A,A,1,False,3.747,A,descriptive,trivial,high,T2: This is a parallel coordinates plot. So yes,rem,True,1.0,1.0,52,False,False,False
+P082,P26,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,10.376,B,descriptive,trivial,high,the carbohydrate axis is flipped/inverted,und,True,1.0,1.0,41,True,False,False
+P082,P26,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,B,B,1,False,18.225,B,descriptive,nontrivial,high,matches the second scatterplot from the left ... the second image,ana,True,1.0,1.0,86,True,False,False
+P082,P26,pcp_eval_fa_11,Evaluate,6,FULL_OUTSOURCING,1,A,A,1,False,14.779,,descriptive,unmappable,high,overplotting/clutter + extras (matches no option),eval,False,,,38,False,False,False
+P083,P27,pcp_ana_fa_1,Analyze,0,FULL_OUTSOURCING,1,D,D,1,False,5.181,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,18,False,False,False
+P083,P27,pcp_und_fa_2,Understand,1,FULL_OUTSOURCING,1,A,B,0,False,16.161,B,descriptive,nontrivial,high,those two axes are swapped (Poverty <-> Malaria 2013),und,True,1.0,0.0,13,False,False,False
+P083,P27,pcp_rem_fa_1,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,3.426,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,18,False,False,False
+P083,P27,pcp_eval_fa_11,Evaluate,3,FULL_OUTSOURCING,4,B,A,0,False,6.023,B,clean_option,,high,T4: B. The axis titles are effectively missing/unclear,eval,True,0.0,1.0,200,False,False,False
+P083,P27,pcp_und_fa_1,Understand,5,FULL_OUTSOURCING,1,B,B,1,False,4.779,B,descriptive,trivial,high,carbohydrate axis reversed/inverted,und,True,1.0,1.0,18,False,False,False
+P083,P27,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,2.125,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,41,False,False,False
+P083,P27,pcp_ana_fa_2,Analyze,7,FULL_OUTSOURCING,2,B,B,1,False,6.246,B,descriptive,nontrivial,high,Answer: the 2nd scatterplot. T2: The 2nd scatterplot image,ana,True,1.0,1.0,104,True,False,False
+P085,P28,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,2,A,A,1,False,27.482,B,descriptive,nontrivial,med,T2 endorses user suggestion: 'axis titles/labels are incomplete because the scales and units are missing',eval,True,0.0,0.0,91,False,False,False
+P085,P28,pcp_eval_fa_10,Evaluate,1,VERIFICATION_ONLY,1,A,A,1,False,28.449,A,descriptive,trivial,high,Yes - the color legend is not properly explained/labeled (confirms user candidate),eval,True,1.0,1.0,102,False,False,False
+P085,P28,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,15.24,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,53,False,False,False
+P085,P28,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,3,B,B,1,False,31.38,B,clean_option,,high,T2: It is B - the second plot from the left.,ana,True,1.0,1.0,105,True,True,False
+P085,P28,pcp_rem_fa_1,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,18.77,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,53,False,False,False
+P086,P29,pcp_rem_fa_2,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,3.543,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,26,False,False,False
+P086,P29,pcp_und_fa_1,Understand,1,FULL_OUTSOURCING,2,B,B,1,False,7.123,B,descriptive,trivial,high,the carbohydrate axis has been flipped vertically (stated twice),und,True,1.0,1.0,49,False,False,False
+P086,P29,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,2,C,A,0,False,19.689,,descriptive,unmappable,high,heavy overplotting/clutter (matches no option; stated twice),eval,False,,,44,False,False,False
+P086,P29,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,2,B,B,1,False,3.176,B,clean_option,,high,T2: B) B,ana,True,1.0,1.0,154,True,False,False
+P086,P29,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,D,D,1,False,4.449,D,clean_option,,high,D,ana,True,1.0,1.0,45,False,False,True
+P086,P29,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,1,B,A,0,False,15.48,,descriptive,unmappable,high,Too many overlapping lines make it cluttered (matches no option),eval,False,,,45,False,False,True
+P086,P29,pcp_rem_fa_1,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,3.654,A,descriptive,trivial,high,Yes.,rem,True,1.0,1.0,45,False,False,True
+P086,P29,pcp_und_fa_2,Understand,7,FULL_OUTSOURCING,1,B,B,1,False,16.588,B,descriptive,nontrivial,high,chart (b) swaps the last two: ...Poverty 2006 -> Malaria 2013,und,True,1.0,1.0,45,False,False,True
+P087,P30,pcp_rem_fa_2,Remember,0,VERIFICATION_ONLY,1,A,A,1,False,8.459,A,clean_option,,high,"if A corresponds to Yes, then A is correct (confirms user candidate)",rem,True,1.0,1.0,37,False,False,False
+P087,P30,pcp_und_fa_1,Understand,1,VERIFICATION_ONLY,1,B,B,1,False,8.423,B,descriptive,trivial,high,Yes - the carbohydrate axis is reversed/inverted (confirms user candidate B),und,True,1.0,1.0,51,False,False,False
+P087,P30,pcp_ana_fa_1,Analyze,2,VERIFICATION_ONLY,1,C,D,0,False,10.49,C,clean_option,,high,Yes - C looks like the best choice ... So C is the correct answer. (confirms user candidate),ana,True,0.0,1.0,37,False,False,False
+P087,P30,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,2,B,B,1,False,4.482,B,clean_option,,high,T2: So B -> Yes - B.,ana,True,1.0,1.0,31,False,False,False
+P087,P30,pcp_und_fa_2,Understand,4,VERIFICATION_ONLY,1,B,B,1,False,10.567,B,descriptive,trivial,high,Yes - (b) looks like the chart where the middle and right axes are swapped (confirms candidate B),und,True,1.0,1.0,31,False,False,False
+P087,P30,pcp_rem_fa_1,Remember,5,VERIFICATION_ONLY,1,A,A,1,False,4.143,A,clean_option,,high,"if A = Yes, then A is correct (confirms user candidate)",rem,True,1.0,1.0,37,False,False,False
+P087,P30,pcp_eval_fa_11,Evaluate,6,FULL_OUTSOURCING,3,A,A,1,False,17.49,A,clean_option,,med,"T3: If A says the color legend is unclear/inconsistent ..., then yes, A. (conditional, user-steered)",eval,True,1.0,1.0,81,False,False,False
+P087,P30,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,3,D,A,0,False,9.518,,hedged_multiple,,high,eliminates B (titles present) and A (legend properly labeled) without picking an option,eval,False,,,92,False,False,False
+P091,P31,pcp_und_fa_2,Understand,0,FULL_OUTSOURCING,1,C,B,0,False,6.938,B,descriptive,nontrivial,high,the last two axes are swapped,und,True,1.0,0.0,82,True,False,False
+P091,P31,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,3.204,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,167,True,False,False
+P091,P31,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,2,A,A,1,False,5.812,A,clean_option,,high,T2: The best answer is: the color legend is not properly labeled.,eval,True,1.0,1.0,168,True,False,False
+P091,P31,pcp_rem_fa_2,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,2.301,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P091,P31,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,2.189,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P091,P31,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,B,B,1,False,14.835,B,descriptive,nontrivial,high,the second image from the left ... the 2nd scatterplot,ana,True,1.0,1.0,86,True,False,False
+P091,P31,pcp_und_fa_1,Understand,6,FULL_OUTSOURCING,1,B,B,1,False,4.247,B,descriptive,trivial,high,the carbohydrate axis is reversed/inverted,und,True,1.0,1.0,82,True,False,False
+P091,P31,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,1,A,A,1,False,5.34,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P092,P32,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,2,E,A,0,True,12.884,,descriptive,unmappable,high,overplotting + hard-to-interpret + unclear scales (matches no option),eval,False,,,44,False,False,False
+P092,P32,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,13.637,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,167,True,False,False
+P092,P32,pcp_und_fa_2,Understand,2,FULL_OUTSOURCING,1,C,B,0,False,32.432,B,descriptive,nontrivial,high,chart (b) swaps the middle and right variables,und,True,1.0,0.0,82,True,False,False
+P092,P32,pcp_rem_fa_2,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,5.89,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P092,P32,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,5.863,B,descriptive,trivial,high,the carbohydrate axis is reversed/inverted,und,True,1.0,1.0,82,True,False,False
+P092,P32,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,5.425,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P092,P32,pcp_ana_fa_2,Analyze,6,FULL_OUTSOURCING,1,B,B,1,False,30.396,B,descriptive,nontrivial,high,Answer: the 2nd image from the left.,ana,True,1.0,1.0,86,True,False,False
+P102,P34,pcp_rem_fa_2,Remember,2,CONCEPT_SUPPORT,1,B,A,0,False,27.394,,no_answer,,high,concept definition of parallel coordinates only,rem,False,,,30,False,False,False
+P102,P34,pcp_rem_fa_1,Remember,3,CONCEPT_SUPPORT,1,B,A,0,False,7.456,,no_answer,,high,concept answer about axes being parallel; no item recommendation,rem,False,,,58,False,False,False
+P102,P34,pcp_eval_fa_11,Evaluate,4,CONCEPT_SUPPORT,1,C,A,0,False,10.096,,no_answer,,high,concept answer about slopes; no item recommendation,eval,False,,,58,False,False,False
+P102,P34,pcp_und_fa_1,Understand,5,CONCEPT_SUPPORT,1,B,B,1,False,10.754,,no_answer,,high,concept answer defining an axis; no item recommendation,und,False,,,15,False,False,False
+P102,P34,pcp_eval_fa_10,Evaluate,6,CONCEPT_SUPPORT,2,D,A,0,False,5.724,,no_answer,,high,concept answers about colour legends and gradients; no item recommendation,eval,False,,,110,False,False,False
+P110,P36,pcp_rem_fa_1,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,5.513,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,27,False,False,False
+P110,P36,pcp_ana_fa_2,Analyze,1,FULL_OUTSOURCING,3,B,B,1,False,5.964,B,clean_option,,high,T3: so answer is b? -> Yes - B.,ana,True,1.0,1.0,52,False,False,False
+P110,P36,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,5.167,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,27,False,False,False
+P110,P36,pcp_ana_fa_1,Analyze,3,FULL_OUTSOURCING,1,D,D,1,False,8.312,D,clean_option,,high,So the answer is D.,ana,True,1.0,1.0,19,False,False,False
+P110,P36,pcp_und_fa_2,Understand,4,FULL_OUTSOURCING,3,A,B,0,False,19.106,B,descriptive,nontrivial,med,"T3: pick the letter that matches 'same data, different axis order' (T1 axis lists imply B)",und,True,1.0,0.0,92,False,False,False
+P110,P36,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,5,C,A,0,False,6.69,C,descriptive,trivial,med,T5: are the slope of the edges too high -> Yes - that could be considered a problem (user-steered),eval,True,0.0,1.0,125,False,False,False
+P110,P36,pcp_und_fa_1,Understand,6,FULL_OUTSOURCING,1,B,B,1,False,11.624,B,descriptive,trivial,high,the carbohydrate axis is reversed/inverted,und,True,1.0,1.0,45,True,False,False
+P110,P36,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,2,A,A,1,False,16.912,,descriptive,unmappable,high,T2: too cluttered/overlapping to be readable (matches no option),eval,False,,,52,False,False,False
+P112,P37,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,6.009,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P112,P37,pcp_ana_fa_2,Analyze,2,FULL_OUTSOURCING,1,B,B,1,False,13.541,B,descriptive,nontrivial,high,The second scatterplot from the left ... the 2nd image,ana,True,1.0,1.0,86,True,False,False
+P112,P37,pcp_und_fa_1,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,34.189,B,descriptive,trivial,high,the carbohydrate axis is inverted,und,True,1.0,1.0,82,True,False,False
+P112,P37,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,13.441,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P112,P37,pcp_und_fa_2,Understand,5,FULL_OUTSOURCING,1,B,B,1,False,7.939,B,descriptive,nontrivial,high,chart (b) swaps the last two variables,und,True,1.0,1.0,82,True,False,False
+P112,P37,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,7.367,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,144,True,False,False
+P112,P37,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,1,C,A,0,False,11.284,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P114,P38,pcp_und_fa_1,Understand,0,FULL_OUTSOURCING,1,B,B,1,False,12.63,B,descriptive,trivial,high,chart (b) flips the carbohydrate axis,und,True,1.0,1.0,15,False,False,False
+P114,P38,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,5.944,D,clean_option,,high,The correct answer is D.,ana,True,1.0,1.0,14,False,False,False
+P114,P38,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,3,E,A,0,True,62.133,,descriptive,unmappable,high,"clutter; letter refused twice without option texts (user sent only 'a,b,c,d,e')",eval,False,,,40,False,False,False
+P114,P38,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,1,B,B,1,False,29.346,B,descriptive,nontrivial,high,The correct scatterplot is the second image,ana,True,1.0,1.0,26,False,False,False
+P114,P38,pcp_rem_fa_2,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,6.219,A,descriptive,trivial,high,Yes. ...the correct answer is True.,rem,True,1.0,1.0,25,False,False,False
+P114,P38,pcp_und_fa_2,Understand,5,FULL_OUTSOURCING,1,B,B,1,False,8.587,B,descriptive,nontrivial,high,chart (b) swaps the last two variables,und,True,1.0,1.0,25,False,False,False
+P114,P38,pcp_eval_fa_11,Evaluate,6,FULL_OUTSOURCING,1,D,A,0,False,52.046,,descriptive,unmappable,high,very cluttered/overplotted (matches no option),eval,False,,,25,False,False,False
+P115,P39,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,1,B,B,1,False,15.452,B,descriptive,nontrivial,high,Answer: the second scatterplot from the left.,ana,True,1.0,1.0,86,True,False,False
+P115,P39,pcp_rem_fa_2,Remember,1,FULL_OUTSOURCING,1,C,A,0,True,10.543,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,0.0,50,True,False,False
+P115,P39,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,1,E,A,0,True,21.943,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P115,P39,pcp_ana_fa_1,Analyze,7,FULL_OUTSOURCING,1,D,D,1,False,14.642,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P122,P41,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,2,B,B,1,False,2.236,B,clean_option,,high,T2: Is that B in this? -> Yes - B.,ana,True,1.0,1.0,104,True,False,False
+P122,P41,pcp_eval_fa_10,Evaluate,1,FULL_OUTSOURCING,2,A,A,1,False,9.056,A,clean_option,,high,T2: Best choice: color legend is not properly labeled.,eval,True,1.0,1.0,172,True,False,False
+P122,P41,pcp_und_fa_1,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,10.542,B,descriptive,trivial,high,The difference is that the carbohydrate axis is flipped.,und,True,1.0,1.0,133,True,False,False
+P122,P41,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,D,D,1,False,21.798,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,167,True,False,False
+P122,P41,pcp_eval_fa_11,Evaluate,5,VERIFICATION_ONLY,1,A,A,1,False,1.742,A,descriptive,trivial,high,Yes - the color legend looks wrong ... incorrect/inconsistent (confirms user candidate),eval,True,1.0,1.0,182,False,False,False
+P122,P41,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,6.723,A,descriptive,trivial,high,Yes. ...characteristic of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P122,P41,pcp_rem_fa_1,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,3.814,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P124,P42,pcp_rem_fa_2,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,18.709,A,descriptive,trivial,high,Yes - the right answer is True.,rem,True,1.0,1.0,24,False,False,False
+P124,P42,pcp_und_fa_1,Understand,1,FULL_OUTSOURCING,1,B,B,1,False,15.152,B,descriptive,trivial,high,chart (b) has the carbohydrate axis reversed,und,True,1.0,1.0,24,False,False,False
+P124,P42,pcp_eval_fa_11,Evaluate,2,FULL_OUTSOURCING,2,A,A,1,False,20.053,,descriptive,unmappable,high,Overplotting (matches no option; stated twice),eval,False,,,49,False,False,False
+P124,P42,pcp_und_fa_2,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,45.7,B,descriptive,nontrivial,high,the middle and right axes are swapped,und,True,1.0,1.0,82,True,False,False
+P124,P42,pcp_ana_fa_2,Analyze,4,FULL_OUTSOURCING,1,B,B,1,False,22.954,B,descriptive,nontrivial,high,So the answer is: the second image.,ana,True,1.0,1.0,86,True,False,False
+P124,P42,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,5.584,A,descriptive,trivial,high,Yes. ...characteristic of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P124,P42,pcp_ana_fa_1,Analyze,6,FULL_OUTSOURCING,1,D,D,1,False,4.523,D,clean_option,,high,Answer: D,ana,True,1.0,1.0,167,True,False,False
+P131,P43,pcp_eval_fa_10,Evaluate,0,FULL_OUTSOURCING,1,D,A,0,False,73.922,,descriptive,unmappable,high,too cluttered/overlapping to interpret (matches no option),eval,False,,,28,False,False,False
+P131,P43,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,38.04,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P131,P43,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,4.977,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P131,P43,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,1,B,B,1,False,14.098,B,descriptive,nontrivial,high,Answer: the second scatterplot from the left.,ana,True,1.0,1.0,86,True,False,False
+P131,P43,pcp_und_fa_2,Understand,4,FULL_OUTSOURCING,1,C,B,0,False,49.784,B,descriptive,nontrivial,high,the order of the middle and right axes is swapped,und,True,1.0,0.0,82,True,False,False
+P131,P43,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,2.411,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P131,P43,pcp_und_fa_1,Understand,6,FULL_OUTSOURCING,1,B,B,1,False,32.528,B,descriptive,trivial,high,the carbohydrate axis is reversed/inverted,und,True,1.0,1.0,82,True,False,False
+P131,P43,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,1,A,A,1,False,9.826,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P132,P44,pcp_ana_fa_1,Analyze,0,VERIFICATION_ONLY,1,C,D,0,False,12.18,C,clean_option,,high,Yes - C is the best choice. (confirms bare user candidate 'c'),ana,True,0.0,1.0,1,False,False,False
+P132,P44,pcp_und_fa_1,Understand,2,VERIFICATION_ONLY,1,A,B,0,False,17.57,,no_answer,,high,Could you share the chart image...? I can't determine the answer yet.,und,False,,,1,False,False,False
+P132,P44,pcp_und_fa_2,Understand,4,FULL_OUTSOURCING,1,A,B,0,False,22.12,B,descriptive,nontrivial,high,the middle and right axes are swapped,und,True,1.0,0.0,82,True,False,False
+P132,P44,pcp_rem_fa_2,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,10.051,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P132,P44,pcp_rem_fa_1,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,54.294,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P132,P44,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,1,A,A,1,False,59.242,,descriptive,unmappable,high,severe overplotting/clutter (matches no option),eval,False,,,30,True,False,False
+P142,P45,pcp_eval_fa_11,Evaluate,1,VERIFICATION_ONLY,1,B,A,0,False,11.758,,descriptive,unmappable,med,validates unseen deictic candidate as 'cluttered/overplotted' - not a listed option,eval,False,,,32,False,False,False
+P142,P45,pcp_rem_fa_1,Remember,2,VERIFICATION_ONLY,1,A,A,1,False,9.427,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot (confirms unstated candidate),rem,True,1.0,1.0,12,False,False,False
+P142,P45,pcp_eval_fa_10,Evaluate,3,FULL_OUTSOURCING,3,A,A,1,False,19.92,,descriptive,unmappable,high,T3: 'hard to read / too cluttered' is very likely the issue (matches no option),eval,False,,,44,False,False,False
+P142,P45,pcp_und_fa_1,Understand,4,VERIFICATION_ONLY,1,B,B,1,False,10.732,B,descriptive,trivial,high,Yes - the carbohydrate axis reversed/inverted (confirms candidate),und,True,1.0,1.0,12,False,False,False
+P142,P45,pcp_ana_fa_2,Analyze,5,VERIFICATION_ONLY,1,B,B,1,False,13.82,B,descriptive,nontrivial,high,"if you picked the second scatterplot from the left, that is right",ana,True,1.0,1.0,12,False,False,False
+P142,P45,pcp_rem_fa_2,Remember,6,VERIFICATION_ONLY,1,A,A,1,False,4.483,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot. (confirms candidate),rem,True,1.0,1.0,12,False,False,False
+P142,P45,pcp_ana_fa_1,Analyze,7,FULL_OUTSOURCING,1,D,D,1,False,42.662,D,clean_option,,high,Best: D. Possible alternative but weaker: C.,ana,True,1.0,1.0,43,False,False,False
+P145,P46,pcp_rem_fa_2,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,7.081,A,descriptive,trivial,high,Yes. ...characteristic of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P145,P46,pcp_rem_fa_1,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,12.16,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P145,P46,pcp_eval_fa_10,Evaluate,4,FULL_OUTSOURCING,1,E,A,0,True,23.623,,descriptive,unmappable,high,far too cluttered / overplotting (matches no option),eval,False,,,30,True,False,False
+P145,P46,pcp_ana_fa_2,Analyze,6,FULL_OUTSOURCING,1,B,B,1,False,22.788,B,descriptive,nontrivial,high,Answer: the second scatterplot from the left.,ana,True,1.0,1.0,86,True,False,False
+P146,P47,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,2,B,B,1,False,9.631,B,descriptive,nontrivial,high,T2: Select the 2nd scatterplot from the left.,ana,True,1.0,1.0,254,True,False,False
+P146,P47,pcp_und_fa_2,Understand,1,FULL_OUTSOURCING,2,A,B,0,False,10.892,B,descriptive,nontrivial,high,the middle and right axes swapped,und,True,1.0,0.0,328,True,False,False
+P146,P47,pcp_rem_fa_1,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,3.116,A,descriptive,trivial,high,Yes. ...a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P146,P47,pcp_und_fa_1,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,36.606,B,descriptive,trivial,high,the carbohydrate (g) axis is reversed,und,True,1.0,1.0,82,True,False,False
+P146,P47,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,C,D,0,False,19.052,C,clean_option,,high,"C. (user restricted the menu to A,B or C; correct D not offered)",ana,True,0.0,1.0,176,True,False,False
+P146,P47,pcp_eval_fa_10,Evaluate,5,FULL_OUTSOURCING,2,B,A,0,False,14.123,B,clean_option,,high,"T2: if you must pick from those options, b) the axis title is missing is the closest (user-mangled options)",eval,True,0.0,1.0,123,True,False,False
+P146,P47,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,2,A,A,1,False,2.803,A,descriptive,trivial,high,T2: Yes.,rem,True,1.0,1.0,80,True,False,False
+P146,P47,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,1,B,A,0,False,6.528,B,clean_option,,high,b) the axis ticks are missing.,eval,True,0.0,1.0,142,True,False,False
+P151,P48,pcp_eval_fa_10,Evaluate,0,FULL_OUTSOURCING,1,C,A,0,False,54.467,,descriptive,unmappable,high,too cluttered/overplotted (matches no option),eval,False,,,30,True,False,False
+P151,P48,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,46.099,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P151,P48,pcp_eval_fa_11,Evaluate,2,FULL_OUTSOURCING,1,E,A,0,True,29.528,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P151,P48,pcp_und_fa_1,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,45.196,B,descriptive,trivial,high,chart (b) has the carbohydrate axis reversed/inverted,und,True,1.0,1.0,82,True,False,False
+P151,P48,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,5.198,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P151,P48,pcp_rem_fa_2,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,7.495,A,descriptive,trivial,high,Yes. ...characteristic of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P151,P48,pcp_ana_fa_2,Analyze,6,FULL_OUTSOURCING,1,B,B,1,False,45.009,B,descriptive,nontrivial,high,that is the second scatterplot from the left.,ana,True,1.0,1.0,86,True,False,False
+P151,P48,pcp_und_fa_2,Understand,7,FULL_OUTSOURCING,2,A,B,0,False,4.255,B,descriptive,nontrivial,high,the middle and right axes are swapped,und,True,1.0,0.0,98,True,False,False
+P154,P49,pcp_rem_fa_2,Remember,0,FULL_OUTSOURCING,1,A,A,1,False,11.383,A,descriptive,trivial,high,Yes. ...characteristic of a parallel coordinates plot.,rem,True,1.0,1.0,49,True,False,False
+P154,P49,pcp_ana_fa_2,Analyze,1,FULL_OUTSOURCING,2,B,B,1,False,2.693,B,clean_option,,high,T2: B.,ana,True,1.0,1.0,99,True,False,False
+P154,P49,pcp_eval_fa_11,Evaluate,2,FULL_OUTSOURCING,1,C,A,0,False,38.314,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P154,P49,pcp_ana_fa_1,Analyze,3,FULL_OUTSOURCING,1,D,D,1,False,4.608,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P154,P49,pcp_und_fa_2,Understand,4,FULL_OUTSOURCING,1,C,B,0,False,14.913,B,descriptive,nontrivial,high,chart (b) swaps the middle and right axes,und,True,1.0,0.0,82,True,False,False
+P154,P49,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,11.484,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P154,P49,pcp_und_fa_1,Understand,6,FULL_OUTSOURCING,2,B,B,1,False,4.571,B,descriptive,trivial,high,T2: The carbohydrate axis. The fat axis looks the same in both charts.,und,True,1.0,1.0,136,True,False,False
+P154,P49,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,1,A,A,1,False,86.843,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,47,True,False,False
+P157,P50,pcp_und_fa_1,Understand,0,FULL_OUTSOURCING,1,B,B,1,False,14.502,B,descriptive,trivial,high,the carbohydrate axis in chart (b) is reversed/inverted,und,True,1.0,1.0,23,False,False,False
+P157,P50,pcp_und_fa_2,Understand,1,FULL_OUTSOURCING,1,B,B,1,False,29.026,B,descriptive,nontrivial,high,the middle and right axes are swapped,und,True,1.0,1.0,17,False,False,False
+P157,P50,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,6.716,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,6,False,False,False
+P157,P50,pcp_ana_fa_1,Analyze,3,VERIFICATION_ONLY,1,D,D,1,False,21.091,D,clean_option,,high,No - the best choice is D. (corrects user candidate C),ana,True,1.0,1.0,8,False,False,False
+P157,P50,pcp_rem_fa_1,Remember,4,FULL_OUTSOURCING,1,A,A,1,False,5.807,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,6,False,False,False
+P157,P50,pcp_eval_fa_11,Evaluate,5,VERIFICATION_ONLY,2,A,A,1,False,7.842,A,descriptive,trivial,low,"T2 flip-flop: 'A is not the best choice' then 'if that's what A says, then yes, A would be correct'",eval,True,1.0,1.0,64,False,False,False
+P157,P50,pcp_eval_fa_10,Evaluate,6,VERIFICATION_ONLY,1,A,A,1,False,17.46,A,descriptive,trivial,med,Yes - the likely issue is the legend/color scale (validates candidate; also pushes clutter as stronger),eval,True,1.0,1.0,34,False,False,False
+P157,P50,pcp_ana_fa_2,Analyze,7,FULL_OUTSOURCING,1,B,B,1,False,10.512,B,descriptive,nontrivial,high,the second image from the left ... the 2nd scatterplot,ana,True,1.0,1.0,12,False,False,False
+P158,P51,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,1,A,A,1,False,7.456,,descriptive,unmappable,high,overplotting (matches no option),eval,False,,,33,True,False,False
+P158,P51,pcp_ana_fa_2,Analyze,2,FULL_OUTSOURCING,1,B,B,1,False,10.331,B,descriptive,nontrivial,high,the second scatterplot from the left ... the second image,ana,True,1.0,1.0,86,True,False,False
+P158,P51,pcp_rem_fa_2,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,3.46,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,51,True,False,False
+P159,P52,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,2,B,B,1,False,43.692,B,clean_option,,high,That matches B ... the answer is B (with requested explanation),ana,True,1.0,1.0,203,True,True,False
+P159,P52,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,2,A,A,1,False,9.321,A,descriptive,trivial,high,Yes. (reaffirmed under epistemic probe),rem,True,1.0,1.0,105,True,False,False
+P159,P52,pcp_eval_fa_11,Evaluate,5,FULL_OUTSOURCING,1,A,A,1,False,24.002,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,30,False,False,False
+P159,P52,pcp_rem_fa_1,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,5.097,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P162,P53,pcp_und_fa_2,Understand,0,VERIFICATION_ONLY,1,A,B,0,False,6.566,,descriptive,unmappable,med,misreads bare 'a' as chart (a); describes cluster separation - no option content,und,False,,,1,False,False,False
+P162,P53,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,7.407,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,45,True,False,False
+P162,P53,pcp_eval_fa_10,Evaluate,3,FULL_OUTSOURCING,2,A,A,1,False,5.245,,descriptive,unmappable,high,T1 scaling/clutter (no option); T2 says legend IS properly labeled (excludes A),eval,False,,,66,False,False,False
+P162,P53,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,D,D,1,False,6.38,D,clean_option,,high,So the answer is D.,ana,True,1.0,1.0,167,True,False,False
+P162,P53,pcp_und_fa_1,Understand,5,FULL_OUTSOURCING,2,B,B,1,False,9.978,B,clean_option,,high,T2: b) The carbohydrate(g) axis is flipped,und,True,1.0,1.0,196,True,False,False
+P162,P53,pcp_ana_fa_2,Analyze,6,FULL_OUTSOURCING,2,E,B,0,True,26.175,,no_answer,,high,needs the images (twice); no recommendation,ana,False,,,99,True,False,False
+P162,P53,pcp_rem_fa_1,Remember,7,FULL_OUTSOURCING,1,A,A,1,False,10.132,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P164,P54,pcp_ana_fa_2,Analyze,1,FULL_OUTSOURCING,1,B,B,1,False,6.513,B,descriptive,nontrivial,high,the second scatterplot from the left ... the 2nd image,ana,True,1.0,1.0,26,False,False,False
+P164,P54,pcp_und_fa_1,Understand,2,FULL_OUTSOURCING,1,B,B,1,False,4.972,B,descriptive,trivial,high,the carbohydrate axis is inverted/reversed,und,True,1.0,1.0,26,False,False,False
+P164,P54,pcp_rem_fa_1,Remember,3,FULL_OUTSOURCING,1,A,A,1,False,5.085,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,15,False,False,False
+P164,P54,pcp_und_fa_2,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,7.49,B,descriptive,nontrivial,high,chart (b) swaps the last two variables,und,True,1.0,1.0,15,False,False,False
+P164,P54,pcp_rem_fa_2,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,4.528,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,15,False,False,False
+P164,P54,pcp_ana_fa_1,Analyze,6,FULL_OUTSOURCING,1,A,D,0,False,60.822,D,clean_option,,high,So: D.,ana,True,1.0,0.0,15,False,False,False
+P164,P54,pcp_eval_fa_10,Evaluate,7,FULL_OUTSOURCING,1,B,A,0,False,22.815,,descriptive,unmappable,high,axes not on same meaningful scale + clutter (matches no option),eval,False,,,14,False,False,False
+P168,P55,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,1,E,A,0,True,32.6,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False
+P168,P55,pcp_rem_fa_2,Remember,1,FULL_OUTSOURCING,1,A,A,1,False,2.15,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P168,P55,pcp_ana_fa_1,Analyze,6,FULL_OUTSOURCING,1,D,D,1,False,2.81,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P171,P56,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,1,B,B,1,False,27.413,B,descriptive,nontrivial,high,The correct choice is the second scatterplot from the left ... the 2nd plot,ana,True,1.0,1.0,26,False,False,False
+P171,P56,pcp_rem_fa_2,Remember,1,FULL_OUTSOURCING,1,A,A,1,False,5.24,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,19,False,False,False
+P171,P56,pcp_und_fa_1,Understand,2,FULL_OUTSOURCING,1,B,B,1,False,13.713,B,descriptive,trivial,high,the carbohydrate axis is reversed,und,True,1.0,1.0,19,False,False,False
+P171,P56,pcp_ana_fa_1,Analyze,3,FULL_OUTSOURCING,1,D,D,1,False,9.726,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,19,False,False,False
+P171,P56,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,4.042,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,19,False,False,False
+P179,P57,pcp_und_fa_1,Understand,0,FULL_OUTSOURCING,1,B,B,1,False,13.128,B,descriptive,trivial,high,the carbohydrate axis ... is reversed/inverted,und,True,1.0,1.0,46,True,False,False
+P179,P57,pcp_eval_fa_10,Evaluate,1,FULL_OUTSOURCING,4,D,A,0,False,16.626,D,clean_option,,high,T4: 'Nothing is wrong with the chart' ... is likely the best multiple-choice answer,eval,True,0.0,1.0,196,True,False,False
+P179,P57,pcp_eval_fa_11,Evaluate,2,FULL_OUTSOURCING,2,A,A,1,False,8.586,A,descriptive,trivial,high,T2: Yes - the legend colors don't match the line colors (endorses user candidate A),eval,True,1.0,1.0,146,True,False,False
+P179,P57,pcp_und_fa_2,Understand,3,FULL_OUTSOURCING,1,B,B,1,False,13.207,B,descriptive,nontrivial,high,rearranging the middle and right axes,und,True,1.0,1.0,42,False,False,False
+P179,P57,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,D,D,1,False,23.576,D,clean_option,,high,So the answer is D.,ana,True,1.0,1.0,107,True,False,False
+P179,P57,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,6.257,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P179,P57,pcp_rem_fa_2,Remember,6,FULL_OUTSOURCING,1,A,A,1,False,4.663,A,descriptive,trivial,high,Yes. This is a plot - specifically a parallel coordinates plot.,rem,True,1.0,1.0,15,False,False,False
+P179,P57,pcp_ana_fa_2,Analyze,7,FULL_OUTSOURCING,1,B,B,1,False,19.218,B,descriptive,nontrivial,high,the second scatterplot from the left ... the 2nd one,ana,True,1.0,1.0,70,True,False,False
+P180,P58,pcp_ana_fa_2,Analyze,0,FULL_OUTSOURCING,1,B,B,1,False,10.411,B,descriptive,nontrivial,high,the second image from the left,ana,True,1.0,1.0,86,True,False,False
+P180,P58,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,7.995,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P180,P58,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,13.517,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot,rem,True,1.0,1.0,50,True,False,False
+P180,P58,pcp_und_fa_2,Understand,3,FULL_OUTSOURCING,1,C,B,0,False,40.651,B,descriptive,nontrivial,high,the middle and right axes are swapped,und,True,1.0,0.0,82,True,False,False
+P180,P58,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,6.99,B,descriptive,trivial,high,the carbohydrate axis is flipped/inverted,und,True,1.0,1.0,82,True,False,False
+P180,P58,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,8.793,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P180,P58,pcp_eval_fa_10,Evaluate,6,FULL_OUTSOURCING,1,A,A,1,False,31.801,,descriptive,unmappable,high,overplotting + normalization unclear (matches no option),eval,False,,,30,True,False,False
+P180,P58,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,2,B,A,0,False,9.396,,descriptive,unmappable,high,clutter + normalized axes (matches no option),eval,False,,,44,True,False,False
+P187,P60,pcp_ana_fa_1,Analyze,4,FULL_OUTSOURCING,1,B,D,0,False,81.095,,no_answer,,high,please upload the chart image and the question/options,ana,False,,,38,False,False,False
+P188,P61,pcp_eval_fa_11,Evaluate,0,FULL_OUTSOURCING,2,A,A,1,False,12.857,,descriptive,unmappable,high,Overplotting / clutter (matches no option; stated twice),eval,False,,,50,False,False,False
+P188,P61,pcp_ana_fa_1,Analyze,1,FULL_OUTSOURCING,1,D,D,1,False,4.832,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,27,False,False,False
+P188,P61,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,4.511,A,descriptive,trivial,high,Yes. This is a parallel coordinates plot.,rem,True,1.0,1.0,27,False,False,False
+P188,P61,pcp_und_fa_2,Understand,3,FULL_OUTSOURCING,1,D,B,0,True,19.081,B,descriptive,nontrivial,high,the middle and right axes are swapped,und,True,1.0,0.0,27,False,False,False
+P188,P61,pcp_und_fa_1,Understand,4,FULL_OUTSOURCING,2,B,B,1,False,24.584,B,descriptive,nontrivial,med,T2: choose whichever one mentions that inversion (letter unresolved by assistant),und,True,1.0,1.0,47,False,False,False
+P188,P61,pcp_eval_fa_10,Evaluate,5,FULL_OUTSOURCING,2,E,A,0,True,15.043,,descriptive,unmappable,high,clutter; T2: can't tell which letter without seeing the choices,eval,False,,,58,False,False,False
+P188,P61,pcp_ana_fa_2,Analyze,6,FULL_OUTSOURCING,2,E,B,0,True,19.0,B,descriptive,nontrivial,high,The 2nd scatterplot from the left (stated twice),ana,True,1.0,0.0,113,True,False,False
+P188,P61,pcp_rem_fa_1,Remember,7,FULL_OUTSOURCING,3,A,A,1,False,2.932,A,descriptive,trivial,high,T3: is it yes or no? -> Yes.,rem,True,1.0,1.0,129,False,False,False
+P191,P62,pcp_eval_fa_10,Evaluate,0,FULL_OUTSOURCING,1,D,A,0,False,47.671,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,31,True,False,False
+P191,P62,pcp_ana_fa_2,Analyze,1,FULL_OUTSOURCING,2,B,B,1,False,4.776,B,descriptive,nontrivial,high,Answer: the second scatterplot from the left. T2 confirms,ana,True,1.0,1.0,110,True,False,False
+P191,P62,pcp_rem_fa_1,Remember,5,FULL_OUTSOURCING,1,A,A,1,False,10.248,A,descriptive,trivial,high,Yes. ...this is a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P192,P63,pcp_und_fa_2,Understand,0,FULL_OUTSOURCING,3,B,B,1,False,2.827,B,descriptive,trivial,high,T3: Yes. The Malaria cases (2013) and Poverty Rate (2006) axes are swapped/reordered.,und,True,1.0,1.0,89,False,False,True
+P192,P63,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,6,A,A,1,False,13.022,A,descriptive,trivial,med,"T3: is color legend properly labeled? -> No ... not very clear (T4 softens: not missing, label uninformative)",eval,True,1.0,1.0,165,False,False,False
+P192,P63,pcp_ana_fa_1,Analyze,3,FULL_OUTSOURCING,1,D,D,1,False,12.889,D,clean_option,,high,The best choice is D.,ana,True,1.0,1.0,167,True,False,False
+P192,P63,pcp_ana_fa_2,Analyze,4,FULL_OUTSOURCING,1,E,B,0,True,47.613,B,descriptive,nontrivial,high,the second scatterplot from the left ... the 2nd image,ana,True,1.0,0.0,86,True,False,False
+P194,P64,pcp_eval_fa_10,Evaluate,2,FULL_OUTSOURCING,1,A,A,1,False,49.145,,descriptive,unmappable,high,too cluttered / overplotting (matches no option),eval,False,,,14,False,False,False
+P194,P64,pcp_ana_fa_2,Analyze,5,FULL_OUTSOURCING,1,B,B,1,False,36.978,B,descriptive,nontrivial,high,the second image ... the second scatterplot,ana,True,1.0,1.0,16,False,False,False
+P204,P66,pcp_rem_fa_1,Remember,0,CONCEPT_SUPPORT,1,A,A,1,False,46.894,,no_answer,,high,concept: what a parallel coordinates plot looks like,rem,False,,,48,False,False,False
+P204,P66,pcp_eval_fa_10,Evaluate,1,FULL_OUTSOURCING,2,B,A,0,False,59.95,,descriptive,unmappable,high,T2: far too cluttered / overplotting (matches no option),eval,False,,,57,False,False,False
+P204,P66,pcp_rem_fa_2,Remember,2,FULL_OUTSOURCING,1,A,A,1,False,6.137,A,descriptive,trivial,high,Yes. ...defining structure of a parallel coordinates plot.,rem,True,1.0,1.0,50,True,False,False
+P204,P66,pcp_ana_fa_2,Analyze,3,FULL_OUTSOURCING,1,D,B,0,False,34.88,C,descriptive,nontrivial,high,The 3rd scatterplot from the left ... overall the 3rd image (reasoning describes 2nd-image content),ana,True,0.0,0.0,86,True,False,False
+P204,P66,pcp_und_fa_2,Understand,4,FULL_OUTSOURCING,1,B,B,1,False,26.651,B,descriptive,nontrivial,high,chart (b) swaps the last two variables,und,True,1.0,1.0,82,True,False,False
+P204,P66,pcp_ana_fa_1,Analyze,5,FULL_OUTSOURCING,1,A,D,0,False,11.818,D,clean_option,,high,The best choice is D.,ana,True,1.0,0.0,167,True,False,False
+P204,P66,pcp_und_fa_1,Understand,6,FULL_OUTSOURCING,1,C,B,0,False,4.623,B,descriptive,trivial,high,the carbohydrate axis is reversed,und,True,1.0,0.0,82,True,False,False
+P204,P66,pcp_eval_fa_11,Evaluate,7,FULL_OUTSOURCING,1,B,A,0,False,11.785,,descriptive,unmappable,high,overplotting/clutter (matches no option),eval,False,,,33,True,False,False

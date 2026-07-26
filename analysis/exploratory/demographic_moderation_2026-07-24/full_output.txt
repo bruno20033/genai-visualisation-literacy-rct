@@ -1,0 +1,321 @@
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:246: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  gidk = d.groupby("arm").idk_rate.mean() * 100
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:254: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  print((d.groupby("arm").matched.agg(["sum", "count", "mean"]).round(3)).to_string())
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:357: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = mm.dropna(subset=[col]).groupby(["arm", col]).acc.agg(["mean", "count"])
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:357: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = mm.dropna(subset=[col]).groupby(["arm", col]).acc.agg(["mean", "count"])
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:357: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = mm.dropna(subset=[col]).groupby(["arm", col]).acc.agg(["mean", "count"])
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:391: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby("arm").size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:391: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby("arm").size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:457: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = (mm.dropna(subset=[mcol]).groupby(["arm", mcol]).acc
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:457: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = (mm.dropna(subset=[mcol]).groupby(["arm", mcol]).acc
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:457: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = (mm.dropna(subset=[mcol]).groupby(["arm", mcol]).acc
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:457: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = (mm.dropna(subset=[mcol]).groupby(["arm", mcol]).acc
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:457: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  piv = (mm.dropna(subset=[mcol]).groupby(["arm", mcol]).acc
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:391: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby("arm").size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:387: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby(["arm", mcol]).size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:391: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  cells = sub.groupby("arm").size().to_dict()
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+/Users/brunokneffel/Downloads/demographic_moderation_2026-07-24/demographic_moderation_analysis.py:197: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  return float(t.effect), float(lo), float(hi), float(t.pvalue), float(t.sd)
+==============================================================================
+EXPLORATORY, NON-PRE-REGISTERED, HYPOTHESIS-GENERATING ANALYSIS ONLY
+Not confirmatory; does not bear on the trial's pre-registered conclusions.
+==============================================================================
+
+### 0. Validation against the SAP pipeline (must match known anchors)
+raw merged CSV rows: 245  (user brief said ~247; 245 data rows after the two Qualtrics metadata rows)
+analysable immediate participants (from pipeline frames): 218
+arm counts: {'unrestricted': 77, 'socratic': 72, 'google': 69}  [anchor: 69/72/77]
+immediate ANCOVA U-G: -5.01 pp (SE 2.74), one-sided p=0.0342   [anchor: about -5.0 pp, p~.034]
+IDK rate by arm (%): {'google': 4.3, 'socratic': 5.0, 'unrestricted': 8.7}  [anchor: G~4.3, U~8.7]
+
+### 1. Demographic-merge coverage and representativeness
+matched (usable demographics): 168/218 (demo row present: 169; consent-revoked: 1)
+match rate by arm:
+              sum  count   mean
+arm                            
+google         54     69  0.783
+socratic       55     72  0.764
+unrestricted   59     77  0.766
+arm x matched chi2 p = 0.959
+  StartDate range matched: 2026-07-17 11:55:23 .. 2026-07-17 15:40:43
+  StartDate range unmatched: 2026-07-16 06:49:12 .. 2026-07-20 10:23:13
+  acc: matched 0.738 vs unmatched 0.731 (SMD +0.03, Welch p=0.836)
+  minivlat_recomputed: matched 7.679 vs unmatched 8.160 (SMD -0.19, Welch p=0.222)
+  aiuse: matched 4.036 vs unmatched 4.140 (SMD -0.10, Welch p=0.524)
+  arm-effect x matched interaction (joint Wald): F=0.80, p=0.450  -> matched-subset arm effects do NOT differ detectably from the unmatched remainder
+
+Prolific status in analysis set: {'APPROVED': 166, 'AWAITING REVIEW': 2}
+Authenticity check 'Bots': {'high': 166, nan: 2}  -> nobody flagged low; flag has no variance (cannot moderate, no exclusion needed)
+baseline arm effects in matched subset (n=168): U-G -3.70 pp [-9.97, +2.57], S-G +1.78 pp [-4.35, +7.91]
+
+### 2. Moderator triage (tested vs not tested, and why)
+- Age: TEST (continuous, per 10 y)
+    n=168, range 25-63, mean 36.8, SD 9.3; good spread
+- Sex: TEST (female vs male)
+    F 67 / M 100; 1 'prefer not to say' -> missing
+    note: arm x sex composition uneven by chance (socratic 69% male vs google ~49%)
+- First language English: TEST (binary)
+    English 86 vs other 82; near 50/50, survey+LLM dialogue were English for everyone (UserLanguage=EN)
+- Country of residence: NOT TESTED separately
+    phi=0.86 with first-language English; near-duplicate construct - testing both double-counts one construct and inflates the family; UK-vs-not reported descriptively only
+- Employment status: TEST (part-time vs full-time)
+    FT 115 / PT 53; everyone employed (screener)
+    note: PT share uneven across arms by chance (google 22% vs unrestricted 42%)
+- Ethnicity: TEST (White vs non-White, crude)
+    White 115 vs non-White 50 (Black 34, Asian 8, Mixed 6, Other 2; 3 'prefer not to say' -> missing); single minority groups too sparse to test alone (Black 15/10/9 per arm), so a crude binary; flagged as heterogeneous-composition collapse
+- Current job role: TEST only as IT/software/data collapse
+    88 distinct roles; explicit list of 13 tech/data roles -> tech 39 vs other 129; full taxonomy far too high-cardinality at this n
+- Prolific total approvals: TEST (log10; auxiliary, not strictly demographic)
+    median 293, IQR 145-572; platform-experience proxy; heavily right-skewed -> log10
+- Student status: NOT TESTED
+    only 20 students (~6-9 per arm); interaction MDES would be enormous; descriptive means only
+- Country of birth / Nationality: NOT TESTED
+    high-cardinality (33 countries) and redundant with residence/first-language
+- Fluent languages: NOT TESTED
+    multilingualism collinear with first-language English; heterogeneous combinations
+- Authenticity check: Bots: NOT TESTABLE / NO EXCLUSIONS
+    all non-missing values are 'high' (no variance); nobody to exclude
+- Submission ids / timestamps / time-taken / completion code / status: NOT MODERATORS
+    tracking metadata, not demographics (status used as sensitivity filter)
+
+Descriptive-only subgroup means (unadjusted immediate accuracy %, no tests):
+  student:
+                      acc%   n
+arm          student          
+google       0.0      74.6  48
+             1.0      69.8   6
+socratic     0.0      77.5  50
+             1.0      65.0   5
+unrestricted 0.0      71.8  50
+             1.0      67.4   9
+  UK resident:
+                     acc%   n
+arm          uk_res          
+google       0.0     77.3  22
+             1.0     71.9  32
+socratic     0.0     79.2  27
+             1.0     73.7  28
+unrestricted 0.0     73.1  29
+             1.0     69.2  30
+  Black (vs White):
+                    acc%   n
+arm          black          
+google       0.0    75.0  39
+             1.0    71.7  15
+socratic     0.0    78.4  44
+             1.0    65.6  10
+unrestricted 0.0    72.5  48
+             1.0    62.5   9
+
+### 3a. Arm x moderator interactions on immediate unaided accuracy  (PRIMARY exploratory family)
+
+Interaction summary (accuracy, covariate-adjusted, HC3; int = difference in arm effect, pp):
+                                moderator   n  min_cell  int_UxM_pp  ci_lo  ci_hi  int_SxM_pp  omnibus_p   bh_q  fl_perm_p  mdes80_UxM_pp
+                      Age (per +10 years) 168        54        -0.1   -8.5    8.2         6.8     0.0622 0.4356     0.0565           11.9
+                     Sex (female vs male) 167        17        -3.2  -16.1    9.6         2.3     0.7202 0.9899        NaN           18.4
+        First language English (vs other) 168        26        -0.3  -12.5   11.8        -0.9     0.9899 0.9899        NaN           17.3
+      Employment (part-time vs full-time) 168        12         1.8  -10.8   14.4        -2.6     0.8530 0.9899        NaN           18.0
+    Ethnicity (non-White vs White, crude) 165        15         2.4  -13.7   18.6        -3.5     0.7962 0.9899        NaN           23.1
+   IT/software/data occupation (vs other) 168        13         0.8  -16.5   18.2        -7.5     0.5314 0.9899        NaN           24.8
+Prolific approvals (per log10 unit, aux.) 168        54         4.0   -8.3   16.4         8.3     0.4314 0.9899        NaN           17.6
+
+Expected false positives at raw p<.05 across 7 tests under the global null: ~0.35
+
+Simple effects (arm contrast within moderator level; pp, 95% CI):
+  Age (per +10 years):
+    U-G @ age~29         -2.7 pp [ -11.7,   +6.3]  p=0.5566
+    S-G @ age~29         -2.8 pp [  -9.5,   +3.8]  p=0.4049
+    U-G @ age~42         -2.9 pp [ -11.2,   +5.4]  p=0.4964
+    S-G @ age~42         +6.0 pp [  -2.5,  +14.5]  p=0.1643
+  Sex (female vs male):
+    U-G @ no             -2.3 pp [ -10.5,   +5.9]  p=0.5758
+    S-G @ no             +1.2 pp [  -6.8,   +9.3]  p=0.7614
+    U-G @ yes            -5.6 pp [ -15.6,   +4.5]  p=0.2765
+    S-G @ yes            +3.5 pp [  -5.4,  +12.5]  p=0.4409
+  First language English (vs other):
+    U-G @ no             -3.4 pp [ -10.7,   +3.8]  p=0.3524
+    S-G @ no             +2.2 pp [  -4.1,   +8.4]  p=0.4924
+    U-G @ yes            -3.8 pp [ -13.7,   +6.1]  p=0.4558
+    S-G @ yes            +1.3 pp [  -9.3,  +11.9]  p=0.8087
+  Employment (part-time vs full-time):
+    U-G @ no             -5.2 pp [ -12.2,   +1.8]  p=0.1422
+    S-G @ no             +2.2 pp [  -4.8,   +9.3]  p=0.5311
+    U-G @ yes            -3.4 pp [ -14.3,   +7.4]  p=0.5347
+    S-G @ yes            -0.3 pp [ -12.2,  +11.5]  p=0.9545
+  Ethnicity (non-White vs White, crude):
+    U-G @ no             -4.3 pp [ -11.0,   +2.4]  p=0.2094
+    S-G @ no             +2.7 pp [  -3.6,   +9.1]  p=0.3985
+    U-G @ yes            -1.9 pp [ -16.7,  +13.0]  p=0.8046
+    S-G @ yes            -0.8 pp [ -14.6,  +13.0]  p=0.9123
+  IT/software/data occupation (vs other):
+    U-G @ no             -3.9 pp [ -10.6,   +2.7]  p=0.2478
+    S-G @ no             +3.5 pp [  -3.3,  +10.3]  p=0.3132
+    U-G @ yes            -3.1 pp [ -19.3,  +13.1]  p=0.7083
+    S-G @ yes            -4.0 pp [ -17.5,   +9.6]  p=0.5648
+  Prolific approvals (per log10 unit, aux.):
+    U-G @ log10appr~2.16   -4.7 pp [ -12.8,   +3.3]  p=0.2450
+    S-G @ log10appr~2.16   -0.3 pp [  -6.6,   +6.0]  p=0.9218
+    U-G @ log10appr~2.76   -2.3 pp [  -9.5,   +4.8]  p=0.5194
+    S-G @ log10appr~2.76   +4.6 pp [  -3.8,  +13.0]  p=0.2806
+
+Descriptive arm x level unadjusted accuracy means (%, n) for tested binaries:
+  Sex (female vs male):
+                         acc%   n
+    arm          female          
+    google       0.0     75.2  26
+                 1.0     72.9  27
+    socratic     0.0     76.2  38
+                 1.0     76.8  17
+    unrestricted 0.0     74.1  36
+                 1.0     66.3  23
+  First language English (vs other):
+                             acc%   n
+    arm          english_l1          
+    google       0.0         76.9  26
+                 1.0         71.4  28
+    socratic     0.0         79.9  28
+                 1.0         72.7  27
+    unrestricted 0.0         74.6  28
+                 1.0         67.9  31
+  Employment (part-time vs full-time):
+                           acc%   n
+    arm          parttime          
+    google       0.0       72.6  42
+                 1.0       79.2  12
+    socratic     0.0       76.1  39
+                 1.0       77.0  16
+    unrestricted 0.0       69.7  34
+                 1.0       73.0  25
+  Ethnicity (non-White vs White, crude):
+                           acc%   n
+    arm          nonwhite          
+    google       0.0       75.3  37
+                 1.0       71.3  17
+    socratic     0.0       78.8  36
+                 1.0       70.5  18
+    unrestricted 0.0       72.0  42
+                 1.0       67.9  15
+  IT/software/data occupation (vs other):
+                           acc%   n
+    arm          tech_job          
+    google       0.0       74.1  41
+                 1.0       74.0  13
+    socratic     0.0       77.4  42
+                 1.0       73.1  13
+    unrestricted 0.0       70.0  46
+                 1.0       75.0  13
+
+### 3b. Arm x moderator interactions on "I don't know" abstention rate  (SECONDARY exploratory family)
+
+Interaction summary (IDK abstention, covariate-adjusted, HC3):
+                                moderator   n  int_UxM_pp  ci_lo  ci_hi  int_SxM_pp  omnibus_p   bh_q  fl_perm_p
+                      Age (per +10 years) 168         3.3   -1.6    8.2        -0.9     0.1802 0.6306        NaN
+                     Sex (female vs male) 167         1.4   -6.4    9.1        -0.2     0.9313 0.9313        NaN
+        First language English (vs other) 168         7.1   -0.1   14.3         2.9     0.1372 0.6306        NaN
+      Employment (part-time vs full-time) 168         1.9   -6.4   10.1        -1.5     0.7102 0.9313        NaN
+    Ethnicity (non-White vs White, crude) 165         2.0   -6.1   10.0         4.7     0.2736 0.6385        NaN
+   IT/software/data occupation (vs other) 168         0.3  -10.6   11.1         1.5     0.9156 0.9313        NaN
+Prolific approvals (per log10 unit, aux.) 168         3.1   -5.4   11.5         1.9     0.6458 0.9313        NaN
+
+### 4. Sensitivities
+(a) unadjusted-spec omnibus p is reported alongside the adjusted one in the results CSV (column omnibus_p_unadj_spec); differences were notable - see CSV.
+(b) Prolific status: 2 non-APPROVED (AWAITING REVIEW) in the matched set; re-running the suggestive moderators without them:
+    Age (per +10 years): UxM -0.1 pp [-8.5, +8.3], omnibus p=0.0585 (n=166)
+(c) cross-adjusted check for any suggestive moderator (adding the other tested moderators' main effects + their arm interactions is over-parameterised at this n; instead each suggestive moderator is re-fit adding the MAIN effects of the other six):
+    Age (per +10 years): UxM -0.2 pp [-8.8, +8.4], omnibus p=0.0527 (n=164)
+
+Saved: analysis_dataset.csv, triage_decisions.csv, moderation_results_*.csv, subgroup_effects_*.csv under /Users/brunokneffel/Downloads/demographic_moderation_2026-07-24
+==============================================================================
+EXPLORATORY, NON-PRE-REGISTERED, HYPOTHESIS-GENERATING ANALYSIS ONLY
+Not confirmatory; does not bear on the trial's pre-registered conclusions.
+==============================================================================

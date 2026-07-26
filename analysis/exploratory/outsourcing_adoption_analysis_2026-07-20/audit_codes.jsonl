@@ -1,0 +1,36 @@
+{"cell":3,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":12,"llm":"C","form":"clean_option","map":null,"conf":"high","ex":"T2: c) the slopes of the edges is too high"}
+{"cell":14,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"So the answer is D."}
+{"cell":20,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The correct answer is D."}
+{"cell":29,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D (explicitly rejects C as non-adjacent)"}
+{"cell":52,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"T2: D"}
+{"cell":61,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"So the answer is D."}
+{"cell":68,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The right answer is D."}
+{"cell":76,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"So the answer is D."}
+{"cell":82,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"D."}
+{"cell":84,"llm":"C","form":"clean_option","map":null,"conf":"high","ex":"c. the fever or malaria... (letter contradicts its own middle/right-swap reasoning)"}
+{"cell":88,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":97,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The correct answer is D."}
+{"cell":121,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"T3: D. There is nothing wrong with this chart"}
+{"cell":124,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":133,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":134,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":146,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The correct answer is D."}
+{"cell":163,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T4: B. The axis titles are effectively missing/unclear"}
+{"cell":170,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T2: It is B - the second plot from the left."}
+{"cell":175,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T2: B) B"}
+{"cell":176,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"D"}
+{"cell":189,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":197,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":211,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"So the answer is D."}
+{"cell":224,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The correct answer is D."}
+{"cell":237,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":247,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Answer: D"}
+{"cell":277,"llm":"C","form":"clean_option","map":null,"conf":"high","ex":"C. (user restricted the menu to A,B or C; correct D not offered)"}
+{"cell":280,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"b) the axis ticks are missing."}
+{"cell":290,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T2: B."}
+{"cell":308,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"That matches B ... the answer is B (with requested explanation)"}
+{"cell":315,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"So the answer is D."}
+{"cell":316,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T2: b) The carbohydrate(g) axis is flipped"}
+{"cell":324,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"So: D."}
+{"cell":338,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"So the answer is D."}

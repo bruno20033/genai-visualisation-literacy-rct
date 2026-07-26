@@ -1,0 +1,70 @@
+==============================================================================
+EXPLORATORY OUTSOURCING DOSE-RESPONSE  (immediate wave, n=188 sample of D15)
+All p two-sided. OLS + HC3. Covariates: minivlat_c + aiuse_c.
+==============================================================================
+
+--- Dose descriptives (Unrestricted arm, n=66) ---
+n_FO of 8: mean 5.32, SD 2.71; distribution {0: 6, 1: 2, 2: 3, 3: 6, 4: 9, 5: 4, 6: 6, 7: 7, 8: 23}
+frac_fo (n_FO/8): mean 0.665, SD 0.338
+engaged 0 items (never used assistant): n=5 (< 10 -> report descriptively only)
+acc SD (U arm): 0.176; post-test acc mean 0.700
+
+--- Selection diagnostics: who outsources? ---
+frac_fo ~ baseline Mini-VLAT: r=-0.117 (p=0.350)
+frac_fo ~ baseline GenAI use: r=+0.017 (p=0.891)
+
+--- Sanity: reproduce the prior binary split (pure-FO vs rest) ---
+pure outsourcers n=51 acc=68.8% | others n=15 acc=74.2% | diff=-5.4pp, Welch p=0.32   (prior session: 68.8 vs 74.2, p=.32)
+
+==============================================================================
+STRAND A - content-coded dose: acc ~ frac_fo   (Unrestricted, n=66)
+==============================================================================
+Pearson r = -0.200 (p=0.107); Spearman rho = -0.243 (p=0.050)
+UNADJUSTED : full-range slope -10.41pp [-25.15, +4.34], p=0.167  (per outsourced item: -1.30pp)
+ADJUSTED   : full-range slope -9.49pp [-24.27, +5.30], p=0.208  (per outsourced item: -1.19pp)
+SENSITIVITY (dose among engaged, n=61): -17.27pp [-31.31, -3.22], p=0.016
+D17-coder-convention sensitivity: 8 disputed cells recoded VO->FO
+  under D17 codes: adjusted slope -9.54pp [-25.02, +5.94], p=0.227
+
+Never-engaged subgroup (n=5, BELOW the n>=10 reporting floor):
+  acc=66.2% (control arm mean 74.5%), baseline Mini-VLAT +1.34 above centre - descriptive only, no inference
+
+Leave-one-out fragility:
+  adjusted frac_fo   : slope [-13.2, -7.2]pp, p [0.059, 0.322]  (sign-stable, never significant)
+  engaged-dose       : slope [-20.9, -14.6]pp, p [0.007, 0.078]  (NOT robust: p crosses .05; only 10 non-fully-outsourcing participants identify it)
+  engaged non-pure n=10 acc=78.1% vs pure n=51 acc=68.8%
+  coherence: mean dose 0.665 x unadjusted slope -10.41 = -6.9pp; observed adjusted U-G arm effect -4.83pp (same order: the dose model prices the arm deficit consistently)
+
+==============================================================================
+STRAND B - latency dose: acc ~ mean log(adoption latency)
+==============================================================================
+Unrestricted (n=61): Pearson r = +0.138 (p=0.290)
+UNADJUSTED : +4.08pp per log-unit [-2.15, +10.31], p=0.199  (per doubling of Delta: +2.83pp)
+ADJUSTED   : +4.78pp per log-unit [-3.45, +13.00], p=0.255  (per doubling of Delta: +3.31pp)
+SAP-variant (direct-adoption rate 0-1): -10.07pp full-range [-41.91, +21.77], p=0.535
+
+Specificity probe - the same slope in the other arms (Delta = post-tool deliberation there, not answer adoption):
+  socratic     (n=61): r=+0.081; adjusted +3.06pp/log-unit [-5.80, +11.91], p=0.499
+  google       (n=54): r=+0.399; adjusted +7.49pp/log-unit [+3.03, +11.95], p=0.001
+  pooled LLM arms (n=122, arm fixed effect): +4.26pp/log-unit [-1.28, +9.79], p=0.132
+
+Convergent validity of the two dose measures (within U):
+  r(frac_fo, mean_logd) = -0.139 (p=0.285) - weak: content and latency capture related but distinct facets
+
+==============================================================================
+STRAND C - within-person: Bloom-category practice dose vs category accuracy
+==============================================================================
+post-test items matched to a practice category: 1056 (= 66 x 16); participants with within-person dose variance: 36/66
+item correct ~ category dose (0-2) + person FE + category FE, participant-clustered:
+  -5.51pp per outsourced practice item in the same Bloom category [-11.55, +0.52], p=0.074
+  (person-level confounders cancel; within-person selection into which
+   categories to outsource does not - direction of that bias unknown)
+  practice item order: RANDOMISED across participants (positions per item: [8])
+
+==============================================================================
+POWER / RESOLUTION (two-sided alpha=.05, 80% power)
+==============================================================================
+  content dose, n=66        : detectable |rho| >= 0.34
+  latency U-arm, n=61       : detectable |rho| >= 0.35
+  pooled LLM arms, n=123    : detectable |rho| >= 0.25
+  in slope terms (content dose): 80%-detectable full-range slope ~= 17.6pp (SD_acc=0.176, SD_dose=0.338)

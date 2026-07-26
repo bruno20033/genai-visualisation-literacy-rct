@@ -1,0 +1,340 @@
+{"cell":0,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... matches the 2nd image"}
+{"cell":1,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed/inverted"}
+{"cell":2,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":4,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":5,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the option that says chart (b) has the carbohydrate axis reversed/flipped"}
+{"cell":6,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D"}
+{"cell":7,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"It is the malaria cases and poverty rate that have been reordered"}
+{"cell":8,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the 2nd scatterplot"}
+{"cell":9,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":10,"llm":"A","form":"clean_option","map":null,"conf":"high","ex":"1) color legend not properly labeled"}
+{"cell":11,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":13,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes - this is a parallel coordinates plot."}
+{"cell":15,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"Please upload the chart and the answer choices."}
+{"cell":16,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"carbohydrate has been flipped/inverted (0 at the top...)"}
+{"cell":17,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"far too cluttered/overplotted (matches no option)"}
+{"cell":18,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"The correct choice is the second scatterplot"}
+{"cell":19,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the 2nd scatterplot ... image 2"}
+{"cell":21,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":22,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":23,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the middle and right variables (Poverty <-> Malaria 2013)"}
+{"cell":24,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":25,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter; secondary: generic title (matches no option)"}
+{"cell":26,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":27,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) reorders the variables (last two swapped)"}
+{"cell":28,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":30,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"carbohydrate axis is reversed/inverted"}
+{"cell":31,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":32,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"that is the second scatterplot from the left"}
+{"cell":33,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter + colors low contrast (matches no option)"}
+{"cell":34,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter; generic title; normalized axes (no option match)"}
+{"cell":35,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"second image from the left ... 2nd scatterplot"}
+{"cell":36,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...characteristic of a parallel coordinates plot"}
+{"cell":37,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":38,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"I need to see the chart first."}
+{"cell":39,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":40,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"I need to see charts (a) and (b) first."}
+{"cell":41,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"Please upload the parallel coordinates plot and the candidate scatterplot images."}
+{"cell":42,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"I need to see charts (a) and (b) first."}
+{"cell":43,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"rearrange the middle and right axes (Poverty <-> Malaria 2013)"}
+{"cell":44,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":45,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...exactly a parallel coordinates plot."}
+{"cell":46,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":47,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed/inverted"}
+{"cell":48,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"second image from the left ... the 2nd plot"}
+{"cell":49,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"severe overplotting / clutter (matches no option)"}
+{"cell":50,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":51,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":53,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the 2nd scatterplot ... Second image from the left."}
+{"cell":54,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped (Poverty <-> Malaria 2013)"}
+{"cell":55,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate (g) axis is reversed/inverted"}
+{"cell":56,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"too cluttered/overplotted (matches no option)"}
+{"cell":57,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":58,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":59,"llm":"B","form":"descriptive","map":"nontrivial","conf":"med","ex":"T2: choose the answer that says axes arranged in a different order (T1 detail uniquely implies B)"}
+{"cell":60,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"chart (b) flips the carbohydrate scale"}
+{"cell":62,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":63,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":64,"llm":"D","form":"descriptive","map":"nontrivial","conf":"high","ex":"The 4th scatterplot from the left ... the 4th image."}
+{"cell":65,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":66,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter; generic title (matches no option)"}
+{"cell":67,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":69,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":70,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter + colors overlap (matches no option)"}
+{"cell":71,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"So the correct answer is: Yes."}
+{"cell":72,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped (Poverty <-> Malaria 2013)"}
+{"cell":73,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"severely overplotted / spaghetti plot (matches no option)"}
+{"cell":74,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"carbohydrate axis reversed/inverted"}
+{"cell":75,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left (stated twice)"}
+{"cell":77,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":78,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is: nothing wrong with the chart."}
+{"cell":79,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":80,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"chart (b) has the carbohydrate axis reversed"}
+{"cell":81,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":83,"llm":null,"form":"hedged_multiple","map":null,"conf":"med","ex":"T2 'B - too cluttered' then T3 'I don't know what A, B, or C say' (letter retracted)"}
+{"cell":85,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... So the answer is: the second scatterplot."}
+{"cell":86,"llm":"A","form":"clean_option","map":null,"conf":"high","ex":"T3: The best option is: the color legend is not properly labeled"}
+{"cell":87,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... the 2nd image"}
+{"cell":89,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"severe overplotting (matches no option)"}
+{"cell":90,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"carbohydrate axis reversed/inverted"}
+{"cell":91,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":92,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"T2: the second image ... second scatterplot"}
+{"cell":93,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":94,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped (Poverty <-> Malaria 2013)"}
+{"cell":95,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":96,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped"}
+{"cell":98,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"normalization unclear + overplotting (matches no option)"}
+{"cell":99,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":100,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...a parallel coordinates plot."}
+{"cell":101,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle scatterplot ... the second (middle) image"}
+{"cell":102,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"chart (b) reverses the carbohydrate axis"}
+{"cell":103,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...characteristic of a parallel coordinates plot."}
+{"cell":104,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":105,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"carbohydrate axis is reversed/inverted"}
+{"cell":106,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second image ... the 2nd option"}
+{"cell":107,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":108,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. It is a parallel coordinates plot. (reaffirmed after 'u sure?')"}
+{"cell":109,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"clutter, then normalized axes, then colors blend - none matches a listed option"}
+{"cell":110,"llm":null,"form":"descriptive","map":"unmappable","conf":"med","ex":"T2 'axis titles are also a problem (inconsistent)' - but titles exist, so not option B (missing); no option matches"}
+{"cell":111,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped; T2 reaffirms axis order changed"}
+{"cell":112,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":113,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting / spaghetti chart (matches no option)"}
+{"cell":114,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":115,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"cluttered / overplotting (matches no option)"}
+{"cell":116,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":117,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes (reaffirmed: 'Yes, I'm sure.')"}
+{"cell":118,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":119,"llm":"C","form":"clean_option","map":null,"conf":"high","ex":"Yes - C (the third scatterplot) matches ... So C is correct. (confirms user candidate)"}
+{"cell":120,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting; too cluttered to be readable (matches no option)"}
+{"cell":122,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"severely overplotted (matches no option)"}
+{"cell":123,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":125,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the second scatterplot from the left."}
+{"cell":126,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is flipped/inverted"}
+{"cell":127,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":128,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped (Poverty <-> Malaria 2013)"}
+{"cell":129,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting (matches no option)"}
+{"cell":130,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... the 2nd image"}
+{"cell":131,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped"}
+{"cell":132,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":135,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":136,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"too cluttered / overplotting (matches no option; stated twice)"}
+{"cell":137,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":138,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second image from the left ... second scatterplot from the left"}
+{"cell":139,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting + unclear scales (matches no option)"}
+{"cell":140,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"rearranging the middle and right axes"}
+{"cell":141,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"T2: Yes - the carbohydrate (g) axis is flipped/inverted (confirms option text)"}
+{"cell":142,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped"}
+{"cell":143,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":144,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"chart (b) flips the carbohydrate axis"}
+{"cell":145,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"The correct choice is the second scatterplot ... the second image"}
+{"cell":147,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"cluttered with too many overlapping lines (matches no option)"}
+{"cell":148,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":149,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"badly overplotted / too cluttered (matches no option)"}
+{"cell":150,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped"}
+{"cell":151,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter + similar colors etc (matches no option)"}
+{"cell":152,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":153,"llm":"B","form":"descriptive","map":"nontrivial","conf":"med","ex":"guided elimination: T2 legend correct, T3 axis titles not complete enough, T4 data present -> implies titles option"}
+{"cell":154,"llm":"C","form":"descriptive","map":"nontrivial","conf":"high","ex":"The third scatterplot from the left ... the 3rd image."}
+{"cell":155,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Chart D."}
+{"cell":156,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"T2: This is a parallel coordinates plot. So yes"}
+{"cell":157,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is flipped/inverted"}
+{"cell":158,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"matches the second scatterplot from the left ... the second image"}
+{"cell":159,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter + extras (matches no option)"}
+{"cell":160,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":161,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"those two axes are swapped (Poverty <-> Malaria 2013)"}
+{"cell":162,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":164,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"carbohydrate axis reversed/inverted"}
+{"cell":165,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":166,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the 2nd scatterplot. T2: The 2nd scatterplot image"}
+{"cell":167,"llm":"B","form":"descriptive","map":"nontrivial","conf":"med","ex":"T2 endorses user suggestion: 'axis titles/labels are incomplete because the scales and units are missing'"}
+{"cell":168,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes - the color legend is not properly explained/labeled (confirms user candidate)"}
+{"cell":169,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":171,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":172,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":173,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis has been flipped vertically (stated twice)"}
+{"cell":174,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"heavy overplotting/clutter (matches no option; stated twice)"}
+{"cell":177,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"Too many overlapping lines make it cluttered (matches no option)"}
+{"cell":178,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes."}
+{"cell":179,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the last two: ...Poverty 2006 -> Malaria 2013"}
+{"cell":180,"llm":"A","form":"clean_option","map":null,"conf":"high","ex":"if A corresponds to Yes, then A is correct (confirms user candidate)"}
+{"cell":181,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"Yes - the carbohydrate axis is reversed/inverted (confirms user candidate B)"}
+{"cell":182,"llm":"C","form":"clean_option","map":null,"conf":"high","ex":"Yes - C looks like the best choice ... So C is the correct answer. (confirms user candidate)"}
+{"cell":183,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T2: So B -> Yes - B."}
+{"cell":184,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"Yes - (b) looks like the chart where the middle and right axes are swapped (confirms candidate B)"}
+{"cell":185,"llm":"A","form":"clean_option","map":null,"conf":"high","ex":"if A = Yes, then A is correct (confirms user candidate)"}
+{"cell":186,"llm":"A","form":"clean_option","map":null,"conf":"med","ex":"T3: If A says the color legend is unclear/inconsistent ..., then yes, A. (conditional, user-steered)"}
+{"cell":187,"llm":null,"form":"hedged_multiple","map":null,"conf":"high","ex":"eliminates B (titles present) and A (legend properly labeled) without picking an option"}
+{"cell":188,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the last two axes are swapped"}
+{"cell":190,"llm":"A","form":"clean_option","map":null,"conf":"high","ex":"T2: The best answer is: the color legend is not properly labeled."}
+{"cell":191,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":192,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":193,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second image from the left ... the 2nd scatterplot"}
+{"cell":194,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed/inverted"}
+{"cell":195,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":196,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting + hard-to-interpret + unclear scales (matches no option)"}
+{"cell":198,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the middle and right variables"}
+{"cell":199,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":200,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed/inverted"}
+{"cell":201,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":202,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the 2nd image from the left."}
+{"cell":203,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"concept definition of parallel coordinates only"}
+{"cell":204,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"concept answer about axes being parallel; no item recommendation"}
+{"cell":205,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"concept answer about slopes; no item recommendation"}
+{"cell":206,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"concept answer defining an axis; no item recommendation"}
+{"cell":207,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"concept answers about colour legends and gradients; no item recommendation"}
+{"cell":208,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":209,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T3: so answer is b? -> Yes - B."}
+{"cell":210,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":212,"llm":"B","form":"descriptive","map":"nontrivial","conf":"med","ex":"T3: pick the letter that matches 'same data, different axis order' (T1 axis lists imply B)"}
+{"cell":213,"llm":"C","form":"descriptive","map":"trivial","conf":"med","ex":"T5: are the slope of the edges too high -> Yes - that could be considered a problem (user-steered)"}
+{"cell":214,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed/inverted"}
+{"cell":215,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"T2: too cluttered/overlapping to be readable (matches no option)"}
+{"cell":216,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":217,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"The second scatterplot from the left ... the 2nd image"}
+{"cell":218,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is inverted"}
+{"cell":219,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":220,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the last two variables"}
+{"cell":221,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":222,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":223,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"chart (b) flips the carbohydrate axis"}
+{"cell":225,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"clutter; letter refused twice without option texts (user sent only 'a,b,c,d,e')"}
+{"cell":226,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"The correct scatterplot is the second image"}
+{"cell":227,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...the correct answer is True."}
+{"cell":228,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the last two variables"}
+{"cell":229,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"very cluttered/overplotted (matches no option)"}
+{"cell":230,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the second scatterplot from the left."}
+{"cell":231,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":232,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":233,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":234,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T2: Is that B in this? -> Yes - B."}
+{"cell":235,"llm":"A","form":"clean_option","map":null,"conf":"high","ex":"T2: Best choice: color legend is not properly labeled."}
+{"cell":236,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"The difference is that the carbohydrate axis is flipped."}
+{"cell":238,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes - the color legend looks wrong ... incorrect/inconsistent (confirms user candidate)"}
+{"cell":239,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...characteristic of a parallel coordinates plot."}
+{"cell":240,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":241,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes - the right answer is True."}
+{"cell":242,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"chart (b) has the carbohydrate axis reversed"}
+{"cell":243,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"Overplotting (matches no option; stated twice)"}
+{"cell":244,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped"}
+{"cell":245,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"So the answer is: the second image."}
+{"cell":246,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...characteristic of a parallel coordinates plot."}
+{"cell":248,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"too cluttered/overlapping to interpret (matches no option)"}
+{"cell":249,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":250,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":251,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the second scatterplot from the left."}
+{"cell":252,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the order of the middle and right axes is swapped"}
+{"cell":253,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":254,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed/inverted"}
+{"cell":255,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":256,"llm":"C","form":"clean_option","map":null,"conf":"high","ex":"Yes - C is the best choice. (confirms bare user candidate 'c')"}
+{"cell":257,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"Could you share the chart image...? I can't determine the answer yet."}
+{"cell":258,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped"}
+{"cell":259,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":260,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":261,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"severe overplotting/clutter (matches no option)"}
+{"cell":262,"llm":null,"form":"descriptive","map":"unmappable","conf":"med","ex":"validates unseen deictic candidate as 'cluttered/overplotted' - not a listed option"}
+{"cell":263,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot (confirms unstated candidate)"}
+{"cell":264,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"T3: 'hard to read / too cluttered' is very likely the issue (matches no option)"}
+{"cell":265,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"Yes - the carbohydrate axis reversed/inverted (confirms candidate)"}
+{"cell":266,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"if you picked the second scatterplot from the left, that is right"}
+{"cell":267,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot. (confirms candidate)"}
+{"cell":268,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"Best: D. Possible alternative but weaker: C."}
+{"cell":269,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...characteristic of a parallel coordinates plot."}
+{"cell":270,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":271,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"far too cluttered / overplotting (matches no option)"}
+{"cell":272,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the second scatterplot from the left."}
+{"cell":273,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"T2: Select the 2nd scatterplot from the left."}
+{"cell":274,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes swapped"}
+{"cell":275,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...a parallel coordinates plot."}
+{"cell":276,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate (g) axis is reversed"}
+{"cell":278,"llm":"B","form":"clean_option","map":null,"conf":"high","ex":"T2: if you must pick from those options, b) the axis title is missing is the closest (user-mangled options)"}
+{"cell":279,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"T2: Yes."}
+{"cell":281,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"too cluttered/overplotted (matches no option)"}
+{"cell":282,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":283,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":284,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"chart (b) has the carbohydrate axis reversed/inverted"}
+{"cell":285,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":286,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...characteristic of a parallel coordinates plot."}
+{"cell":287,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"that is the second scatterplot from the left."}
+{"cell":288,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped"}
+{"cell":289,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...characteristic of a parallel coordinates plot."}
+{"cell":291,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":292,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":293,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the middle and right axes"}
+{"cell":294,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":295,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"T2: The carbohydrate axis. The fat axis looks the same in both charts."}
+{"cell":296,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":297,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis in chart (b) is reversed/inverted"}
+{"cell":298,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped"}
+{"cell":299,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":300,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"No - the best choice is D. (corrects user candidate C)"}
+{"cell":301,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":302,"llm":"A","form":"descriptive","map":"trivial","conf":"low","ex":"T2 flip-flop: 'A is not the best choice' then 'if that's what A says, then yes, A would be correct'"}
+{"cell":303,"llm":"A","form":"descriptive","map":"trivial","conf":"med","ex":"Yes - the likely issue is the legend/color scale (validates candidate; also pushes clutter as stronger)"}
+{"cell":304,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second image from the left ... the 2nd scatterplot"}
+{"cell":305,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting (matches no option)"}
+{"cell":306,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... the second image"}
+{"cell":307,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":309,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. (reaffirmed under epistemic probe)"}
+{"cell":310,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":311,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":312,"llm":null,"form":"descriptive","map":"unmappable","conf":"med","ex":"misreads bare 'a' as chart (a); describes cluster separation - no option content"}
+{"cell":313,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":314,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"T1 scaling/clutter (no option); T2 says legend IS properly labeled (excludes A)"}
+{"cell":317,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"needs the images (twice); no recommendation"}
+{"cell":318,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":319,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... the 2nd image"}
+{"cell":320,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is inverted/reversed"}
+{"cell":321,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":322,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the last two variables"}
+{"cell":323,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":325,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"axes not on same meaningful scale + clutter (matches no option)"}
+{"cell":326,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":327,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":328,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":329,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"The correct choice is the second scatterplot from the left ... the 2nd plot"}
+{"cell":330,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":331,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed"}
+{"cell":332,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":333,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":334,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis ... is reversed/inverted"}
+{"cell":335,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"T4: 'Nothing is wrong with the chart' ... is likely the best multiple-choice answer"}
+{"cell":336,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"T2: Yes - the legend colors don't match the line colors (endorses user candidate A)"}
+{"cell":337,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"rearranging the middle and right axes"}
+{"cell":339,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":340,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a plot - specifically a parallel coordinates plot."}
+{"cell":341,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... the 2nd one"}
+{"cell":342,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second image from the left"}
+{"cell":343,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":344,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot"}
+{"cell":345,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped"}
+{"cell":346,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is flipped/inverted"}
+{"cell":347,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":348,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting + normalization unclear (matches no option)"}
+{"cell":349,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"clutter + normalized axes (matches no option)"}
+{"cell":350,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"please upload the chart image and the question/options"}
+{"cell":351,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"Overplotting / clutter (matches no option; stated twice)"}
+{"cell":352,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":353,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. This is a parallel coordinates plot."}
+{"cell":354,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the middle and right axes are swapped"}
+{"cell":355,"llm":"B","form":"descriptive","map":"nontrivial","conf":"med","ex":"T2: choose whichever one mentions that inversion (letter unresolved by assistant)"}
+{"cell":356,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"clutter; T2: can't tell which letter without seeing the choices"}
+{"cell":357,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"The 2nd scatterplot from the left (stated twice)"}
+{"cell":358,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"T3: is it yes or no? -> Yes."}
+{"cell":359,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}
+{"cell":360,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"Answer: the second scatterplot from the left. T2 confirms"}
+{"cell":361,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...this is a parallel coordinates plot."}
+{"cell":362,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"T3: Yes. The Malaria cases (2013) and Poverty Rate (2006) axes are swapped/reordered."}
+{"cell":363,"llm":"A","form":"descriptive","map":"trivial","conf":"med","ex":"T3: is color legend properly labeled? -> No ... not very clear (T4 softens: not missing, label uninformative)"}
+{"cell":364,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":365,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second scatterplot from the left ... the 2nd image"}
+{"cell":366,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"too cluttered / overplotting (matches no option)"}
+{"cell":367,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"the second image ... the second scatterplot"}
+{"cell":368,"llm":null,"form":"no_answer","map":null,"conf":"high","ex":"concept: what a parallel coordinates plot looks like"}
+{"cell":369,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"T2: far too cluttered / overplotting (matches no option)"}
+{"cell":370,"llm":"A","form":"descriptive","map":"trivial","conf":"high","ex":"Yes. ...defining structure of a parallel coordinates plot."}
+{"cell":371,"llm":"C","form":"descriptive","map":"nontrivial","conf":"high","ex":"The 3rd scatterplot from the left ... overall the 3rd image (reasoning describes 2nd-image content)"}
+{"cell":372,"llm":"B","form":"descriptive","map":"nontrivial","conf":"high","ex":"chart (b) swaps the last two variables"}
+{"cell":373,"llm":"D","form":"clean_option","map":null,"conf":"high","ex":"The best choice is D."}
+{"cell":374,"llm":"B","form":"descriptive","map":"trivial","conf":"high","ex":"the carbohydrate axis is reversed"}
+{"cell":375,"llm":null,"form":"descriptive","map":"unmappable","conf":"high","ex":"overplotting/clutter (matches no option)"}

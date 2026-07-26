@@ -1,0 +1,176 @@
+/Users/brunokneffel/Downloads/outsourcing_adoption_analysis_2026-07-20/analysis.py:140: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  adoption_rate=g.adopted.mean(), n_llmwrong=g.apply(lambda x: (x.llm_correct == 0).sum()),
+/Users/brunokneffel/Downloads/outsourcing_adoption_analysis_2026-07-20/analysis.py:141: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  n_rescue=g.apply(lambda x: ((x.llm_correct == 0) & (x.adopted == 0)).sum()),
+/Users/brunokneffel/Downloads/outsourcing_adoption_analysis_2026-07-20/analysis.py:143: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  blind5_share=g.apply(lambda x: x.blind5.sum() / max(x.llm_committed.sum(), 1)),
+/Users/brunokneffel/Downloads/outsourcing_adoption_analysis_2026-07-20/analysis.py:144: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  blind10_share=g.apply(lambda x: x.blind10.sum() / max(x.llm_committed.sum(), 1)),
+/Users/brunokneffel/Downloads/outsourcing_adoption_analysis_2026-07-20/analysis.py:145: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  idk_after_answer=g.apply(lambda x: (x.idk & x.llm_committed).sum()),
+/Users/brunokneffel/Downloads/outsourcing_adoption_analysis_2026-07-20/analysis.py:148: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  med_delta_comm=g.apply(lambda x: x.loc[x.llm_committed, 'adopt_delta_s'].median()),
+/Users/brunokneffel/Downloads/outsourcing_adoption_analysis_2026-07-20/analysis.py:249: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  llmw_pc = af.groupby(['pid', 'cat']).apply(lambda x: float((x.llm_correct == 0).any())).rename('llmwrong_pc')
+==============================================================================
+PARTICIPANT-LEVEL EXPOSURES
+==============================================================================
+n=66; engaged>=1: 61; committed>=2: 57; llm-wrong>=1: 14 participants (18 llm-wrong committed cells)
+adoption_rate: mean 0.895 SD 0.173; mapfail_share: mean 0.382 SD 0.206; blind5_share: mean 0.199 SD 0.252
+Resolution: detectable |rho| ~ 0.339 at n=66 (80% power, two-sided .05); subgroup models smaller n -> larger floor
+
+==============================================================================
+THEME 1: ADOPTION & DISCORDANCE
+==============================================================================
+  T1 adoption rate P(adopted) overall:  +90.17 pp [95% CI  +86.88,  +93.46] p=0.0000 n=295 | 295 committed cells, 59 participants (cluster-robust)
+  T1 discordance rate (=1-adoption):   +9.83 pp [95% CI   +6.54,  +13.12] p=0.0000 n=295 | same cells
+  T1 LLM correctness base rate (committed):  +93.90 pp [95% CI  +90.84,  +96.96] p=0.0000 n=295 | committed cells; per-item table in phase0_merge log
+  T1 adoption rate | FULL_OUTSOURCING:  +89.61 pp [95% CI  +86.20,  +93.01] p=0.0000 n=279 | 59 participants
+  T1 adoption rate | VERIFICATION_ONLY: +100.00 pp [95% CI +100.00, +100.00] p=0.0000 n=16 | 7 participants
+
+answer_form shares of ENGAGED cells (n=376): {'descriptive': 76.6, 'clean_option': 19.1, 'no_answer': 3.7, 'hedged_multiple': 0.5}
+mapping burden (nontrivial+unmappable descriptive): 38.6% of engaged cells
+
+2x2x2 taxonomy (committed cells):
+                                         cells
+llm_correct adopted participant_correct       
+0           0       0                        3
+                    1                        1
+            1       0                       14
+1           0       0                       25
+            1       1                      252
+
+passive success (LLM right, adopted): 252 cells, 58 participants
+threw away a correct answer: 25 cells, 22 participants -> then IDK: 4, wrong option: 21
+inherited the error (LLM wrong, adopted): 14 cells, 11 participants
+rescued (LLM wrong, overridden): 4 cells, 4 participants -> then correct: 1, IDK: 2
+
+answer_form -> non-adoption (committed cells only):
+  T1 adoption diff: desc_trivial - clean:   +3.46 pp [95% CI   -1.93,   +8.84] p=0.2081 n=295 | cluster-robust LPM, clean_option reference
+  T1 adoption diff: desc_nontrivial - clean:  -21.94 pp [95% CI  -32.65,  -11.24] p=0.0001 n=295 | cluster-robust LPM, clean_option reference
+  Fisher (nontrivial vs rest x adopted): OR=0.09 p=0.0000 (ignores clustering)
+  adoption by form:
+                  mean  count
+m3                           
+clean            0.944     72
+desc_nontrivial  0.725     80
+desc_trivial     0.979    143
+
+==============================================================================
+THEME 2: BEHAVIOUR -> POST-TEST ACCURACY
+==============================================================================
+  T2 adoption rate (0->1), adjusted:  +12.81 pp [95% CI  -28.61,  +54.22] p=0.5446 n=57 | n_committed>=2
+  T2 adoption rate (0->1), + fo_share (over-and-above dose):   +8.73 pp [95% CI  -29.98,  +47.44] p=0.6585 n=57 | fo_share coef -14.3pp p=0.149
+    Freedman-Lane permutation p = 0.5212
+  T2 mapping-failure exposure (0->1), adjusted:   -2.25 pp [95% CI  -25.90,  +21.39] p=0.8520 n=59 | n_engaged>=2
+  T2 mapping-failure exposure (0->1), + fo_share (over-and-above dose):   -0.46 pp [95% CI  -21.00,  +20.07] p=0.9648 n=59 | fo_share coef -17.0pp p=0.042
+    Freedman-Lane permutation p = 0.8453
+  T2 blind-copy share (<5s, 0->1), adjusted:   -1.28 pp [95% CI  -27.29,  +24.74] p=0.9233 n=57 | n_committed>=2
+  T2 blind-copy share (<5s, 0->1), + fo_share (over-and-above dose):   -1.61 pp [95% CI  -30.00,  +26.79] p=0.9117 n=57 | fo_share coef -14.9pp p=0.158
+    Freedman-Lane permutation p = 0.9200
+  T2 blind-copy share (<10s, sens), adjusted:   -9.70 pp [95% CI  -29.08,   +9.67] p=0.3263 n=57 | n_committed>=2
+  T2 blind-copy share (<10s, sens), + fo_share (over-and-above dose):   -8.43 pp [95% CI  -30.12,  +13.26] p=0.4463 n=57 | fo_share coef -14.1pp p=0.183
+    Freedman-Lane permutation p = 0.3165
+
+rescue: only 14 participants ever received a wrong committed answer; rescue-rate regression skipped (counts in Theme 3 instead)
+  frac-logit check (mapfail): AME full-range -2.19 pp (coef p=0.835) vs LPM above
+
+Within-person (participant x Bloom category; removes stable traits, NOT within-person targeting):
+  T2 FE: category adoption share -> category accuracy:   -2.35 pp [95% CI  -28.57,  +23.86] p=0.8605 n=171 | 24 participants with within-person exposure variation; within-person perm p=0.8102
+  T2 FE: category mapping-failure share -> category accuracy:   +1.01 pp [95% CI  -13.24,  +15.25] p=0.8896 n=217 | 53 participants with within-person exposure variation; within-person perm p=0.8377
+
+==============================================================================
+THEME 3: LLM-ERROR PROPAGATION
+==============================================================================
+LLM-wrong committed cells: 18 across 14 participants; by item:
+item_id
+pcp_ana_fa_1      3
+pcp_ana_fa_2      4
+pcp_eval_fa_10    5
+pcp_eval_fa_11    5
+pcp_und_fa_2      1
+dtype: int64
+
+case table (practice cell -> that participant's category post-test):
+  P02 pcp_eval_fa_11 llm=C(The slopes of the edges is too high) submitted=C adopted=1.0 -> cat acc 0.50, wrong: sa_6:B; sa_2:B
+  P10 pcp_ana_fa_2 llm=D(D) submitted=D adopted=1.0 -> cat acc 0.75, wrong: sa_1:C
+  P13 pcp_eval_fa_10 llm=D(There is nothing wrong with this chart) submitted=D adopted=1.0 -> cat acc 1.00, wrong: none
+  P13 pcp_und_fa_2 llm=C(The Fever or Malaria cases (%) and Pov) submitted=C adopted=1.0 -> cat acc 1.00, wrong: none
+  P19 pcp_ana_fa_2 llm=C(C) submitted=C adopted=1.0 -> cat acc 1.00, wrong: none
+  P20 pcp_eval_fa_10 llm=D(There is nothing wrong with this chart) submitted=E adopted=0.0 -> cat acc 0.75, wrong: sa_6:B
+  P25 pcp_eval_fa_10 llm=B(The axis titles are missing) submitted=E adopted=0.0 -> cat acc 0.50, wrong: sa_4:B; sa_6:D
+  P25 pcp_ana_fa_2 llm=C(C) submitted=C adopted=1.0 -> cat acc 0.75, wrong: sa_5:A
+  P27 pcp_eval_fa_11 llm=B(The axis titles are missing) submitted=B adopted=1.0 -> cat acc 0.75, wrong: sa_1:D
+  P28 pcp_eval_fa_11 llm=B(The axis titles are missing) submitted=A adopted=0.0 -> cat acc 1.00, wrong: none
+  P30 pcp_ana_fa_1 llm=C(C) submitted=C adopted=1.0 -> cat acc 0.75, wrong: sa_8:B
+  P36 pcp_eval_fa_11 llm=C(The slopes of the edges is too high) submitted=C adopted=1.0 -> cat acc 0.75, wrong: sa_2:F(IDK)
+  P44 pcp_ana_fa_1 llm=C(C) submitted=C adopted=1.0 -> cat acc 0.75, wrong: sa_5:C(IDK)
+  P47 pcp_ana_fa_1 llm=C(C) submitted=C adopted=1.0 -> cat acc 0.75, wrong: sa_8:timeout
+  P47 pcp_eval_fa_10 llm=B(The axis titles are missing) submitted=B adopted=1.0 -> cat acc 0.75, wrong: sa_6:B
+  P47 pcp_eval_fa_11 llm=B(The axis titles are missing) submitted=B adopted=1.0 -> cat acc 0.75, wrong: sa_6:B
+  P57 pcp_eval_fa_10 llm=D(There is nothing wrong with this chart) submitted=D adopted=1.0 -> cat acc 0.50, wrong: sa_6:D; sa_2:B
+  P66 pcp_ana_fa_2 llm=C(C) submitted=D adopted=0.0 -> cat acc 0.75, wrong: sa_6:C(IDK)
+  T3 FE: received wrong LLM answer in category -> category accuracy:   +1.31 pp [95% CI  -14.89,  +17.51] p=0.8741 n=217 | 13 participants with within-person exposure variation; within-person perm p=0.8649
+
+eval post-test option shares, exposed-to-wrong-eval-answer (n=9) vs rest:
+  pcp_eval_sa_1 (key=A):
+answer      A     B     D     E
+exposed                        
+False    0.81  0.02  0.12  0.05
+True     0.89  0.00  0.11  0.00
+  pcp_eval_sa_2 (key=A):
+answer      A     B     C     D     E     F
+exposed                                    
+False    0.82  0.02  0.02  0.05  0.02  0.07
+True     0.67  0.22  0.00  0.00  0.00  0.11
+  pcp_eval_sa_4 (key=A):
+answer      A     B     C     D  timeout
+exposed                                 
+False    0.70  0.19  0.05  0.04     0.02
+True     0.89  0.11  0.00  0.00     0.00
+  pcp_eval_sa_6 (key=A):
+answer      A     B     C     D     E  timeout
+exposed                                       
+False    0.47  0.23  0.05  0.16  0.05     0.04
+True     0.44  0.33  0.00  0.22  0.00     0.00
+
+==============================================================================
+THEME 4: ABSTENTION / LETTER-MAPPING
+==============================================================================
+practice-block IDK submissions: 19 cells, 16 participants
+  after a COMMITTED llm answer: 6 | on mapfail cells: 15 | after clean_option: 1 | on no_answer/hedged cells: 2
+  T4 practice IDK: mapfail cells vs other engaged cells:   +8.61 pp [95% CI   +3.15,  +14.08] p=0.0020 n=376 | cluster-robust LPM over 376 engaged cells
+  Fisher: OR=6.55 p=0.0004 (ignores clustering)
+  T4 mapfail exposure -> post-test IDK share, adjusted:   +3.44 pp [95% CI  -10.89,  +17.78] p=0.6378 n=59 | n_engaged>=2
+  T4 mapfail exposure -> attempted-only accuracy, adjusted:   -0.13 pp [95% CI  -18.85,  +18.59] p=0.9893 n=59 | n_engaged>=2
+  T4 FE: category outsourcing dose (per practice item, 0-2) -> category post-test IDK share:   +4.54 pp [95% CI   +0.36,   +8.73] p=0.0333 n=264 | 36 participants with within-person exposure variation; within-person perm p=0.0429
+  T4 FE: category mapping-failure share -> category post-test IDK share:   +0.33 pp [95% CI   -7.66,   +8.33] p=0.9347 n=217 | 53 participants with within-person exposure variation; within-person perm p=0.9216
+
+==============================================================================
+THEME 5: PROMPT QUALITY (n_regen all 0, n_queries all 0, judge_fidelities empty -> dropped)
+==============================================================================
+cells with reasoning-request language: 5 (1.3%), participants ever: 4
+cells with bare-answer-demand language: 5, participants ever: 2
+verbatim question-paste cells: 183 (48.7%)
+prompt length per engaged cell: median 49 chars, p90 154
+  -> only 4 participants ever asked for reasoning: regression skipped (counts only)
+  T5 slower adoption (per log-unit median Delta, committed cells), + fo_share:   +2.93 pp [95% CI   -5.32,  +11.17] p=0.4869 n=57 | NB prior pass: latency gradient NOT outsourcing-specific (Google slope >= this)
+
+==============================================================================
+THEME 6: COGNITIVE LOAD (4-outcome family; suggestive only)
+==============================================================================
+  NOTE: tlx is all-NaN in imm.pkl -> skipped (routed around, not fabricated)
+  T6 fo_share -> GL_ave (RAW scale units, not pp):   +0.26 pp [95% CI   -1.33,   +1.85] p=0.7498 n=66 | outcome SD=2.17
+  T6 fo_share -> EL_ave (RAW scale units, not pp):   -0.90 pp [95% CI   -2.56,   +0.77] p=0.2909 n=66 | outcome SD=2.36
+  T6 fo_share -> IL_ave (RAW scale units, not pp):   +0.96 pp [95% CI   -0.48,   +2.39] p=0.1909 n=66 | outcome SD=1.89
+  T6 blind-copy share -> GL_ave (RAW units):   -0.79 pp [95% CI   -3.68,   +2.09] p=0.5896 n=57 | germane load; committed>=2
+  mediation sketch (Baron-Kenny style, NO causal ordering): fo_share coef -9.5 pp -> -10.0 pp when GL_ave added; GL_ave coef +2.09 pp/unit (p=0.069)
+
+==============================================================================
+THEME 7: MODERATION (underpowered, hypothesis-generating)
+==============================================================================
+  T7 fo_share x minivlat_c (pp per full dose per +1 SD moderator):   +5.21 pp [95% CI  -15.26,  +25.69] p=0.6178 n=66 | moderator SD=2.67; n=66 cannot resolve interactions
+  T7 fo_share x aiuse_c (pp per full dose per +1 SD moderator):   -5.98 pp [95% CI  -30.15,  +18.19] p=0.6278 n=66 | moderator SD=0.93; n=66 cannot resolve interactions
+  MDES for the literacy interaction ~ 29 pp per SD (2.8 x SE) -> underpowered as stated
+
+wrote participant_behaviour_frame.csv, participant_category_adoption_panel.csv, results_summary.csv | seed 2026 | B = 10000

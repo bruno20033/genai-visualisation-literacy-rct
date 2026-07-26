@@ -1,0 +1,31 @@
+theme,label,est_pp,lo95,hi95,p,n,identified_off
+T1,T1 adoption rate P(adopted) overall,90.17,86.88,93.46,0.0,295,"295 committed cells, 59 participants (cluster-robust)"
+T1,T1 discordance rate (=1-adoption),9.83,6.54,13.12,0.0,295,same cells
+T1,T1 LLM correctness base rate (committed),93.9,90.84,96.96,0.0,295,committed cells; per-item table in phase0_merge log
+T1,T1 adoption rate | FULL_OUTSOURCING,89.61,86.2,93.01,0.0,279,59 participants
+T1,T1 adoption rate | VERIFICATION_ONLY,100.0,100.0,100.0,0.0,16,7 participants
+T1,T1 adoption diff: desc_trivial - clean,3.46,-1.93,8.84,0.2081,295,"cluster-robust LPM, clean_option reference"
+T1,T1 adoption diff: desc_nontrivial - clean,-21.94,-32.65,-11.24,0.0001,295,"cluster-robust LPM, clean_option reference"
+T2,"T2 adoption rate (0->1), adjusted",12.81,-28.61,54.22,0.5446,57,n_committed>=2
+T2,"T2 adoption rate (0->1), + fo_share (over-and-above dose)",8.73,-29.98,47.44,0.6585,57,fo_share coef -14.3pp p=0.149
+T2,"T2 mapping-failure exposure (0->1), adjusted",-2.25,-25.9,21.39,0.852,59,n_engaged>=2
+T2,"T2 mapping-failure exposure (0->1), + fo_share (over-and-above dose)",-0.46,-21.0,20.07,0.9648,59,fo_share coef -17.0pp p=0.042
+T2,"T2 blind-copy share (<5s, 0->1), adjusted",-1.28,-27.29,24.74,0.9233,57,n_committed>=2
+T2,"T2 blind-copy share (<5s, 0->1), + fo_share (over-and-above dose)",-1.61,-30.0,26.79,0.9117,57,fo_share coef -14.9pp p=0.158
+T2,"T2 blind-copy share (<10s, sens), adjusted",-9.7,-29.08,9.67,0.3263,57,n_committed>=2
+T2,"T2 blind-copy share (<10s, sens), + fo_share (over-and-above dose)",-8.43,-30.12,13.26,0.4463,57,fo_share coef -14.1pp p=0.183
+T2,T2 FE: category adoption share -> category accuracy,-2.35,-28.57,23.86,0.8605,171,24 participants with within-person exposure variation; within-person perm p=0.8102
+T2,T2 FE: category mapping-failure share -> category accuracy,1.01,-13.24,15.25,0.8896,217,53 participants with within-person exposure variation; within-person perm p=0.8377
+T3,T3 FE: received wrong LLM answer in category -> category accuracy,1.31,-14.89,17.51,0.8741,217,13 participants with within-person exposure variation; within-person perm p=0.8649
+T4,T4 practice IDK: mapfail cells vs other engaged cells,8.61,3.15,14.08,0.002,376,cluster-robust LPM over 376 engaged cells
+T4,"T4 mapfail exposure -> post-test IDK share, adjusted",3.44,-10.89,17.78,0.6378,59,n_engaged>=2
+T4,"T4 mapfail exposure -> attempted-only accuracy, adjusted",-0.13,-18.85,18.59,0.9893,59,n_engaged>=2
+T4,"T4 FE: category outsourcing dose (per practice item, 0-2) -> category post-test IDK share",4.54,0.36,8.73,0.0333,264,36 participants with within-person exposure variation; within-person perm p=0.0429
+T4,T4 FE: category mapping-failure share -> category post-test IDK share,0.33,-7.66,8.33,0.9347,217,53 participants with within-person exposure variation; within-person perm p=0.9216
+T5,"T5 slower adoption (per log-unit median Delta, committed cells), + fo_share",2.93,-5.32,11.17,0.4869,57,NB prior pass: latency gradient NOT outsourcing-specific (Google slope >= this)
+T6,"T6 fo_share -> GL_ave (RAW scale units, not pp)",0.26,-1.33,1.85,0.7498,66,outcome SD=2.17
+T6,"T6 fo_share -> EL_ave (RAW scale units, not pp)",-0.9,-2.56,0.77,0.2909,66,outcome SD=2.36
+T6,"T6 fo_share -> IL_ave (RAW scale units, not pp)",0.96,-0.48,2.39,0.1909,66,outcome SD=1.89
+T6,T6 blind-copy share -> GL_ave (RAW units),-0.79,-3.68,2.09,0.5896,57,germane load; committed>=2
+T7,T7 fo_share x minivlat_c (pp per full dose per +1 SD moderator),5.21,-15.26,25.69,0.6178,66,moderator SD=2.67; n=66 cannot resolve interactions
+T7,T7 fo_share x aiuse_c (pp per full dose per +1 SD moderator),-5.98,-30.15,18.19,0.6278,66,moderator SD=0.93; n=66 cannot resolve interactions

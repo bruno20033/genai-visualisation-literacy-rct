@@ -1,0 +1,60 @@
+% ============================================================================
+% DRAFT ONLY -- NOT INSERTED INTO sections/results.tex (D16 word cap; author
+% decides). Proposed location: sections/results.tex \S\ref{sec:res-checks},
+% immediately after the existing "Exploratory: [outsourcing content]"
+% paragraph, before the abstention paragraph.
+%
+% EXPLORATORY, post-commencement (2026-07-18, dose-response pass). Links the
+% outsourcing measures to the primary outcome at the individual level. All
+% numbers computed by ~/Downloads/outsourcing_doseresponse_2026-07-18/
+% analyze_outsourcing_doseresponse.py on the D15 frames + the durable
+% single-coder content codes (93.4%-convention CSV; recoding the 8 disputed
+% cells to the D17 convention moves the adjusted slope by 0.05pp, p=.227).
+% Self-verifying figure script in the same directory (22/22 PASS).
+% Cost if added: ~185 words + 1 figure + 1 verdict-table row.
+% ============================================================================
+
+\emph{Exploratory: outsourcing dose and unaided performance.} If the deficit in
+\S\ref{sec:res-accuracy} runs through outsourcing, participants who outsourced
+more should retain less. Three operationalisations point that way; none is
+individually decisive (Figure~\ref{fig:outsourcing-dose}). The share of the
+eight practice items coded full outsourcing predicted lower post-test accuracy
+($-9.5$\,pp over the full dose range, covariate-adjusted, 95\%~CI
+$[-24.3, +5.3]$, $p=.21$); among the 61 tool-engaging participants the slope is
+$-17.3$\,pp $[-31.3, -3.2]$ ($p=.016$), but only ten
+non-fully-outsourcing participants identify it, and leave-one-out $p$ reaches
+$.078$. Within participants, where stable person characteristics cancel, each
+outsourced practice item in a Bloom category cost $5.5$\,pp on that category's
+post-test items ($[-11.6, +0.5]$, $p=.074$). Timing corroborates only weakly:
+slower answer adoption predicted higher accuracy within the arm ($+3.3$\,pp per
+doubling of $\Delta$, $p=.26$), but the same deliberation-time slope was
+strongest in the \emph{search} arm ($p=.001$), so latency indexes post-tool
+deliberation generally, not outsourcing specifically. Because outsourcing is a
+self-selected behaviour, not an assigned treatment, learners who outsource may
+differ in unmeasured effort or motivation; the dose precedes the post-test and
+baseline adjustment moves the slope little (dose--Mini-VLAT $r=-.12$), but
+causal language is not licensed, and at $n=66$ only correlations
+$|\rho|\ge.34$ are reliably detectable. This analysis was not pre-registered
+and is reported as exploratory, estimation only.
+
+% --- Figure (generated: fig_outsourcing_dose_response.pdf; move into
+%     generated/results/ if adopted) ---
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{generated/results/fig_outsourcing_dose_response.pdf}
+  \caption{Outsourcing dose and immediate unaided post-test accuracy within
+    the Unrestricted arm. Left: number of the eight aided practice items coded
+    full outsourcing (content dose; points $x$-jittered). Right: participant
+    geometric-mean answer-adoption latency $\Delta$ (timing dose, log scale;
+    $n=61$ tool-engaging participants). Lines are unadjusted OLS fits with
+    95\% confidence bands; covariate-adjusted slopes are reported in the text.
+    Exploratory, non-pre-registered, associational.}
+  \label{fig:outsourcing-dose}
+\end{figure}
+
+% --- Proposed tab:verdicts row (Exploratory family, after the
+%     "Outsourcing content" row). ALTERNATIVE (zero-row cost): amend the
+%     existing Outsourcing-content row's Estimate cell to
+%     "$95.5\%$ ($n=376$); dose slope $-9.5$\,pp $[-24.3,+5.3]$" and keep one
+%     row. Author to choose. ---
+% Outsourcing dose & acc per full dose, U arm & $-9.5$ $[-24.3, +5.3]$ & $.21$ & Directionally consistent (estimate only) \\

@@ -1,0 +1,3104 @@
+[
+ {
+  "participant_id": "P002",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request for the answer ('give me the correct answer') with no own candidate offered."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item's own question verbatim ('What would you say is the difference...'), which asks the assistant to answer the item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question verbatim and demands the verdict ('...? - yes or no') without offering an own answer."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item's own question verbatim; assistant asked to select the best chart."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question verbatim plus 'Yes or no?', requesting the verdict directly."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Every engaged item (5/8) was a direct answer demand or a verbatim forward of the item question, with no own reasoning shown; three items unaided."
+ },
+ {
+  "participant_id": "P005",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me the answer'); follow-up 'so a,b,c or d' pushes for the option letter."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer'); follow-up restates the two options for the assistant to adjudicate, still without an own pick."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer'), then pastes the answer options for the assistant to choose from."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer'), then pastes the options so the assistant can pick one."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Outsourced all 8 items with 'give me the answer'; when the assistant lacked the options, pasted the full option list so it could pick the letter."
+ },
+ {
+  "participant_id": "P007",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Open-ended handover ('can u help me') of the shared item with no concept question or own candidate; assistant asked to deal with the item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Open-ended handover ('can u help me') with no own reasoning; the item is the only referent."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "After 'can u help me', explicitly asks 'which one is correct?' - a direct request to select the answer option."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Open-ended handover ('can u help me?') with no concept focus or candidate; assistant supplies the item's answer content."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Open-ended handover ('can u help me?') of the item with no own reasoning shown."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'what is correct?' directly asks the assistant to state the correct answer."
+   }
+  ],
+  "overall_confidence": "medium",
+  "summary_note": "Generic 'can u help me' openers functioned as full handovers of the shared item (no concept asked, no candidate offered); the follow-ups 'which one is correct?' / 'what is correct?' make the answer-seeking intent explicit. Medium confidence because the bare openers require this contextual reading."
+ },
+ {
+  "participant_id": "P011",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Please give me the correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Please give me the correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Please give me the correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Please give me the correct answer'); no decline-and-reason turn follows, though the submitted answer contradicts the assistant."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Please give me the correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Please give me the correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Identical 'Please give me the correct answer' on all six engaged items. Notably submitted B (No) on rem_fa_1 against the assistant's 'Yes' - the only sign of independent (mis)judgment."
+ },
+ {
+  "participant_id": "P014",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item's own question ('whats wrong with this chart') with no own reading offered."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item's own question ('name one problem with this chart') verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; assistant selects the chart."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Forwarded every item's own question text (verbatim or near-verbatim) on all 8 items; no own candidates at any point."
+ },
+ {
+  "participant_id": "P019",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Close paraphrase of the item's evaluative question ('is anything wrong with this chart?') asking the assistant to produce the problem."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item's own question ('is anything wrong with this chart')."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Four engaged items: two close paraphrases of the eval items' own questions and two verbatim forwards; no own candidates."
+ },
+ {
+  "participant_id": "P022",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim (assistant requested the chart image; request still outsources the judgment)."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim (assistant could not see the charts)."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim (assistant requested the images)."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim (assistant requested the charts)."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Forwarded the item question verbatim on all six engaged items; on four the assistant could not see the stimulus and asked for an upload, but the requests themselves were full forwards."
+ },
+ {
+  "participant_id": "P025",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim (submitted 'I don't know' afterwards, but no own reasoning appears in the exchange)."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forward of every item's own question on all 8 items; no own candidates anywhere."
+ },
+ {
+  "participant_id": "P027",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me correct answer.') with no own candidate."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request repeated twice until the assistant produced the letter."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me correct answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me correct answer') with no own candidate."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "'Give me correct answer' on all 8 items, repeated verbatim until the assistant complied."
+ },
+ {
+  "participant_id": "P032",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me correct answer'), then 'So which answer?' to extract the option."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Show me correct answer')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Close paraphrase of the item's question ('Which graph best reflects the correlation...') asking the assistant to pick the chart."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question near-verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question near-verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Mix of direct answer demands and verbatim/paraphrased forwards of the item question on all 8 items; no own candidates."
+ },
+ {
+  "participant_id": "P038",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me the right answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me the right answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me the right answer') with no own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "'Give me the right answer' on the three engaged items; five items unaided."
+ },
+ {
+  "participant_id": "P041",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'what are your thoughts ?' invites the assistant's own judgment of the item with no candidate or concept question."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'what are your thoughts ?' delegates the item judgment to the assistant."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'what are your thoughts ?' delegates the item judgment to the assistant."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Bare '?' prompts the assistant to solve the shared item; no content of the participant's own."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Bare '?' prompts the assistant to solve the shared item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Bare '?' followed by a verbatim forward of the item question."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Bare '?' prompts the assistant to solve the shared item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Contentless '/' nudge, consistent with the participant's established pattern of triggering the assistant to answer the shared item."
+   }
+  ],
+  "overall_confidence": "medium",
+  "summary_note": "Contentless nudges ('what are your thoughts ?', '?', '/') that each triggered the assistant to solve the shared item; coded as outsourcing because they invite the assistant's own solution with no concept question or candidate. Medium confidence given the interpretive step on the bare-punctuation turns."
+ },
+ {
+  "participant_id": "P042",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question ('what is wrong with the chart?'), then pastes the options and demands a valid one."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question plus 'yes or no'; the follow-up 'why' seeks explanation only after taking the verdict."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Close paraphrase of the item question ('what is the difference between both charts?')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question near-verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Near-verbatim reproduction of the item question."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item's ask ('name one problem of the chart'), then demands 'answer a b or c and tell me why'."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Pastes the item question together with the full option list for the assistant to choose."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Near-verbatim reproduction of the item question."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Forwarded or closely paraphrased every item's question; when the assistant's free-text answer did not match the options, argued with it ('you're wrong. answer a b or c') - but only to extract a valid option letter, never to reason independently."
+ },
+ {
+  "participant_id": "P046",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Asks the assistant to state the right answer ('explain me what the right answer is'), then to choose from the pasted options."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim wrapped in 'can you tell me'."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Two engaged items, both explicit answer requests ('explain me what the right answer is'; 'can you tell me which...'); pasted the options when the assistant could not see them."
+ },
+ {
+  "participant_id": "P050",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Please can you tell me the answer?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the answer?')."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the answer?')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the answer?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request repeated twice until the assistant identified the scatterplot."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the answer?')."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the answer?')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What's the answer?')."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "'What is the answer?' on all 8 items, repeated where the assistant initially could not comply."
+ },
+ {
+  "participant_id": "P052",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the correct answer')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give the correct answer'); no decline-and-reason turn, though the submission deviated from the assistant's answer."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give the correct answer')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give the correct answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "First half direct answer demands, second half verbatim forwards of the item questions; submitted C on ana_fa_1 despite the assistant's 'D'."
+ },
+ {
+  "participant_id": "P055",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "One-word demand for the answer ('answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "One-word demand for the answer ('answer')."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "One-word demand for the answer ('answer')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "One-word demand for the answer ('answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Demand for the answer; 'u sure?' checks the assistant's answer, not an own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Demand for the answer, then mines further options ('anything else?', 'what about colors?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Demand for the answer, then probes option B ('axis titles?') for assistant endorsement."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Demand for the answer; the pushback 'but they look the same' contests the assistant's answer but ends in accepting its framing, not independent reasoning."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "One-word 'answer' demand on all 8 items; follow-ups probed specific options ('axis titles?', 'what about colors?') - answer-shopping rather than own reasoning. On und_fa_2 pushed back ('but they look the same') but then accepted the assistant's framing."
+ },
+ {
+  "participant_id": "P057",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Three engaged items, all verbatim forwards of the item question; five items unaided."
+ },
+ {
+  "participant_id": "P059",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrases the item's ask ('what's wrong with this chart?'); 'I don't know how to interpret it' frames the handover rather than posing a concept question."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; 'are you sure?' tests the assistant's answer, not an own candidate."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Reproduces the item question but appends an own tentative candidate ('Maybe C?'), making it a confirmation request for the participant's answer."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase-forward of the item's question ('Is there something wrong with this chart?') with no own candidate."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Mostly verbatim forwards, but on ana_fa_2 stated an own candidate ('Maybe C?') before asking - the one verification item. 'Are you sure?' follow-ups check the assistant, not own answers."
+ },
+ {
+  "participant_id": "P062",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the correct answer?'), then pastes the options and asks the assistant to pick."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Single engaged item: direct answer request, then pasted the options for the assistant to pick; submitted 'I don't know' despite the assistant choosing D."
+ },
+ {
+  "participant_id": "P063",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question near-verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim or near-verbatim forward of the item's own question on all 8 items."
+ },
+ {
+  "participant_id": "P067",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me the correct answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Help me with the correct answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('help me answer the question please')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('help answer the question')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Four engaged items, all explicit requests for the answer ('Give me the correct answer', 'help me answer the question please')."
+ },
+ {
+  "participant_id": "P068",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the answer?')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the answer?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('please answer the question'), then forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the answer?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item's ask verbatim, then requests 'name another problem'."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; 'so is The carbohydrate(g) axis is flipped' echoes the assistant-derived answer, not a prior own candidate."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "All 8 items outsourced via 'what is the answer?' or verbatim forwards; the und_fa_1 follow-up echoes option B back after the assistant's explanation (uptake, not a prior own candidate)."
+ },
+ {
+  "participant_id": "P073",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me a correct answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me a correct answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me a correct answer')."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me a correct answer')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me a correct answer')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me a correct answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me a correct answer')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me a correct answer')."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Identical 'give me a correct answer' on all 8 items."
+ },
+ {
+  "participant_id": "P081",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Close paraphrase of the item question ('What is the difference between charts a and b?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item's ask ('what are the problems with this chart')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase-forward of the item question ('is this a parallel coordinates plot')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrases the item's ask ('what errors are made in this chart'), then has the assistant adjudicate each option in turn."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item question ('which scatterplot is shown in the parallel coordinates plot')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item question ('which chart depicts the relation between home ownership rate and number of households')."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Self-phrased but faithful paraphrases of each item's own question on all six engaged items; on eval_fa_10 additionally walked the assistant through the options one by one ('is the color legend correct', 'are the axis titles complete', 'is there data on the chart') - yet still submitted 'I don't know' there."
+ },
+ {
+  "participant_id": "P082",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'what type of chart is this' asks the assistant to classify the shown chart - an open-form paraphrase of the item's own question, whose answer is the item's answer."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item question ('whats the difference between these charts')."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item's ask ('are their any problems with this chart')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Four engaged items: open-form paraphrases of the items' own questions (e.g. 'what type of chart is this' for the is-this-a-PCP item); no own candidates."
+ },
+ {
+  "participant_id": "P083",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('answer please')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the answer')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the answer'), escalating to pasting the options for a letter verdict."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase-forward of the item question ('is this an example of parallel coordinate')."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the answer'), then forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Seven engaged items, all direct answer demands or forwards; on eval_fa_11 pasted the options after three rounds of pressing for the letter."
+ },
+ {
+  "participant_id": "P085",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Truncated forward of the item's ask ('problem in this chart'); the later own hypothesis about axis titles comes only after the assistant's answer."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "States an own candidate within the request ('i think the colour legend is not properly labeled') and asks the assistant to check it."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Word-order-mangled reproduction of the item's own yes/no question, with no distinct own candidate."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase-forward of the item question, then 'which one a,b,c,d?' for the letter; 'and why it is?' is post-hoc."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question near-verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "One clear verification (eval_fa_10: stated own legend hypothesis before asking); elsewhere forwarded item questions. The ana_fa_2 follow-up 'and why it is?' sought the reasoning only after taking the letter."
+ },
+ {
+  "participant_id": "P086",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me the correct answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then 'what is the best answer'."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then 'best answer please'."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then pastes the full item with options for a letter verdict."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Requests only the answer while refusing explanation ('i need just the correct answer no explanation')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Requests only the answer, no explanation."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Requests only the answer, no explanation."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Requests only the answer, no explanation."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Maximally explicit outsourcing on all 8 items, including 'i need just the correct answer no explanation' - actively refusing the learning content."
+ },
+ {
+  "participant_id": "P087",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Presents an own candidate ('Do you think the correct answer is A?') for confirmation."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "States an own candidate ('I think the correct answer is B, what do you think?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Presents an own candidate ('Do you think the correct answer is C?') for confirmation."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the correct answer?') with no prior candidate; 'So B' takes up the assistant's answer."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "States an own candidate ('I think the correct answer is B')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Presents an own candidate ('Do you think the correct answer is A?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Opens with a direct answer request; the later 'So the correct answer is A' emerges from assistant-led option probing, not a prior own candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Opens with a direct answer request, then has the assistant eliminate options ('Are the axis titles missing?', 'Is the color legend properly labeled?')."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Candidate-first verifier on 5 of 8 items ('Do you think the correct answer is A?', 'I think the correct answer is B'); fell back to direct answer requests on the three items where no own candidate is stated."
+ },
+ {
+  "participant_id": "P091",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then recites the options for the assistant to choose."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forward of every item's question on all 8 items; on eval_fa_10 additionally pasted the options for adjudication."
+ },
+ {
+  "participant_id": "P092",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item's ask ('is there any problem with the chart'), then 'any other' for more."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Seven engaged items: verbatim forwards plus one paraphrase ('is there any problem with the chart'); 'any other' mined additional answer material."
+ },
+ {
+  "participant_id": "P093",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "No assistant interaction on any item."
+ },
+ {
+  "participant_id": "P102",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "CONCEPT_SUPPORT",
+    "rationale": "Asks what the term means ('what are paralell coordinates?') without asking the assistant to judge the shown chart."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "CONCEPT_SUPPORT",
+    "rationale": "General definitional question ('are paralell coordinates all have to be parallel to count?') supporting the participant's own classification."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "CONCEPT_SUPPORT",
+    "rationale": "General question about the chart type ('can slopes in a paralell corordinate graph be very sloped?') rather than a request to evaluate this chart or name the answer."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "CONCEPT_SUPPORT",
+    "rationale": "Pure concept question ('what is a axis?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "CONCEPT_SUPPORT",
+    "rationale": "General questions about legend conventions ('can there be a colour legend...', 'can the colours fade...') supporting an own evaluation of the chart."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "The clearest concept-support profile in the arm: asked only general definitional questions ('what are parallel coordinates?', 'what is a axis?', 'can there be a colour legend?') and answered every item themselves; never requested an answer or forwarded an item question."
+ },
+ {
+  "participant_id": "P105",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "No assistant interaction on any item."
+ },
+ {
+  "participant_id": "P110",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the correct answer?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then 'are you sure' and 'so answer is b?' to lock in the letter."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the correct answer?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the answer?')."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then 'answer is what letter' and a demand to 'crosscheck again and type out correct answer'."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request; rejections of unusable answers lead to option-by-option probing ('are the axis tiles missing', 'are the slope of the edges too high'), still assistant-adjudicated."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item question ('what is the difference between the two charts')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request repeated until the assistant supplied the answer."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Outsourced all 8; on eval_fa_11 rejected the assistant's non-option answers ('thats not true', 'not part of the options') and probed options until the assistant endorsed one, which was submitted."
+ },
+ {
+  "participant_id": "P112",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, including copy-pasted survey UI text."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forward of the item question on all seven engaged items, once including pasted survey UI chrome ('Next question \u2192...')."
+ },
+ {
+  "participant_id": "P114",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('correct answer?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('correct answer')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then repeated demands for the option letter."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what's the correct answer?')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what's the correct answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what's the correct answer')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what's the correct answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "'Correct answer?' on all seven engaged items; on eval_fa_10 pressed for the letter ('what's the letter', 'a,b,c,d,e') without ever supplying the options, and submitted 'I don't know'."
+ },
+ {
+  "participant_id": "P115",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; the assistant's answer was not adopted (submitted 'I don't know'), but no own reasoning appears."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; submitted 'I don't know' despite the answer."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on the four engaged items, but twice submitted 'I don't know' after receiving a direct answer (rem_fa_2, eval_fa_11) - answers were requested yet not adopted."
+ },
+ {
+  "participant_id": "P119",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "No assistant interaction on any item."
+ },
+ {
+  "participant_id": "P122",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; 'Is that B in this?' maps the assistant's answer to a letter."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then recites the options for the assistant to choose."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question together with all options for the assistant to adjudicate, with no own pick."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Recites the options but states own candidates within the request ('I think color legend is wrong'; 'I dont think' titles are missing), asking the assistant to check that judgment."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Mostly verbatim forwards (often with options pasted); one verification on eval_fa_11 where own candidates were stated inside the request ('I think color legend is wrong', 'axis titles... I dont think so')."
+ },
+ {
+  "participant_id": "P124",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the right answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the right answer')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item's ask ('name one problem withthis chart'), then 'what is the answer'."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Direct answer demands and verbatim forwards on all seven engaged items."
+ },
+ {
+  "participant_id": "P131",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Reproduces the item question ('what's wrong with the chart?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim or near-verbatim forwards of the item's own question on all 8 items."
+ },
+ {
+  "participant_id": "P132",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Sends only their own candidate letter ('c'); the assistant confirms it, functioning as a check of the participant's pick."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Sends only their own candidate letter ('a'); no answer was requested and no question forwarded."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "medium",
+  "summary_note": "Sent bare option letters ('c', 'a') as first turns - read as implicit verification of an own tentative pick (the assistant treated 'c' exactly that way); remaining engaged items were verbatim forwards. Medium confidence for the bare-letter interpretation."
+ },
+ {
+  "participant_id": "P142",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "'what do you thing? is it right ?' asks the assistant to check the participant's already-formed pick (referenced as 'it')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "'is it right?' checks the participant's own selection rather than requesting the answer."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'what do you think?' invites the assistant's own solution with no candidate stated; later turns keep negotiating the assistant's answer."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "'is it right?' checks an own formed selection."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "'is it right?' checks an own formed selection; the assistant explicitly confirms 'if you picked the second scatterplot, that is right'."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "'is it right?' checks an own formed selection."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'what do you think? maybe more good answers?' asks the assistant to judge the options with no own candidate offered."
+   }
+  ],
+  "overall_confidence": "medium",
+  "summary_note": "Checked an own (unstated but deictically referenced) selection with 'is it right?' on five items - coded verification since a formed candidate is implied; 'what do you think?' items lack any candidate and were coded outsourcing. Medium confidence because the referent of 'it' is never spelled out."
+ },
+ {
+  "participant_id": "P145",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim (submitted 'I don't know' afterwards)."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on the four engaged items; four items unaided."
+ },
+ {
+  "participant_id": "P146",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then re-pastes it with survey UI chrome."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Pastes item text (first the wrong item's, then this item's question verbatim) for the assistant to answer."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim plus 'A,B or C' for a letter verdict."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then pastes (mangled) options for the assistant to choose."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Pastes the wrong item's question, then this item's question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question together with the option list for adjudication."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Literal copy-paste forwarding on all 8 items, including survey UI chrome ('Next question \u2192...') and twice pasting the wrong item's question before correcting - confirms mechanical forwarding of the item text."
+ },
+ {
+  "participant_id": "P151",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; 'are they similar' then probes an option with the assistant."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on all 8 items; the und_fa_2 follow-up 'are they similar' probes option A after the answer rather than reasoning independently."
+ },
+ {
+  "participant_id": "P154",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then demands the letter ('A, B, C, OR D')."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question (with survey chrome), then asks the assistant to pick between the two candidate options ('the carbohydrate axis or the fat axis')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim (with survey chrome)."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on all 8 items (twice including 'Question N of 8' chrome); follow-ups pressed for the letter ('A, B, C, OR D') or had the assistant adjudicate between two options."
+ },
+ {
+  "participant_id": "P157",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Compressed paraphrase of the item question ('What is the difference?') with no own candidate."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What's the answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'Is it?' compresses the item's own yes/no question and forwards it; no candidate stated."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Proposes an own candidate ('is it C?') for checking; the assistant corrects to D."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'is it?' forwards the item's yes/no question with no candidate."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "States an own candidate ('I think it's A') and clarifies what A says for the check."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "States an own reading ('Again I think the legend is wrong?') for confirmation."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'Which is it?' asks the assistant to identify the correct option."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Genuinely mixed profile: verified own candidates on three items ('is it C?', 'I think it's A', 'Again I think the legend is wrong?') and outsourced the other five ('What's the answer', 'Which is it?', compressed forwards 'Is it?')."
+ },
+ {
+  "participant_id": "P158",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on the three engaged items; five items unaided."
+ },
+ {
+  "participant_id": "P159",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim plus 'A, B, C or D?'; the request to explain the method comes only after taking the answer."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; the follow-up probes the assistant's evidence, not an own answer."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the evaluative ask ('What is wrong with this chart?') for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Outsourced four items via forwards, but uniquely asked afterwards 'Please explain how I could have determined this answer?' and challenged the assistant's basis ('Your answer isn't solely derived from the title, is it?') - answer-first, understanding-second."
+ },
+ {
+  "participant_id": "P162",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "VERIFICATION_ONLY",
+    "rationale": "Sends only 'a', read as the participant's own tentative pick offered for reaction; no question was asked and no answer requested."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question near-verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question ('What's wrong with this chart?'), then probes an option ('Is the color legend properly labeled?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then pastes all options; the assistant returns the letter."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then demands 'A, B, C or D?'."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "medium",
+  "summary_note": "Mostly verbatim forwards with option pastes; the bare 'a' first turn on und_fa_2 is read as sending an own candidate for reaction (submitted A), parallel to P44 - the main interpretive call here."
+ },
+ {
+  "participant_id": "P164",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the correct answer')."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the correct answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('correct answer?')."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('correct answer?')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('correct answer?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('correct answer?'); no decline-and-reason turn, though the submission deviated from the assistant's answer."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('correct answer')."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "'Correct answer?' on all seven engaged items; on ana_fa_1 submitted A despite the assistant's clear 'D'."
+ },
+ {
+  "participant_id": "P168",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on the three engaged items; submitted 'I don't know' on eval_fa_11 despite receiving an answer."
+ },
+ {
+  "participant_id": "P171",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('what is the correct answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Commands the assistant to 'answer the question'."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Commands the assistant to 'answer the question'."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Commands the assistant to 'answer the question'."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Commands the assistant to 'answer the question'."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "'Answer the question' command on four items plus one 'what is the correct answer'; three items unaided."
+ },
+ {
+  "participant_id": "P179",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase of the item question ('whats the difference between these two charts?')."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question; later proposes 'maybe there is nothing wrong' only to seek the assistant's endorsement after its free-text answer failed to match the options."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item's ask ('name one problem with this chart?'); the candidate offered afterwards responds to the option mismatch, not prior own reasoning."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase-forward ('is there a difference in these two charts?')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Close paraphrase of the item question asking the assistant to pick the best chart."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "'is this a plot?' compresses and forwards the item's classification question about the shown chart."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Paraphrase-forward of the item question ('which is these is encoded...')."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Self-phrased paraphrases of every item's question; own candidates appeared only after the assistant's answer proved unusable ('Maybe there is nothing wrong...?', 'I think it is that the colour legend...') and were immediately submitted for assistant endorsement - negotiation, not independent reasoning."
+ },
+ {
+  "participant_id": "P180",
+  "items": [
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim, then 'and another' for more answer material."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on all 8 items; 'and another' mined a second answer on eval_fa_11."
+ },
+ {
+  "participant_id": "P184",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "No assistant interaction on any item."
+ },
+ {
+  "participant_id": "P187",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Open-ended handover ('can you please help me with this chart') with no concept question or own candidate; hedged - no follow-up exists to disambiguate."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "low",
+  "summary_note": "Single engaged item with the ambiguous opener 'can you please help me with this chart' and no follow-up (the assistant asked for an upload and got none). Coded as outsourcing - an open handover with no concept question or candidate, consistent with how identical phrasings function elsewhere in this arm - but the concept-seeking reading cannot be excluded, hence low confidence."
+ },
+ {
+  "participant_id": "P188",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('Give me the right answer?') repeated."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the correct answer?')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the correct answer?')."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the correct answer?'); submitted 'I don't know' despite the answer."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then asks the assistant to adjudicate 'is it answer b or c?'."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then 'is it answer A, B, C or D then?'."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request, then forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('What is the correct answer?', 'is it yes or no?') after an initial wrong-item paste."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "'What is the correct answer?' on all 8 items; repeatedly failed to map the assistant's descriptive answers onto option letters ('is it answer b or c?') and submitted 'I don't know' twice despite receiving answers."
+ },
+ {
+  "participant_id": "P191",
+  "items": [
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; the follow-up confirms the assistant's answer rather than an own prior."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Verbatim forwards on the three engaged items; 'So the bill length one ?' confirms uptake of the assistant's answer."
+ },
+ {
+  "participant_id": "P192",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Demands the answer ('answer', 'just give me the answer'); the final turn echoes the assistant-derived option."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "After an initial concept question about an axis label, forwards the item's question ('is something wrong with this chart?') and has the assistant adjudicate each option."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Four engaged items; opened eval_fa_10 with a genuine concept query ('what's whole.wt?') but immediately pivoted to forwarding the item's question and option-by-option answer mining, so the item codes as outsourcing under the strongest-evidence rule."
+ },
+ {
+  "participant_id": "P194",
+  "items": [
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('give me answer')."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Direct request ('share the answer')."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "Two engaged items, both direct answer demands ('give me answer', 'share the answer'); six items unaided."
+ },
+ {
+  "participant_id": "P198",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "NO_INTERACTION",
+    "rationale": "No turns were logged for this item."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "No assistant interaction on any item."
+ },
+ {
+  "participant_id": "P204",
+  "items": [
+   {
+    "item_id": "pcp_rem_fa_1",
+    "code": "CONCEPT_SUPPORT",
+    "rationale": "Asks what a parallel coordinates plot looks like in general - a schema question supporting their own classification, not a request to judge the shown chart."
+   },
+   {
+    "item_id": "pcp_eval_fa_10",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question ('WHAT IS WRONG WITH THE CHART?') twice."
+   },
+   {
+    "item_id": "pcp_rem_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; no decline-and-reason turn, though the submission deviated from the assistant's answer."
+   },
+   {
+    "item_id": "pcp_und_fa_2",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   },
+   {
+    "item_id": "pcp_ana_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; submission deviated from the assistant's 'D' without any reasoning turn."
+   },
+   {
+    "item_id": "pcp_und_fa_1",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim; submission deviated from the assistant's answer without any reasoning turn."
+   },
+   {
+    "item_id": "pcp_eval_fa_11",
+    "code": "FULL_OUTSOURCING",
+    "rationale": "Forwards the item question verbatim."
+   }
+  ],
+  "overall_confidence": "high",
+  "summary_note": "One concept-first item (asked what a PCP looks like in general, then classified the chart themselves); the other seven engaged items were verbatim forwards. Three submissions contradict the assistant's answer (ana_fa_2, ana_fa_1, und_fa_1), suggesting the forwarded answers were not always adopted."
+ }
+]

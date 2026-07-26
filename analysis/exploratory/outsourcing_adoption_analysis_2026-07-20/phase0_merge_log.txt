@@ -1,0 +1,46 @@
+AUDIT: regex draft vs blind re-read on all 36 group-A cells: 36/36 agree (100.0%)
+
+=== QA: llm-answer availability x content code ===
+llm_committed      False  True  All
+code                               
+CONCEPT_SUPPORT        6     0    6
+FULL_OUTSOURCING      72   279  351
+VERIFICATION_ONLY      3    16   19
+All                   81   295  376
+
+=== answer_form distribution ===
+answer_form
+descriptive        288
+clean_option        72
+no_answer           14
+hedged_multiple      2
+Name: count, dtype: int64
+
+mapping_difficulty (descriptive cells):
+mapping_difficulty
+trivial       143
+nontrivial     80
+unmappable     65
+Name: count, dtype: int64
+
+extract_confidence: {'high': 362, 'med': 13, 'low': 1}
+
+Flag check: FULL_OUTSOURCING cells WITHOUT a committed llm answer: 72
+CONCEPT_SUPPORT cells coded no_answer: 6 of 6
+
+LLM correctness base rate (committed cells): 0.939 n = 295
+by item:
+                mean  count
+item_id                    
+pcp_ana_fa_1    0.94     48
+pcp_ana_fa_2    0.92     52
+pcp_eval_fa_10  0.58     12
+pcp_eval_fa_11  0.44      9
+pcp_rem_fa_1    1.00     49
+pcp_rem_fa_2    1.00     49
+pcp_und_fa_1    1.00     39
+pcp_und_fa_2    0.97     37
+
+Adoption rate (committed cells): 0.902
+
+wrote adoption_frame.csv: 376 rows

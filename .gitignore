@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------------------
+# Raw, identifiable data. NEVER commit anything in here.
+# These files carry IP addresses, geolocation and Prolific IDs. Consent item 8
+# permits sharing anonymised data only. See data/raw/README.md.
+# ---------------------------------------------------------------------------
+data/raw/*
+!data/raw/README.md
+!data/raw/.gitkeep
+
+# The pseudonym crosswalk re-identifies every participant. It is the one file
+# that must never leave this machine.
+**/participant_crosswalk.csv
+
+# Qualtrics exports anywhere else in the tree, in case one gets misplaced
+RCT_DataLiteracy*.csv
+RCT_DelayedRetest*.csv
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---------------------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+*~
+*.swp
+
+# ---------------------------------------------------------------------------
+# Analysis scratch
+# ---------------------------------------------------------------------------
+*.log
+analysis_frames*/
+*.bak_*

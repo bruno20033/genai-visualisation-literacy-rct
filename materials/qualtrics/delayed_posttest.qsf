@@ -1,0 +1,330 @@
+{
+  "SurveyEntry": {
+    "SurveyID": "SV_delayedPCP",
+    "SurveyName": "RCT_DelayedRetest_PCP (iframe - feeds notebook)",
+    "SurveyDescription": null,
+    "SurveyOwnerID": "UR_owner",
+    "SurveyBrandID": "oii",
+    "DivisionID": null,
+    "SurveyLanguage": "EN",
+    "SurveyActiveResponseSet": "RS_default",
+    "SurveyStatus": "Inactive",
+    "SurveyStartDate": "0000-00-00 00:00:00",
+    "SurveyExpirationDate": "0000-00-00 00:00:00",
+    "SurveyCreationDate": "2026-07-13 00:00:00",
+    "CreatorID": "UR_owner",
+    "LastModified": "2026-07-13 00:00:00",
+    "LastAccessed": "0000-00-00 00:00:00",
+    "LastActivated": "0000-00-00 00:00:00",
+    "Deleted": null
+  },
+  "SurveyElements": [
+    {
+      "SurveyID": "SV_delayedPCP",
+      "Element": "BL",
+      "PrimaryAttribute": "Survey Blocks",
+      "SecondaryAttribute": null,
+      "TertiaryAttribute": null,
+      "Payload": {
+        "1": {
+          "Type": "Default",
+          "Description": "Intro (Part 2)",
+          "ID": "BL_intro",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID1"
+            }
+          ]
+        },
+        "2": {
+          "Type": "Standard",
+          "Description": "Delayed post-test (NOAID)",
+          "ID": "BL_noaid",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID2"
+            }
+          ]
+        },
+        "3": {
+          "Type": "Standard",
+          "Description": "Tool-use disclosure",
+          "ID": "BL_disc",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID3"
+            }
+          ]
+        },
+        "4": {
+          "Type": "Standard",
+          "Description": "Debrief",
+          "ID": "BL_debrief",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_delayedPCP",
+      "Element": "FL",
+      "PrimaryAttribute": "Survey Flow",
+      "SecondaryAttribute": null,
+      "TertiaryAttribute": null,
+      "Payload": {
+        "Type": "Root",
+        "FlowID": "FL_1",
+        "Properties": {
+          "Count": 12
+        },
+        "Flow": [
+          {
+            "Type": "EmbeddedData",
+            "FlowID": "FL_2",
+            "EmbeddedData": [
+              {
+                "Description": "PROLIFIC_PID",
+                "Type": "Recipient",
+                "Field": "PROLIFIC_PID",
+                "VariableType": "String",
+                "DataVisibility": {
+                  "Private": false,
+                  "Hidden": false
+                },
+                "AnalyzeText": false
+              },
+              {
+                "Description": "STUDY_ID",
+                "Type": "Recipient",
+                "Field": "STUDY_ID",
+                "VariableType": "String",
+                "DataVisibility": {
+                  "Private": false,
+                  "Hidden": false
+                },
+                "AnalyzeText": false
+              },
+              {
+                "Description": "SESSION_ID",
+                "Type": "Recipient",
+                "Field": "SESSION_ID",
+                "VariableType": "String",
+                "DataVisibility": {
+                  "Private": false,
+                  "Hidden": false
+                },
+                "AnalyzeText": false
+              },
+              {
+                "Description": "participant_id",
+                "Type": "Recipient",
+                "Field": "participant_id",
+                "VariableType": "String",
+                "DataVisibility": {
+                  "Private": false,
+                  "Hidden": false
+                },
+                "AnalyzeText": false
+              },
+              {
+                "Description": "condition",
+                "Type": "Recipient",
+                "Field": "condition",
+                "VariableType": "String",
+                "DataVisibility": {
+                  "Private": false,
+                  "Hidden": false
+                },
+                "AnalyzeText": false
+              },
+              {
+                "Description": "post_test_2_q",
+                "Type": "Recipient",
+                "Field": "post_test_2_q",
+                "VariableType": "String",
+                "DataVisibility": {
+                  "Private": false,
+                  "Hidden": false
+                },
+                "AnalyzeText": false
+              }
+            ]
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_intro",
+            "FlowID": "FL_3"
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_noaid",
+            "FlowID": "FL_4"
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_disc",
+            "FlowID": "FL_5"
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_debrief",
+            "FlowID": "FL_6"
+          }
+        ]
+      }
+    },
+    {
+      "SurveyID": "SV_delayedPCP",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID1",
+      "SecondaryAttribute": "Welcome back — Part 2",
+      "TertiaryAttribute": null,
+      "Payload": {
+        "QuestionText": "<h3 style=\"margin-top:0\">Part&nbsp;2 &mdash; continue the chart-reading task</h3><p>Thanks for coming back to finish the short task from your earlier session. This is Part&nbsp;2, and it continues the same chart-reading activity.</p><p>As before, please work through each chart question <strong>on your own</strong> &mdash; there are no tools or outside resources for this part, and there is no time pressure beyond a brief per-question limit.</p><p>It takes about <strong>10&ndash;15&nbsp;minutes</strong>. When you are ready, click the arrow to begin.</p>",
+        "QuestionText_Unsafe": "<h3 style=\"margin-top:0\">Part&nbsp;2 &mdash; continue the chart-reading task</h3><p>Thanks for coming back to finish the short task from your earlier session. This is Part&nbsp;2, and it continues the same chart-reading activity.</p><p>As before, please work through each chart question <strong>on your own</strong> &mdash; there are no tools or outside resources for this part, and there is no time pressure beyond a brief per-question limit.</p><p>It takes about <strong>10&ndash;15&nbsp;minutes</strong>. When you are ready, click the arrow to begin.</p>",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Welcome back — Part 2",
+        "ChoiceOrder": [],
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        },
+        "DataExportTag": "intro",
+        "QuestionID": "QID1",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "NextChoiceId": 1,
+        "NextAnswerId": 1,
+        "GradingData": [],
+        "Language": []
+      }
+    },
+    {
+      "SurveyID": "SV_delayedPCP",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID2",
+      "SecondaryAttribute": "Delayed PCP post-test (NOAID)",
+      "TertiaryAttribute": null,
+      "Payload": {
+        "QuestionText": "<iframe src=\"https://bruno20033.github.io/thesis-rct/qualtrics-pcp-posttest2.html?pid=${e://Field/ResponseID}\" width=\"100%\" style=\"border:none;min-height:700px\" title=\"Chart-reading task (Part 2)\"></iframe>",
+        "QuestionText_Unsafe": "<iframe src=\"https://bruno20033.github.io/thesis-rct/qualtrics-pcp-posttest2.html?pid=${e://Field/ResponseID}\" width=\"100%\" style=\"border:none;min-height:700px\" title=\"Chart-reading task (Part 2)\"></iframe>",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Delayed PCP post-test (NOAID)",
+        "ChoiceOrder": [],
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        },
+        "DataExportTag": "pcp_posttest2",
+        "QuestionID": "QID2",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "NextChoiceId": 1,
+        "NextAnswerId": 1,
+        "GradingData": [],
+        "Language": [],
+        "QuestionJS": "/* ====================================================================\n * QUALTRICS PCP POST-TEST BRIDGE — Add JavaScript snippet.\n *\n * Paste into the \"Add JavaScript\" panel of the unaided PCP post-test\n * question. Question Text is a single iframe:\n *   immediate (this survey):  qualtrics-pcp-posttest1.html\n *   delayed   (Session 2):    qualtrics-pcp-posttest2.html\n *   <iframe src=\"https://bruno20033.github.io/thesis-rct/qualtrics-pcp-posttest1.html?pid=${e://Field/ResponseID}\"\n *           width=\"100%\" style=\"border:none;min-height:700px\"></iframe>\n *\n * ── ONE embedded-data field holds the whole block ──────────────────\n * A JSON array, one dict per item (presentation order):\n *   { id, chart_id, format, answer, rt_ms, timeout }\n * No answer key ships here — correctness is scored OFFLINE\n * (pcp_score.js against PCP_KEY in pcp_scoring.js).\n *\n * Reuse an existing declared field (POSTTEST_FIELD). The immediate and\n * delayed post-tests live in SEPARATE surveys, so both may safely use the\n * same field name within their own survey.\n * ==================================================================== */\nQualtrics.SurveyEngine.addOnReady(function () {\n  var qThis = this;\n  var POSTTEST_FIELD = 'post_test_2_q';   // delayed-wave field the notebook reads (DELAYED_PACKED_CANDIDATES)\n\n  qThis.hideNextButton();\n\n  // Qualtrics wraps Question Text in <label for=\"...\">, which can intercept\n  // clicks inside the iframe. Remove the association.\n  var labelEl = qThis.questionContainer ? qThis.questionContainer.querySelector('label.QuestionText') : null;\n  if (labelEl && labelEl.getAttribute('for')) labelEl.removeAttribute('for');\n\n  function handleMessage(event) {\n    var data = event.data;\n    if (!data || typeof data !== 'object' || !data.type) return;\n    var Q = Qualtrics.SurveyEngine;\n\n    if (data.type === 'pcp_block_complete' && data.embeddedData) {\n      try {\n        // The renderer already serialised the per-item array under\n        // pcp_<block>_responses; write that one blob to the reused field.\n        var blob = data.embeddedData['pcp_' + (data.block || '') + '_responses'];\n        if (blob != null) Q.setEmbeddedData(POSTTEST_FIELD, String(blob));\n      } catch (e) { console.warn('[PCP bridge] write failed:', e); }\n    }\n\n    if (data.type === 'rct_complete') {\n      qThis.showNextButton();\n    }\n\n    if (data.type === 'rct_height' && typeof data.value === 'number') {\n      var h = Math.max(600, Math.min(1800, data.value + 16));\n      var iframes = qThis.questionContainer\n        ? qThis.questionContainer.getElementsByTagName('iframe')\n        : document.querySelectorAll('.QuestionBody iframe');\n      for (var i = 0; i < iframes.length; i++) iframes[i].style.height = h + 'px';\n    }\n  }\n\n  window.addEventListener('message', handleMessage, false);\n  this.addOnUnload && this.addOnUnload(function () {\n    window.removeEventListener('message', handleMessage, false);\n  });\n\n  console.log('[PCP bridge] post-test — listening (one-field mode).');\n});\n"
+      }
+    },
+    {
+      "SurveyID": "SV_delayedPCP",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID3",
+      "SecondaryAttribute": "Tool-use disclosure",
+      "TertiaryAttribute": null,
+      "Payload": {
+        "QuestionText": "Just to help us interpret the results: for this Part&nbsp;2, did you use any outside help to answer the chart questions &mdash; for example an AI assistant (such as ChatGPT), a web search, written notes, or another person? Your answer does not affect your payment.",
+        "QuestionText_Unsafe": "Just to help us interpret the results: for this Part&nbsp;2, did you use any outside help to answer the chart questions &mdash; for example an AI assistant (such as ChatGPT), a web search, written notes, or another person? Your answer does not affect your payment.",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Tool-use disclosure",
+        "Choices": {
+          "1": {
+            "Display": "No — I answered entirely on my own"
+          },
+          "2": {
+            "Display": "Yes, for at least one question"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "Language": [],
+        "DataExportTag": "tooluse_disclosure",
+        "QuestionID": "QID3",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "NextChoiceId": 3,
+        "NextAnswerId": 1
+      }
+    },
+    {
+      "SurveyID": "SV_delayedPCP",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID4",
+      "SecondaryAttribute": "Debrief",
+      "TertiaryAttribute": null,
+      "Payload": {
+        "QuestionText": "<h3 style=\"margin-top:0\">Thank you &mdash; what this study was about</h3><p>Now that you have finished, here is the full purpose of the research. The chart-reading sessions were part of a study on how different digital tools (web search versus AI assistants) affect how well people <em>learn</em> to read parallel-coordinates charts. The questions you just answered without any tools measured what you retained, and this second session &mdash; about three days after the first &mdash; measured how durable that learning was.</p><p>We described the sessions as a &ldquo;task&rdquo; rather than a &ldquo;test&rdquo; because we wanted to observe natural learning rather than test-focused studying. The existence of this second session was disclosed when you signed up. Your responses are anonymised and analysed only in aggregate.</p><p style=\"color:#666\">[Researcher to add: CUREC ethics reference and a contact email here before launch.]</p><p>Thank you for taking part.</p>",
+        "QuestionText_Unsafe": "<h3 style=\"margin-top:0\">Thank you &mdash; what this study was about</h3><p>Now that you have finished, here is the full purpose of the research. The chart-reading sessions were part of a study on how different digital tools (web search versus AI assistants) affect how well people <em>learn</em> to read parallel-coordinates charts. The questions you just answered without any tools measured what you retained, and this second session &mdash; about three days after the first &mdash; measured how durable that learning was.</p><p>We described the sessions as a &ldquo;task&rdquo; rather than a &ldquo;test&rdquo; because we wanted to observe natural learning rather than test-focused studying. The existence of this second session was disclosed when you signed up. Your responses are anonymised and analysed only in aggregate.</p><p style=\"color:#666\">[Researcher to add: CUREC ethics reference and a contact email here before launch.]</p><p>Thank you for taking part.</p>",
+        "QuestionType": "DB",
+        "Selector": "TB",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "Debrief",
+        "ChoiceOrder": [],
+        "Validation": {
+          "Settings": {
+            "Type": "None"
+          }
+        },
+        "DataExportTag": "debrief",
+        "QuestionID": "QID4",
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        },
+        "NextChoiceId": 1,
+        "NextAnswerId": 1,
+        "GradingData": [],
+        "Language": []
+      }
+    }
+  ]
+}

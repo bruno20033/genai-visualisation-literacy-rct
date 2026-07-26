@@ -1,0 +1,686 @@
+# RCT Treatment Interface for Qualtrics
+
+A self-contained HTML/CSS/JS app that runs the experimental UI (chart + multi-question task on the left, LLM chat or mocked Google search on the right). Architecture modelled on **Simple Chat** (Bermudez Schettino, Dasmeh & Brinkmann, 2025, [arXiv:2511.19123](https://arxiv.org/abs/2511.19123)).
+
+This repo provides **two deployment architectures** — pick one:
+
+| Architecture | When to use | Files |
+|---|---|---|
+| **Iframe + postMessage** *(original)* | Public host available (GitHub Pages, your institution's web server, Netlify). Qualtrics is fully isolated from the experimental UI; the editor cannot mangle anything. | [embed.html](embed.html), [qualtrics-question-js.js](qualtrics-question-js.js), [qualtrics-llm.html](qualtrics-llm.html), [qualtrics-search.html](qualtrics-search.html) |
+| **Self-contained HTML View** *(alternative)* | No external host. Everything pastes directly into Qualtrics. Adds streaming, Chart.js, four question types, and per-condition `LLM_Log` / `Search_Log` fields. | [qualtrics-llm-htmlview.html](qualtrics-llm-htmlview.html), [qualtrics-search-htmlview.html](qualtrics-search-htmlview.html) |
+
+The two are mutually exclusive per question. The iframe section below is the original guide; jump to [HTML View deployment](#html-view-deployment-self-contained) for the alternative.
+
+**Why iframe?** Earlier versions of this project pasted HTML/CSS/JS directly into the Qualtrics question. Qualtrics' rich-text editor strips `<style>` blocks and mangles markup, which broke the layout. The iframe approach moves the entire app to a URL Qualtrics never touches; Qualtrics just renders an `<iframe>` tag and the inside is invisible to its editor.
+
+## Files
+
+| File | Role |
+|---|---|
+| `embed.html` | The whole experimental app — single self-contained page. **This is what gets deployed.** Reads `?condition=`, `?arm=`, `?pid=`, `?model=` from its URL. Holds two arm system prompts (Socratic, Unrestricted), the Judge prompt, the Judge orchestration, and all UI. |
+| `qualtrics-llm.html` | One-line `<iframe>` snippet to paste into the LLM-branch question (the same iframe serves both Socratic and Unrestricted arms; the `arm` param is filled from Embedded Data). |
+| `qualtrics-search.html` | One-line `<iframe>` snippet to paste into the SEARCH-branch question (the Google-only control arm). |
+| `qualtrics-question-js.js` | Qualtrics-side bridge — paste into both questions' JS panels. Listens for postMessage from the iframe and writes to Embedded Data (chat, search, and Judge fields), shows the Next button, and resizes the iframe. |
+| `worker.js` | Cloudflare Worker that holds OpenRouter API keys as server-side secrets and proxies three routes: `POST /llm` (generator), `POST /search` (Google via Serper.dev), and `POST /judge` (LLM-as-Judge fidelity layer). **Deploy this so the keys never ship in `embed.html`.** See [Backend proxy setup](#backend-proxy-setup-cloudflare-worker) below. |
+| `rct_arm_prompts.md` | Canonical, version-controlled copies of the two LLM-arm system prompts (Socratic, Unrestricted). Mirror into `embed.html` JS literals before deploying. |
+| `rct_judge_prompts.md` | Canonical Judge system prompt + synthetic calibration corpus + calibration log. Mirror into `embed.html`'s `RCT_JUDGE_SYSTEM_PROMPT` literal before deploying. |
+| `README.md` | This file. |
+
+## Communication contract (iframe → parent)
+
+The iframe posts these messages to `window.parent`:
+
+```js
+{ type: 'rct_log_update', payload: <full InteractionLog> }   // every interaction
+{ type: 'rct_complete' }                                      // final answer submitted
+{ type: 'rct_height',  value: <px> }                          // suggested iframe height
+```
+
+`qualtrics-question-js.js` translates them into `Qualtrics.SurveyEngine.setEmbeddedData(...)` calls, `qThis.showNextButton()`, and `iframe.style.height = ...`.
+
+## Setup overview
+
+```
+1. Edit embed.html (API key, instructions, chart data, etc.)
+2. Deploy embed.html publicly (GitHub Pages is the easy default)
+3. Survey Flow: declare Embedded Data + Randomizer
+4. LLM question:    paste iframe + paste qualtrics-question-js.js
+5. SEARCH question: paste iframe + paste qualtrics-question-js.js
+6. Test in Qualtrics preview
+```
+
+## 1. Deploying `embed.html`
+
+You need a public HTTPS URL that serves `embed.html`. Easiest options for a thesis:
+
+### GitHub Pages (recommended for thesis projects)
+
+1. Make sure the project directory is a git repo (`git init` if needed) and push it to a GitHub repo, e.g. `username/thesis`.
+2. On GitHub: **Settings → Pages → Source: Deploy from a branch → main → `/` (root)**. Save.
+3. Wait ~1 minute. Your URL is `https://username.github.io/thesis/embed.html`.
+
+### Cloudflare Pages
+
+`Connect to Git` → pick the repo → leave build command empty → publish directory `/` → deploy. URL is `https://<project>.pages.dev/embed.html`.
+
+### Netlify drop
+
+Drag the project folder onto [app.netlify.com/drop](https://app.netlify.com/drop). Get an instant `https://*.netlify.app` URL.
+
+Whichever you pick, **note the URL of `embed.html`**. You'll paste it into the iframe in step 4.
+
+## 2. Qualtrics Survey Flow
+
+The study has **three arms**, randomised between-subjects:
+
+| Arm | URL parameters | What participants see |
+|---|---|---|
+| **Google-only (control)** | `?condition=SEARCH` | Real Google web search panel (Serper.dev API); chart + question on the left. No LLM. |
+| **Socratic LLM (treatment)** | `?condition=LLM&arm=socratic` | LLM chat with a probe-only system prompt; an LLM-as-Judge layer scores every turn for scaffold fidelity in the background (passive mode). |
+| **Unrestricted LLM (treatment)** | `?condition=LLM&arm=unrestricted` | LLM chat with a generally-helpful system prompt. No Judge layer. |
+
+If `arm` is missing on the LLM condition, the embed defaults to `unrestricted` for backward compatibility with the pre-arm URL shape.
+
+### Multi-question flow
+
+The treatment screen cycles through multiple questions sequentially: the participant answers one True/False item, clicks **Next question →**, and the chart + question text + treatment-panel state swap to the next item. The final question's button reads **Finish** and triggers `rct_complete` (which reveals the Qualtrics **Next** button). Each question carries its own chart, defined in the `QUESTIONS` array at the top of `embed.html` — to add or change items, just edit that array.
+
+By default the chat/search history resets between questions (constants `RESET_CHAT_BETWEEN_QUESTIONS` and `RESET_SEARCH_BETWEEN_QUESTIONS` in `embed.html`) so each item is a clean experimental unit and the LLM doesn't carry prior-item context. Flip either constant to `false` if you want conversational memory or accumulated search history to persist across items. All events in `InteractionLog` are tagged with `question_id` regardless of the reset setting, so per-question analysis is always possible.
+
+**To add or remove questions**, edit the `QUESTIONS` array in `embed.html` and declare a matching `qN_answer` field in Survey Flow for each new question id. `current_question_index` and `question_count` are written on every interaction so analysts can split drop-outs by which question the participant abandoned.
+
+### Share-chart button (unrestricted arm only)
+
+The unrestricted-arm LLM panel has a **📊 Share chart with assistant** button above the chatbox. When clicked, it rasterises the current chart SVG to PNG and attaches it (plus a structured text block with title, y-axis, data points, and the True/False claim) to the next message as a multimodal `user` block. Vision-capable models (the default `openai/gpt-4o-mini` qualifies) can then reason directly about the image; non-vision models will silently ignore it.
+
+The Socratic arm intentionally omits this button — feeding the chart image to the model would let it answer the item directly, defeating the probe-only scaffold.
+
+One share per question, reset on advance. Each click writes a `context_share` event to `InteractionLog.events` (tagged with `question_id`), but the PNG data is **not** persisted (it's regenerated from `QUESTIONS[i].chart` on each API build, kept in an in-memory cache otherwise). No new Embedded Data fields are required.
+
+Add an **Embedded Data** element at the top of Survey Flow with these field names (leave values blank — the bridge fills them):
+
+```
+# core identification
+condition
+arm
+participant_id
+session_id
+model_used
+InteractionLog
+interaction_log              # per-condition dict view — see "interaction_log dictionary schema" below
+
+# task answers (one per question — declare q1..qN to match QUESTIONS.length in embed.html)
+q1_answer
+q2_answer
+q3_answer
+
+# multi-question progress (written on every interaction; useful for analysing drop-outs)
+current_question_index
+question_count
+
+# LLM-condition counters and content
+prompt_count
+response_count
+last_prompt
+last_response
+all_prompts
+all_responses
+prompt_1 prompt_2 prompt_3 ... prompt_20
+response_1 response_2 response_3 ... response_20
+
+# SEARCH-condition counters and content
+query_count
+click_count
+total_clicks
+total_dwell_ms
+last_search_query
+all_search_queries
+all_clicked_urls
+search_query_1 search_query_2 ... search_query_20
+search_click_1 search_click_2 ... search_click_20
+search_click_title_1 ... search_click_title_20
+search_click_query_1 ... search_click_query_20
+search_click_index_1 ... search_click_index_20
+search_dwell_ms_1 ... search_dwell_ms_20
+
+# Socratic-arm Judge fields (empty for other arms)
+judge_model
+judge_mode
+judge_call_count
+judge_failure_count
+judge_avg_fidelity
+judge_min_fidelity
+judge_below_threshold_count
+judge_extraction_attempt_count
+judge_total_latency_ms
+judge_fidelity_1 judge_fidelity_2 ... judge_fidelity_20
+judge_intent_1 judge_intent_2 ... judge_intent_20
+judge_fidelity_reasoning_1 ... judge_fidelity_reasoning_20
+judge_intent_reasoning_1 ... judge_intent_reasoning_20
+judge_status_1 ... judge_status_20
+judge_latency_ms_1 ... judge_latency_ms_20
+judge_active_regen_1 ... judge_active_regen_20
+```
+
+The `prompt_N` / `response_N` / `search_query_N` fields capture each turn separately so analysts can read prompts and AI replies directly from the CSV. Up to 20 turns are written; if a participant has fewer, the remaining fields stay empty. The full conversation is also concatenated into `all_prompts`, `all_responses`, and `all_search_queries` (separated by `\n---\n`). The complete event log with timestamps and latencies remains in `InteractionLog` (stringified JSON) for full-fidelity analysis.
+
+`prompt_count` counts user prompts SENT (regardless of whether the AI replied successfully). `response_count` counts successful AI replies / search results shown.
+
+`judge_fidelity_N` (1–5) and `judge_intent_N` (1–4) are the Socratic-arm Judge scores per turn, defined in [rct_judge_prompts.md](rct_judge_prompts.md). `judge_status_N` is `ok` / `parse_error` / `api_error` / `timeout`. `judge_active_regen_N` is `true`/`false` indicating whether active mode triggered a silent regeneration on that turn (always `false` in passive mode). Aggregates: `judge_avg_fidelity` (mean over OK turns), `judge_min_fidelity`, `judge_below_threshold_count` (turns where fidelity < 3), `judge_extraction_attempt_count` (turns where intent ∈ {1, 2}). Empty for non-Socratic arms.
+
+Add a **Randomizer** that evenly assigns each participant to **one of three branches**:
+
+```
+Randomizer (Evenly Present Elements: ☑)
+├─ Branch 1 (Google-only, control)
+│   ├─ Set Embedded Data: condition = SEARCH
+│   └─ Block: SEARCH question
+├─ Branch 2 (Socratic LLM)
+│   ├─ Set Embedded Data: condition = LLM, arm = socratic
+│   └─ Block: LLM question (Socratic)
+└─ Branch 3 (Unrestricted LLM)
+    ├─ Set Embedded Data: condition = LLM, arm = unrestricted
+    └─ Block: LLM question (Unrestricted)
+```
+
+The two LLM-condition blocks can use the **same Qualtrics question** (and the same iframe `src` template), differing only by their Embedded-Data-set step setting `arm` differently. The Randomizer's branch boundary is what selects the system prompt for each participant.
+
+## 3. The two Qualtrics questions
+
+Create two **Text Entry** questions, one per branch.
+
+### LLM question
+
+**Question Text** (rich-text editor → Source view, paste the line below; replace `EMBED_URL` with your hosted URL from step 2). The `arm` parameter is read from Embedded Data so the same question can serve both LLM arms — the Randomizer determines which `arm` each participant gets:
+
+```html
+<iframe
+  src="https://yourname.github.io/thesis/embed.html?condition=LLM&arm=${e://Field/arm}&pid=${e://Field/ResponseID}"
+  width="100%" height="800" frameborder="0"
+  style="border:none; display:block; width:100%; min-height:700px;"
+  allow="clipboard-write"
+  title="Research tools — LLM condition">
+</iframe>
+```
+
+**JavaScript panel** (gear icon → Add JavaScript): paste the entire contents of `qualtrics-question-js.js`.
+
+### SEARCH question
+
+Same as LLM but with `condition=SEARCH` in the iframe URL.
+
+`${e://Field/ResponseID}` is Qualtrics piped text — it inserts the participant's response ID as the `pid` query parameter, so the iframe storage and the embedded log stay tied to that participant.
+
+## 4. Test in Qualtrics
+
+Open the survey **Preview**. Open browser DevTools → Console. You should see:
+
+```
+[RCT bridge] listening for iframe postMessage events.
+[RCT embed] init complete — condition=LLM, pid=<response-id>
+```
+
+Then check:
+- Top instructions panel renders.
+- Chart, True/False, Submit on the left.
+- Treatment on the right (chat or search).
+- Selecting True/False enables the Submit button.
+- Clicking Submit → right panel locks, Qualtrics' real Next button appears.
+- After submitting and exporting (Data & Analysis → Export → CSV), `InteractionLog` is populated as a stringified JSON column, and the flat fields (`condition`, `prompt_count`, `q1_answer`, `model_used`, `session_id`) are filled.
+
+## Customisation
+
+Everything user-facing lives at the top of `embed.html`. After editing, **redeploy** (push to GitHub, etc.) — Qualtrics fetches the new version automatically on the next survey load.
+
+| Want to change… | Edit in `embed.html` |
+|---|---|
+| Instructions text | `INSTRUCTIONS_HTML` |
+| Chart data | `CHART_DATA` |
+| Search results | `SEARCH_RESULTS` |
+| Questions list | `QUESTIONS` |
+| LLM model / API key / referer | Top of file |
+| Aesthetics | The `<style>` block |
+
+Different instructions per condition? Move `INSTRUCTIONS_HTML` below the `CONDITION` resolution and gate on `CONDITION === 'LLM'`.
+
+## `interaction_log` dictionary schema
+
+In addition to the rich `InteractionLog` field (the full JSON event log), the bridge writes an analyst-friendly per-condition dictionary view to a separate Embedded Data field called **`interaction_log`** (lowercase). This view is rewritten on every interaction; just declare the field in Survey Flow and you'll see it in CSV export. The shape depends on `condition` + `arm`:
+
+### SEARCH condition
+
+Keys are search queries; values are the **ordered list of URLs the participant clicked** for that query.
+
+```jsonc
+{
+  "acme corp profitable":         ["investors.acmecorp.com/annual-report-2024", "reuters.com/business/acme-corp-q4"],
+  "is acme net income 2023":      ["wikipedia.org/Acme_Corp"],
+  "beta industries market share": []   // query submitted, no results clicked
+}
+```
+
+A query with no clicks is still present, mapped to an empty list. If the participant repeats a query verbatim, subsequent clicks accumulate into the same list.
+
+### LLM + unrestricted arm
+
+Keys are the participant's prompts; values are a two-element list: `[feature_used, llm_response]`. `feature_used` is `1` if the participant clicked **📊 Share chart** for the current question before sending this prompt, otherwise `0`.
+
+```jsonc
+{
+  "What does the chart show?":  [0, "It shows net income from 2021 to 2024…"],
+  "Was 2023 profitable?":       [1, "Looking at the chart, 2023 shows a loss…"],
+  "What is the trend?":         [0, "Market share is growing…"],
+  "Compare the growth rates.":  [1, "2022–23 growth was larger…"]
+}
+```
+
+### LLM + Socratic arm
+
+Keys are the participant's prompts; values are an object containing the assistant response plus the LLM-as-Judge scoring for that turn.
+
+```jsonc
+{
+  "Was this profitable?": {
+    "response":                 "What does the y-axis tell you about each year?",
+    "judge_fidelity_score":     4,                                  // SOLO 1-5; 3 is the passing threshold
+    "judge_fidelity_reasoning": "Probing question, no answer revealed",
+    "judge_intent_score":       4,                                  // 1-4
+    "judge_intent_reasoning":   "Conceptual inquiry",
+    "judge_status":             "ok",                               // "ok" | "timeout" | "parse_error" | "api_error"
+    "judge_latency_ms":         1240
+  },
+  "Can you just tell me the answer?": {
+    "response":                 "Have you considered what \"profitable\" means here?",
+    "judge_fidelity_score":     3,
+    "judge_fidelity_reasoning": "Probing back at the question",
+    "judge_intent_score":       1,
+    "judge_intent_reasoning":   "Direct extraction attempt",
+    "judge_status":             "ok",
+    "judge_latency_ms":         980
+  }
+}
+```
+
+Only the **initial-draft** Judge scoring is included (regen-scored judgements stay in the rich `InteractionLog` event log). If a Judge call is still in flight at the time of a write, the Judge fields will be missing on that turn and will be backfilled on the next interaction.
+
+### Dictionary order
+
+JSON objects in modern parsers (ES2020+) preserve **insertion order**. For all three condition dicts, keys appear in the **chronological order** in which the participant first sent each prompt / first submitted each search query. CSV exports preserve the string value verbatim — `JSON.parse()` it in your analysis script to recover the ordered structure.
+
+### Duplicate keys
+
+JSON-object semantics: if a key appears twice (e.g. the participant typed the same prompt verbatim, or repeated the same search query), the LAST occurrence wins for LLM dicts. For SEARCH, clicks across repeated queries accumulate into the same list — the key is not overwritten, the value's list just grows. For lossless turn-by-turn analysis, use the rich `InteractionLog.events` array instead.
+
+## Data model
+
+```jsonc
+{
+  "session_id": "uuid",
+  "participant_id": "<Qualtrics ResponseID or sim id>",
+  "condition": "LLM" | "SEARCH",
+  "model_used": "openai/gpt-4o-mini" | null,
+  "started_at": "ISO8601",
+  "events": [
+    { "type": "prompt",               "ts": "...", "content": "..." },
+    { "type": "response",             "ts": "...", "content": "...", "latency_ms": 1234, "http_status": 200 },
+    { "type": "search_query",         "ts": "...", "query": "..." },
+    { "type": "search_results_shown", "ts": "...", "query": "...", "results": [/*…*/], "latency_ms": 600 },
+    { "type": "answer_change",        "ts": "...", "question_id": "q1", "value": true },
+    { "type": "answer_final",         "ts": "...", "question_id": "q1", "value": true },
+    { "type": "panel_locked",         "ts": "..." },
+    { "type": "error",                "ts": "...", "error": "...", "http_status": 500 }
+  ],
+  "prompt_count": 3,
+  "answers": { "q1": true }
+}
+```
+
+For the LLM condition, chat is **multi-turn**: every prior `prompt`/`response` event is replayed as `user`/`assistant` messages on each request. For SEARCH, results come from **Google** via the Serper.dev API, proxied by the same Cloudflare Worker; clicking a result opens it in the in-panel reader so the chart and question stay visible, and dwell time is logged per click. See *Google search backend (Serper.dev)* below.
+
+### SEARCH event types
+
+| Event | Fields | When |
+|---|---|---|
+| `search_query` | `query` | Submitted before the API call (so failed searches are still recorded). |
+| `search_results_shown` | `query, results[], latency_ms` | After a successful API response. `results` is `[{title, url, displayUrl, snippet}]`. |
+| `result_click` | `index, url, title, query` | Logged synchronously, **before** navigation, so a torn-down page doesn't lose the click. |
+| `result_dwell` | `url, dwell_ms, returned_via` | Computed on `pageshow` when the participant returns. `returned_via` is `"bfcache"` (instant restore) or `"reload"`. Sub-100 ms and 30 min+ values are filtered as noise. |
+| `error_retry` | `attempt, error` | Each transient failure during the silent-retry loop (max 2 retries). |
+| `error` | `error, http_status, latency_ms` | Logged once after all retries are exhausted; the inline error card is shown. |
+
+The bridge's flat-field flattener writes per-turn fields (`search_click_1..20`, `search_click_title_1..20`, `search_click_query_1..20`, `search_click_index_1..20`, `search_dwell_ms_1..20`) plus aggregates `total_clicks`, `total_dwell_ms`, `query_count`, `click_count`, `all_clicked_urls` so analysts get the data without parsing `InteractionLog` JSON.
+
+## Backend proxy setup (Cloudflare Worker)
+
+The OpenRouter API key must NOT live in `embed.html` once that file is deployed publicly — anyone can read it from page source and rack up your bill. The proxy in [worker.js](worker.js) fixes this: it sits between `embed.html` and OpenRouter, holding the key as a server-side secret.
+
+### One-time setup (~5 minutes)
+
+1. **Create a Cloudflare account** at [dash.cloudflare.com/sign-up](https://dash.cloudflare.com/sign-up). Free tier is fine.
+2. **Workers & Pages → Create → Create Worker.** Name it e.g. `thesis-llm-proxy`. Click **Deploy** (the placeholder code is fine for now).
+3. **Edit code** → paste the **entire contents of [worker.js](worker.js)** into the editor (replace what's there). Click **Save and deploy**.
+4. **Settings → Variables and Secrets:**
+   - Add **`OPENROUTER_API_KEY`** as **Type: Secret** → paste your real OpenRouter key (the one you tested with curl) → **Save**.
+   - Add **`ALLOWED_ORIGINS`** as **Type: Text** → set to your GitHub Pages origin and Qualtrics origin, comma-separated:
+     ```
+     https://bruno20033.github.io,https://oii.eu.qualtrics.com
+     ```
+     (add other Qualtrics datacentres if you publish from a different one — `*.qualtrics.com` is locked down per-tenant)
+   - Optional: `MAX_TOKENS=1024` (default), `HTTP_REFERER=https://bruno20033.github.io/thesis-rct`, `X_TITLE=RCT Chart Study`.
+5. **Note your worker URL** — at the top of the worker page, e.g. `https://thesis-llm-proxy.bruno20033.workers.dev`.
+
+### Test the proxy
+
+```bash
+curl -i https://thesis-llm-proxy.YOUR-CF-USERNAME.workers.dev \
+  -H "Origin: https://bruno20033.github.io" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"openai/gpt-4o-mini","messages":[{"role":"user","content":"hi"}]}'
+```
+
+Expect a normal OpenRouter chat completion back. Responses with `403 Forbidden origin` mean `ALLOWED_ORIGINS` didn't match — fix the env var.
+
+### Wire `embed.html` to the proxy
+
+In [embed.html](embed.html), set:
+
+```js
+var PROXY_URL = 'https://thesis-llm-proxy.YOUR-CF-USERNAME.workers.dev';
+```
+
+(`OPENROUTER_API_KEY` and `OPENROUTER_URL` are no longer needed — the proxy adds the auth header server-side.) Commit and push:
+
+```bash
+git add embed.html
+git commit -m "route llm calls through cloudflare proxy"
+git push
+```
+
+### Revoke the leaked key
+
+The key currently in your repo's git history (commit `b0ceff5` and similar) is permanently exposed. After confirming the proxy works:
+
+1. Go to [openrouter.ai/keys](https://openrouter.ai/keys) → revoke the old key.
+2. Create a new key, paste it into the **Cloudflare Worker secret** (NOT into embed.html ever again).
+
+The worker now holds the key; no further key handling is needed in your repo.
+
+### What the proxy enforces
+
+The Worker exposes two routes under one origin-locked CORS policy:
+
+- **`POST /` and `POST /llm`** — forward to OpenRouter chat completions with the secret `OPENROUTER_API_KEY` (the participant-facing generator). `max_tokens` is clamped to the `MAX_TOKENS` env var (default 1024).
+- **`POST /search`** — Google web results via the [Serper.dev](https://serper.dev) API, using the secret `SERPER_API_KEY`. Returns up to 30 organic `{title, url, displayUrl, snippet}` items; non-organic blocks (answer box, knowledge graph, ads) are dropped. (Earlier backends: Google Programmable Search — removed "search the entire web" for new engines in 2024 — Brave Search — free tier needs a billing card — and a DuckDuckGo HTML scrape, which DDG rate-limited from datacentre IPs after a handful of queries.)
+- **`POST /judge`** — forwards to OpenRouter with the **separate** secret `OPENROUTER_JUDGE_API_KEY` for the LLM-as-Judge fidelity layer (Socratic arm only). Judge model id is supplied per request in the `model` body field, so the Judge provider can be swapped without redeploying. `max_tokens` is clamped to `JUDGE_MAX_TOKENS` (default 400). `temperature` is clamped to ≤ 0.3 (forced to 0.1 if higher) so Judge grading stays near-deterministic.
+
+Cross-cutting:
+- **Origin allowlist** — every request is checked against `ALLOWED_ORIGINS`. Off-list requests get `403 Forbidden origin`.
+- **Method allowlist** — POST only (plus OPTIONS for CORS pre-flight).
+- **CORS headers** — `Access-Control-Allow-Origin` is set to the matching allowed origin (per-request), not `*`.
+
+For higher-stakes deployments, add per-IP rate limiting in Cloudflare's dashboard (Security → WAF → Rate limiting) and daily spend caps on the OpenRouter and Serper keys.
+
+## Google search backend (Serper.dev)
+
+The SEARCH condition's results come from **Google**, via the [Serper.dev](https://serper.dev) Search API, proxied server-side by the Cloudflare Worker. Serper returns Google's SERP as JSON; the Worker keeps the organic results and normalises them to the shape the browser already expects. This requires a `SERPER_API_KEY` secret on the Worker.
+
+> **Why Serper?** Earlier backends were card-free but unreliable. Google Programmable Search no longer allows "search the entire web" for new engines (since 2024). A DuckDuckGo HTML scrape needs no key, but DDG rate-limits datacentre IPs — it served its bot-challenge page after only a few queries from the Worker, breaking the SEARCH control mid-session. Serper gives real Google results, a keyed quota that doesn't throttle at trial scale, and a clean JSON contract that's reproducible and citable in the Methods. Visual presentation in `embed.html` (blue title link, green URL hostname, grey snippet) is identical regardless of backend.
+
+### What it does behind the scenes
+
+The Worker `POST /search` route:
+1. Takes a `{ query }` JSON body from the browser.
+2. POSTs `{ q, num, gl, hl }` to `https://google.serper.dev/search` with the `X-API-KEY` header.
+3. Reads the JSON response and keeps the `organic` array (up to N results).
+4. **Ignores non-organic blocks** (answer box, knowledge graph, top stories, paid ads) so the experimental control sees plain organic results only.
+5. Returns the same `{ items: [{title, url, displayUrl, snippet}], total }` shape the browser already expects — so `embed.html` and the Qualtrics bridge need no changes.
+
+### Required + optional Worker env vars
+
+In Workers & Pages → your worker → **Settings → Variables and Secrets**:
+
+- `SERPER_API_KEY` (Type: **Secret**, **required**) → your Serper.dev API key. Get one at [serper.dev](https://serper.dev) (free starter credits, then ~$0.001/query).
+- `SEARCH_NUM_RESULTS` (Type: **Text**, optional) → `1`–`30`, default 10.
+- `SEARCH_GL` (Type: **Text**, optional) → Google country code, default `us`. Examples: `us`, `gb`, `de`.
+- `SEARCH_HL` (Type: **Text**, optional) → Google interface language, default `en`. Examples: `en`, `de`.
+
+Only `SERPER_API_KEY` is required; the rest have working defaults.
+
+### Test the route
+
+```bash
+curl -i https://thesis-llm-proxy.YOUR-CF-USERNAME.workers.dev/search \
+  -H "Origin: https://bruno20033.github.io" \
+  -H "Content-Type: application/json" \
+  -d '{"query":"how to read a parallel coordinates chart"}'
+```
+
+Expect `200` + `{"items":[{"title":"…","url":"…","displayUrl":"…","snippet":"…"}, …], "total":"…"}` with ~10 organic results. A `403 Forbidden origin` means `ALLOWED_ORIGINS` doesn't include the test origin. A `401`/`403` carrying a Serper `detail` means the key is missing or wrong. A `429` means the Serper plan quota is exhausted — top up or upgrade.
+
+### Reliability notes
+
+- Serper is a keyed, quota-backed API, so there's no datacentre-IP rate-limiting like the old DDG scrape — the failure mode that broke the SEARCH arm mid-session ("worked for a few searches, then *Suche vorübergehend nicht verfügbar*") is gone.
+- If the Worker ever returns non-OK, the embed's retry loop kicks in (2 retries with back-off, then a clean `error` event and the "search temporarily unavailable" message).
+- Watch per-query spend on the Serper dashboard and set a plan cap before launch, the same way you cap the OpenRouter keys.
+
+## LLM-as-Judge fidelity layer (Socratic arm only)
+
+The Socratic arm has known scaffold-failure modes — direct or oblique solution extraction by the participant, model drift toward helpful-assistant mode, jailbreaks, and gaming. To detect and quantify these, every Socratic-arm turn is silently scored by a **second LLM** (the Judge) on two rubrics:
+
+- **`fidelity_score` (1–5):** SOLO-style rubric measuring whether the assistant message stayed within the Socratic boundary (passing threshold = 3 / Relational).
+- **`intent_score` (1–4):** taxonomy of participant intent — direct extraction / oblique extraction / legitimate clarification / legitimate conceptual inquiry. Intent scores 1 and 2 flag the turn for analyst review (no participant-facing intervention).
+
+Both scores are returned in **one** Judge round-trip per turn. Architecture is adapted from VibeCheck (Sankaranarayanan, 2026, [arXiv:2602.20206v2](https://arxiv.org/abs/2602.20206)) — the design intent transfers (cross-family Judge, SOLO rubric, prompt-injection hardening), the IDE-coupled mechanics (Apply-button gate, file-system watcher) are dropped because there's no IDE in a Qualtrics chat widget.
+
+### How to swap the Judge model
+
+One config constant in [embed.html](embed.html):
+```js
+var RCT_JUDGE_MODEL = 'anthropic/claude-haiku-4-5';   // any OpenRouter model id
+```
+The Worker forwards whatever `model` the embed sends, so swapping the Judge is one constant + one redeploy of `embed.html`. **Cross-family rule:** if you change the generator family, also change the Judge model so they're from different providers (Wataoka et al. 2024 self-preference bias). The default mapping (OpenAI generator → Anthropic Judge) handles this automatically; if you switch the generator to Claude, change the Judge to GPT or Gemini.
+
+### How to toggle passive vs active mode
+
+```js
+var RCT_JUDGE_MODE = 'passive';   // 'passive' | 'active' | 'off'
+```
+
+| Mode | Behaviour | Recommended when |
+|---|---|---|
+| **`passive`** | Judge fires after the assistant message renders, **fire-and-forget**. Scores backfill `InteractionLog` and the per-turn flat fields a few seconds later. Participant never sees the Judge or any extra latency. | **Default for the main trial.** Measures the Socratic treatment as actually delivered, including its failure modes. |
+| **`active`** | Judge fires **before** the assistant message renders. If `fidelity_score < RCT_JUDGE_THRESHOLD`, the response is silently regenerated with a stronger system-prompt reinforcement and the regen is shown instead. The participant never sees the rejected draft. | **Pilot only.** Adds 2–5s of latency per turn; modifies the treatment delivery mid-flight (which is OK for pilot, contaminating for the main trial). |
+| **`off`** | Judge disabled. | Sanity-check runs, or if you ever want to ship the Socratic arm without judging. |
+
+Active mode does **one** regen attempt per turn. If the regen also fails the Judge it's served anyway — the participant never gets a loading spinner and the Judge never blocks delivery. Failure is logged via `judge_active_regen_N = true` plus `active_regen_succeeded` inside the `judge_result` event in `InteractionLog`.
+
+### Worker secret
+
+`OPENROUTER_JUDGE_API_KEY` (Type: **Secret**) on the Cloudflare Worker. May be set to the same value as `OPENROUTER_API_KEY` (the generator key) for simplicity, but a separate key is **strongly recommended** so spend monitoring and rotation on the Judge channel are independent of the generator's. If the Judge key is unset, the Worker falls back to `OPENROUTER_API_KEY` so the route still works during initial setup.
+
+### Reading Judge data out of Qualtrics for analysis
+
+Per-turn flat fields (1..20) appear directly as CSV columns:
+
+| Field | Type | Notes |
+|---|---|---|
+| `judge_fidelity_N` | int 1–5 | empty if turn N hasn't been judged yet |
+| `judge_intent_N` | int 1–4 | |
+| `judge_fidelity_reasoning_N` | string ≤ 300 chars | preview; full text in `InteractionLog` JSON |
+| `judge_intent_reasoning_N` | string ≤ 300 chars | |
+| `judge_status_N` | enum | `ok` / `parse_error` / `api_error` / `timeout` / `''` (no call) |
+| `judge_latency_ms_N` | int | wall-clock from Judge fetch dispatch to JSON parse |
+| `judge_active_regen_N` | bool string | `true` iff active mode triggered a regen on this turn |
+
+Session aggregates:
+- `judge_avg_fidelity` (mean over OK turns)
+- `judge_min_fidelity`
+- `judge_below_threshold_count` (turns where fidelity < 3)
+- `judge_extraction_attempt_count` (turns where intent ∈ {1, 2})
+- `judge_call_count`, `judge_failure_count`, `judge_total_latency_ms`
+- `judge_model`, `judge_mode` (recorded once for the session)
+
+For full per-event reasoning, parse the `InteractionLog` column as JSON and filter for `events[].type === 'judge_result'`. Each judge_result event also carries `is_regen_score` (true on second-pass scoring of regenerated responses in active mode), `active_regen_triggered`, `active_regen_succeeded`, and `raw_response_truncated` (set only when the Judge returned unparseable JSON).
+
+The full Judge prompt and calibration corpus live in [rct_judge_prompts.md](rct_judge_prompts.md). The two arm system prompts live in [rct_arm_prompts.md](rct_arm_prompts.md). Both are documentation files; runtime copies are JS string literals in `embed.html`.
+
+## Refresh resilience
+
+The iframe persists its `InteractionLog` to **its own** `localStorage` keyed by `pid` and `condition`. Refreshing the Qualtrics page reloads the iframe; the iframe restores its state, replays the chat or search UI, and re-applies any submitted lock. The Qualtrics Embedded Data is also up to date because every event is mirrored via postMessage.
+
+## Security: API-key handling
+
+The OpenRouter API key in `embed.html` ships to the participant's browser and is extractable. Choose ONE:
+
+1. **Backend proxy (RECOMMENDED).** Stand up `POST /llm` on a Cloudflare Worker / Vercel function that forwards to OpenRouter with the real key in a server env var. In `embed.html`, set `OPENROUTER_URL` to your proxy and remove the `Authorization` header.
+2. **Per-session ephemeral key** passed via the iframe's URL.
+3. **Hardcoded for IRB-supervised pilots only**, with all of: spend cap on the OpenRouter key, weekly rotation, time-limited recruitment, methods-section disclosure of the trade-off.
+
+Set `EXPECTED_ORIGIN` near the top of `qualtrics-question-js.js` to your deployed origin (e.g. `'https://yourname.github.io'`) so the postMessage listener ignores stray events from other iframes.
+
+## Failure handling
+
+If the OpenRouter request fails, an `error` event is logged with the error string and HTTP status, and an inline error bubble appears in the chat. The chart and T/F question remain answerable — the dependent variable is still measurable even if the treatment fails. Filter or exclude responses with elevated `error` event counts during analysis.
+
+## Pre-launch verification checklist
+
+- [ ] `embed.html` deployed at a stable HTTPS URL.
+- [ ] OpenRouter API key set; spend cap configured on the OpenRouter dashboard.
+- [ ] `EXPECTED_ORIGIN` set in `qualtrics-question-js.js`.
+- [ ] Embedded Data fields declared in Survey Flow.
+- [ ] Randomizer set to even allocation between LLM and SEARCH branches.
+- [ ] LLM question has the iframe pasted (with the deployed URL) AND `qualtrics-question-js.js` in its JS panel.
+- [ ] SEARCH question has the same.
+- [ ] Browser console shows both `[RCT bridge]` and `[RCT embed]` log lines on preview load.
+- [ ] Multi-turn LLM works (a follow-up prompt that requires prior context returns a coherent reply).
+- [ ] Refresh test mid-session restores chat/search and answer state.
+- [ ] Submit → Next reveals → right panel locks.
+- [ ] CSV export: `InteractionLog` is one column with a parseable JSON string; flat columns populated.
+- [ ] Mobile blocked in Survey Options (or layout explicitly chosen otherwise).
+
+## HTML View deployment (self-contained)
+
+Use this path when you don't have a public URL to host `embed.html` on. The two HTML View files are fully self-contained — no iframe, no proxy, no separate JS bridge.
+
+### Differences from the iframe build
+
+| Concern | Iframe build | HTML View build |
+|---|---|---|
+| Hosting | Static URL (`embed.html`) + Qualtrics paste | Everything inside Qualtrics |
+| Chart | Hand-rolled SVG | [Chart.js](https://www.chartjs.org/) via CDN |
+| LLM | Single round-trip (non-streaming) | **Streaming** (OpenRouter SSE) |
+| **SEARCH** | **Real Google** via Worker `/search` route (Serper.dev API) + click + dwell tracking | **Still mocked** (4 hardcoded results); click event logged but no navigation |
+| Question types | True/False only | True/False, MC (single), MC (multi), Likert |
+| Embedded Data field | `InteractionLog` (one) | `LLM_Log` and `Search_Log` (per condition) |
+| Layout | `min-height: 560px` (page grows) | `height: 600px` with internal scroll per panel |
+| Submit timing | Immediate | If a stream is in flight, waits for it to finish before locking |
+
+### Files
+
+| File | What goes where |
+|---|---|
+| [qualtrics-llm-htmlview.html](qualtrics-llm-htmlview.html) | LLM (Condition A). Paste the `<style>` + `<div>` mount into the question's HTML View, paste the `<script>` body into the JS panel. (Or paste the whole file into HTML View if your Qualtrics instance preserves `<script>` tags.) |
+| [qualtrics-search-htmlview.html](qualtrics-search-htmlview.html) | Search (Condition B). Same paste flow. |
+
+Both files double as standalone preview pages — open them in a browser and the script falls back to a non-Qualtrics simulator mode.
+
+### Setup
+
+1. **Survey Flow → Embedded Data block** (blank values):
+   ```
+   LLM_Log
+   Search_Log
+   prompt_count
+   query_count
+   total_response_time_ms
+   click_count
+   q1_answer
+   q2_answer
+   q3_answer
+   q4_answer
+   condition
+   participant_id
+   model_used
+   ```
+2. **Randomizer**: even allocation between LLM and SEARCH branches.
+3. Create **two Text Entry questions**, one per branch.
+4. For the **LLM question**:
+   - Question Text → HTML View → paste the `<style>...</style>` block plus the `<div id="rct-root"></div>` mount from `qualtrics-llm-htmlview.html`.
+   - JS panel → paste the contents of the inline `<script>` block (everything inside its tags).
+   - Edit the constants at the top of the JS: `OPENROUTER_API_KEY`, `OPENROUTER_REFERER`, `MODEL`, `INSTRUCTIONS_HTML`, `QUESTIONS`, `CHART_DATA`. The `<script src="...chart.js...">` CDN tag must be in the HTML View paste so Chart.js loads.
+5. For the **SEARCH question**: same flow with `qualtrics-search-htmlview.html`. Edit `SEARCH_RESULTS` and the same shared constants.
+6. **Test in Preview**. The browser console should show `[RCT] init complete — condition=LLM, pid=<id>` once.
+
+### Question schema (extending)
+
+```js
+var QUESTIONS = [
+  { id: 'q1', type: 'truefalse', text: '...' },
+  { id: 'q2', type: 'mc',        text: '...', options: ['A','B','C','D'] },
+  { id: 'q3', type: 'mcmulti',   text: '...', options: ['X','Y','Z'] },
+  { id: 'q4', type: 'likert',    text: '...', scale: 5, leftLabel: 'Disagree', rightLabel: 'Agree' }
+];
+```
+
+The Submit button stays disabled until **every** question has a non-empty answer (for `mcmulti`, at least one box checked). For each question id, a flat `<id>_answer` Embedded Data field is written; multi-select answers are stored as JSON-stringified arrays like `[0,2]`.
+
+### Streaming behaviour
+
+The LLM file uses OpenRouter's SSE streaming endpoint (`stream: true`). The assistant bubble updates incrementally as `delta.content` arrives. The full reply is accumulated and logged on stream end. If the participant clicks Submit while a stream is in flight, the button shows "Submitting after response…" and the panel locks once the stream completes — no partial responses, no orphaned chat bubbles.
+
+### Embedded Data schema
+
+```jsonc
+{
+  "session_id": "uuid",
+  "participant_id": "<Qualtrics ResponseID>",
+  "condition": "LLM" | "SEARCH",
+  "model_used": "openai/gpt-4o-mini" | undefined,
+  "started_at": "ISO8601",
+  "events": [
+    { "type": "prompt",               "ts": "...", "content": "..." },
+    { "type": "response",             "ts": "...", "content": "...", "latency_ms": 1234 },
+    { "type": "search_query",         "ts": "...", "query": "..." },
+    { "type": "search_results_shown", "ts": "...", "query": "...", "results": [...], "latency_ms": 600 },
+    { "type": "result_click",         "ts": "...", "index": 2, "url": "...", "title": "...", "query": "..." },
+    { "type": "answer_change",        "ts": "...", "question_id": "q2", "value": 1 },
+    { "type": "submit_click",         "ts": "...", "stream_in_flight": false },
+    { "type": "answer_final",         "ts": "...", "question_id": "q2", "value": 1 },
+    { "type": "panel_locked",         "ts": "..." },
+    { "type": "error",                "ts": "...", "error": "...", "latency_ms": 1500 }
+  ],
+  "prompt_count":           3,        // LLM only
+  "query_count":            2,        // SEARCH only
+  "click_count":            6,        // Submit + Send + Search + result clicks
+  "total_response_time_ms": 4321,
+  "answers": { "q1": true, "q2": 1, "q3": [0, 2], "q4": 4 },
+  "finalised": true
+}
+```
+
+### Verification (HTML View build)
+
+Before the pilot, confirm `LLM_Log` / `Search_Log` is saving to Qualtrics correctly:
+
+1. **Survey Flow declarations**: in Survey Flow, expand the Embedded Data block; confirm all 13 fields above are listed with blank default values. Without declarations, Qualtrics drops `setEmbeddedData` writes silently.
+2. **Open survey Preview** in Chrome with DevTools open. Console should print `[RCT] init complete — condition=LLM, pid=R_xxxxxx (Qualtrics)` exactly once. If it prints twice, the idempotency guard isn't working — check that you didn't paste the JS into both Question Text *and* the JS panel.
+3. **Layout sanity**: total height ≈ 600 px; only inner panes scroll on overflow; the Qualtrics Next button stays anchored at the bottom of the question card and does not jump down the page as the chat grows.
+4. **All 4 question types render** and accept input. Submit is disabled until the last one is answered.
+5. **LLM streaming**: send a prompt. Tokens arrive progressively (visibly streaming, not a single dump after a delay). Network tab shows `Content-Type: text/event-stream`. After `[DONE]`, run `JSON.parse(localStorage.getItem('rct_state_<pid>_LLM')).events` and confirm the last `response` event has the full text and a `latency_ms` value.
+6. **Mid-stream Submit**: send a slow prompt, click Submit immediately. The button should change to "Submitting after response…" and the panel should NOT lock until the stream finishes.
+7. **Search**: type a query → 4–5 mock results render after 400–800 ms. Click a result → `result_click` event in the log; `click_count` increments. The query string is logged even though results are static.
+8. **CSV export end-to-end** (the most important check): in Preview, finish a complete fake submission. Note the Response ID. Go to **Data & Analysis → Export & Import → Export Data → CSV**, download, open. Confirm in the CSV row:
+   - `LLM_Log` (or `Search_Log`) column contains a parseable JSON string. `JSON.parse(value).events.length` matches what you did.
+   - `prompt_count` (or `query_count`), `total_response_time_ms`, `click_count` are populated as integers-as-strings.
+   - `q1_answer` through `q4_answer` are populated. Multi-select answers like `q3_answer` are JSON arrays as strings (e.g. `"[0,2]"`).
+   - `condition`, `participant_id`, `model_used` are filled.
+9. **Refresh resilience**: mid-session, hard-refresh the Preview tab. Chat history / search query / radio selections / answered state all restore from localStorage. If you'd already submitted, the panel stays locked and Next stays visible.
+
+If `LLM_Log` is empty in the CSV, the most common causes are: (a) the field isn't declared in Survey Flow, (b) the JS isn't actually pasted into the JS panel (check for the init log line), or (c) you previewed the page but never clicked through to a final response submission — Qualtrics doesn't write Embedded Data for previews you abandon mid-session unless you complete the response.
+
+## Out of scope (deliberately)
+
+- The backend proxy itself — design above; build separately.
+- A Python analysis pipeline (downstream thesis work; data shape is documented above).
+- Per-condition chart variants — single chart shared by both conditions for now.
+- Streaming LLM responses in the iframe build — only the HTML View build streams. Simple Chat does this in the iframe build too; left as a future enhancement.

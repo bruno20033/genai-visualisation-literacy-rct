@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "thesis-llm-proxy",
+  "main": "worker.js",
+  "compatibility_date": "2026-05-01",
+  "observability": {
+    "enabled": true
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "RCT_LOGS",
+      "id": "a156627769c44850ba682f8c1d05cd72"
+    }
+  ]
+}

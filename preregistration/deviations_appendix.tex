@@ -1,0 +1,236 @@
+% ==========================================================================
+% Deviations from the pre-registered analysis plan.
+% Standalone appendix section. Wire in via \input{sections/appendix_deviations}
+% inside sections/appendix.tex (place alongside the other methodological
+% appendices, e.g. after app:sap-extended / app:power).
+%
+% Scope: departures of (i) the realised design/sample, (ii) the thesis SAP, and
+% (iii) the executed analysis code from the OSF pre-registration (yw3nm,
+% registered 2026-07-15). Grounded in the frozen SAP extract, preregistration.md,
+% sections/results.tex, and the executed pipeline
+% (rct_data_literacy_analysis_4_FINAL_2026-07-21.ipynb + sap_estimators.py).
+%
+% AUTHOR VERIFY BEFORE SUBMISSION (three second-hand values I could not open the
+% executed notebook to confirm directly -- ~/Downloads was read-locked in the
+% drafting session):
+%   (1) randomisation-inference permutation count actually used (stated: 2,000);
+%   (2) per-protocol set definition in the gatekeeper cell (stated: engagement
+%       filter, n=203) vs a disclosed-external-tool exclusion;
+%   (3) whether the Mini-VLAT covariate is key-scored (a MINIVLAT_KEY block in
+%       cell ~10) or the raw survey column is used -- NOT asserted here; check.
+% No new \cite keys are introduced (avoids undefined-citation errors); full
+% citations for every method named live in Section~\ref{sec:sap} and
+% Appendix~\ref{app:sap-extended}.
+% ==========================================================================
+
+\section{Deviations from the Pre-Registered Analysis Plan}
+\label{app:deviations}
+
+This trial was pre-registered on the Open Science Framework (registration
+\texttt{yw3nm}, registered 15 July 2026, under embargo until 10 August 2026).
+The registration comprises the pre-registration form, a frozen extract of the
+Statistical Analysis Plan (SAP), and the analysis code. That frozen SAP extract
+is reproduced, materially unchanged, as Section~\ref{sec:sap} and
+Appendix~\ref{app:sap-extended} of this thesis. Recruitment opened on 16 July
+2026; every change recorded below therefore post-dates data collection and is
+reported as a transparent post-commencement amendment rather than a
+finalisation of the plan.
+
+The governing principle is unchanged by any item below: the confirmatory record
+(Table~\ref{tab:verdicts}) rests solely on the pre-registered tests, executed as
+registered; analyses added after commencement are reported as exploratory and
+carry no error-rate claim; and each departure is stated here with its rationale
+and its bearing on the conclusions. None of the deviations alters a confirmatory
+verdict.
+
+\subsection{Design and sampling (pre-registration form)}
+\label{app:dev-design}
+
+\paragraph{Sample size.} The registration fixed a target of $N=200-250$ (66 per arm),
+recruited on a rolling basis until reached. Recruitment continued slightly past 
+the minimal target of 200 as after the first 30 participants completed the survey faster freeing up budget to extend the study.  Table~\ref{tab:dev-n}. 
+The over-enrolment is in the conservative
+direction (it raises power for the primary immediate-wave contrast and does not
+affect Type~I error) and the allocation ratio was preserved.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Planned versus realised sample size, by arm.}
+  \label{tab:dev-n}
+  \small
+  \begin{tabular}{lcccc}
+    \toprule
+     & Google & Socratic & Unrestricted & Total \\
+    \midrule
+    Planned (randomised)        & 66 & 66 & 66 & 200 \\
+    Realised (randomised)       & 78 & 77 & 77 & 232 \\
+    Immediate post-test (analysed) & 69 & 72 & 77 & 218 \\
+    Delayed post-test (returned)   & 56 & 58 & 60 & 174 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{Placeholders resolved after registration.} Two values left open at
+registration were fixed as data collection began, consistent with the plan's own
+instructions: the GenAI-usage covariate was mapped to its survey item at
+fielding, and the direct-adoption latency cut-off was set to its pre-specified
+default of 5\,s. The plan had anticipated locking this cut-off from a pilot
+$\Delta$ distribution; as no pilot was run (a pre-registered design choice), the
+default was used and the primary latency read remains, as planned, threshold-free
+(the per-arm $\Delta$ distribution and the log-$\Delta$ contrast).
+
+\subsection{Statistical Analysis Plan}
+\label{app:dev-sap}
+
+The SAP as published in this thesis (Section~\ref{sec:sap};
+Appendix~\ref{app:sap-extended}) is materially identical to the registered SAP:
+every model, contrast, estimand anchoring, multiplicity rule, and robustness
+item is carried over unchanged. One prose-level change was made after
+registration --- the answer-adoption-latency paragraph
+(Section~\ref{sec:sap}) was expanded with additional interpretive caveats
+treating response latency as a suggestive rather than definitive index of
+processing. This is an interpretation-only elaboration: the planned analysis
+(threshold-free per-arm $\Delta$ distribution plus a log-$\Delta$ mixed-model
+contrast and a direct-adoption rate) is unchanged. 
+
+But additional robustness checks were added after trial commencement
+
+\subsection{Analysis code}
+\label{app:dev-code}
+
+\paragraph{Conforms to the plan.} The confirmatory and key-secondary pipeline
+was executed as pre-registered: the primary accuracy mixed model with the wave
+dummy anchored at the immediate assessment and the covariate adjustment; the
+fixed-sequence gatekeeper (H1$_a$ superiority $\rightarrow$ H2$_a$
+non-inferiority via the 90\% interval against the 8.5\,pp margin $\rightarrow$
+the supporting contrast, stopping at the first non-rejection); the wave-stratified
+Cox model with arm$\times$wave terms and participant-clustered (Lin--Wei
+sandwich) covariance for its contrasts; the persistence simple effect
+$\beta_2+\beta_5$; the Bloom item-level GEE with its Bayesian corroboration; the
+productivity models under false-discovery control; multiple imputation
+($m=50$) and Lee bounds for attrition; and the robustness battery of
+Appendix~\ref{app:robustness}. The covariates are the two pre-registered
+baseline measures, and no post-randomisation exclusion enters the primary
+analysis. The departures are the following.
+
+\paragraph{Departures from the registered analysis.} Table~\ref{tab:dev-code}
+lists each departure, what was registered, what was executed, and the bearing on
+the conclusions.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Departures of the executed analysis from the registered plan. None
+    changes a confirmatory verdict.}
+  \label{tab:dev-code}
+  \small
+  \renewcommand{\arraystretch}{1.25}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{p{0.205\textwidth} p{0.29\textwidth} p{0.365\textwidth}}
+    \toprule
+    Element & Registered & Executed / impact \\
+    \midrule
+    Per-protocol set (non-inferiority co-analysis)
+      & Exclude participants who \emph{disclosed} external LLM / AI-overview use
+        during training.
+      & An \emph{engagement} (received-treatment) filter --- participants with
+        $\geq 1$ interaction with the assigned tool ($n=203$). Non-inferiority
+        is declared under both the intention-to-treat and this per-protocol set,
+        and a disclosure-based exclusion is additionally reported as a robustness
+        check; the two should be reconciled so the pre-registered
+        disclosure-based set formally carries the co-analysis. \\
+    Randomisation-inference resolution
+      & 10{,}000 permutations of the arm labels.
+      & 2{,}000 permutations. A supporting robustness check only; the reported
+        permutation $p$ is stable at this resolution. Recommended to be raised to
+        10{,}000 for the final report. \\
+    Cognitive-load ordered-trend test
+      & Jonckheere--Terpstra test against the pre-registered arm ordering on the
+        load subscales.
+      & Not implemented; each subscale was compared across arms with the
+        covariate-adjusted arm-contrast regressions instead. A manipulation
+        check informing interpretation only. \\
+    Socratic-fidelity reliability
+      & Human double-coding of a sample of assistant turns with Cohen's $\kappa
+        \geq 0.80$.
+      & Not implemented as a human $\kappa$; fidelity was quantified by an
+        automated per-turn judge score (mean 3.55/5; 6.7\% of turns below the
+        pass threshold; no regeneration required) together with a pre-deployment
+        adversarial leak audit (Appendix~\ref{app:socratic-validation}). A
+        manipulation check; it still evidences that the scaffold withheld
+        answers. \\
+    Unstructured-covariance sensitivity
+      & An unstructured two-wave covariance fitted and reported in place of the
+        compound-symmetric model if a likelihood-ratio test rejected the
+        equal-variance restriction.
+      & The likelihood-ratio comparison was not run; the random-intercept
+        (compound-symmetric) model was used throughout. The immediate-wave
+        primary contrasts are point-identified independently of the cross-wave
+        covariance, so this bears only on the precision of the persistence
+        estimand. \\
+    Lower-order sparing equivalence test
+      & An equivalence (TOST) test of the lower-order Unrestricted--control
+        difference against a 6.25\,pp bound, should lower-order sparing be
+        claimed.
+      & Not implemented. It was moot: the Bloom interaction reversed sign
+        (the deficit fell in the \emph{lower}-order items), so no lower-order
+        sparing was available to test (Section~\ref{sec:res-rq2}). \\
+    Complier average causal effect
+      & Two-stage least squares with assignment instrumenting compliant tool use.
+      & Reported as the equivalent one-sided-noncompliance Wald ratio (a point
+        estimate without a standard error). Because compliance was near-total
+        ($\approx 90$--$97\%$ by arm), the complier effect coincides with the
+        intention-to-treat effect and the missing interval is immaterial. \\
+    Item-level missingness
+      & Unanswered items scored incorrect (accuracy) / censored (success time).
+      & Applied as registered for items that were administered but left blank;
+        items from a block that was never administered are dropped as missing
+        rather than scored incorrect. Affects per-participant denominators only
+        at the margins. \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{Additional analyses not in the pre-registration.} Three analyses were
+added after commencement and are reported as exploratory, without confirmatory
+claims, in the Results chapter (Section~\ref{sec:results}):
+\begin{enumerate}
+  \item the arm difference in \emph{abstention} (``I do not know'') on the
+        unaided post-test, modelled with a participant-clustered logistic
+        regression (Section~\ref{sec:res-rq3});
+  \item a content-based classification of the unrestricted arm's practice-block
+        interactions into cognitive-outsourcing categories, with its coding
+        protocol and reliability documented in
+        Appendix~\ref{app:outsourcing-coding};
+  \item a within-arm outsourcing dose--response relating the amount of
+        outsourced practice to unaided post-test accuracy, reported as
+        associational only.
+\end{enumerate}
+The pre-registered arm-by-Mini-VLAT moderation was itself specified as
+exploratory and is likewise reported without a verdict; it is not a new
+addition.
+
+\paragraph{Pre-registered analysis not implemented.} The plan named an
+erroneous-answer-adoption analysis relating answer-adoption latency to the
+correctness of the tool's output ($\Delta \times$ correctness). This was not
+implemented, because assistant messages were not scored against the item key
+during the trial. The behavioural risk surface it targeted --- the share of
+answers submitted too quickly for independent verification --- is instead
+reported through the direct-adoption rates of the answer-adoption-latency check
+(Section~\ref{sec:res-checks}).
+
+\subsection{Reproducibility and code of record}
+\label{app:dev-repro}
+
+The confirmatory results were produced by a single executed notebook
+(\texttt{rct\_\allowbreak data\_\allowbreak literacy\_\allowbreak analysis\_\allowbreak 4\_\allowbreak FINAL\_\allowbreak 2026-07-21.\allowbreak ipynb}) importing
+the shared estimator module \texttt{sap\_\allowbreak estimators.py}, run in a pinned
+environment with a fixed random seed. This executed pipeline --- not any earlier
+template or dummy-data copy --- is the code of record and is the version to be
+archived with the registration once the embargo lifts. Two known, non-substantive
+issues in the executed run are noted for transparency and do not affect any
+reported estimate or verdict: the CONSORT completion-by-arm table is broken by a
+participant-identifier key mismatch, so the completion counts in
+the Results chapter (Section~\ref{sec:results}) were recomputed by hand; and one monitoring cell prints
+a stale hard-coded narrative string (a leftover from the dummy-data pipeline)
+around otherwise live numbers. Both are flagged for clean-up before the archived
+code is finalised.

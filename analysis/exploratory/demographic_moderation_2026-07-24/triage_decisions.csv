@@ -1,0 +1,14 @@
+variable,decision,reason,detail
+Age,"TEST (continuous, per 10 y)","n=168, range 25-63, mean 36.8, SD 9.3; good spread",
+Sex,TEST (female vs male),F 67 / M 100; 1 'prefer not to say' -> missing,note: arm x sex composition uneven by chance (socratic 69% male vs google ~49%)
+First language English,TEST (binary),"English 86 vs other 82; near 50/50, survey+LLM dialogue were English for everyone (UserLanguage=EN)",
+Country of residence,NOT TESTED separately,phi=0.86 with first-language English; near-duplicate construct - testing both double-counts one construct and inflates the family; UK-vs-not reported descriptively only,
+Employment status,TEST (part-time vs full-time),FT 115 / PT 53; everyone employed (screener),note: PT share uneven across arms by chance (google 22% vs unrestricted 42%)
+Ethnicity,"TEST (White vs non-White, crude)","White 115 vs non-White 50 (Black 34, Asian 8, Mixed 6, Other 2; 3 'prefer not to say' -> missing); single minority groups too sparse to test alone (Black 15/10/9 per arm), so a crude binary; flagged as heterogeneous-composition collapse",
+Current job role,TEST only as IT/software/data collapse,88 distinct roles; explicit list of 13 tech/data roles -> tech 39 vs other 129; full taxonomy far too high-cardinality at this n,
+Prolific total approvals,"TEST (log10; auxiliary, not strictly demographic)","median 293, IQR 145-572; platform-experience proxy; heavily right-skewed -> log10",
+Student status,NOT TESTED,only 20 students (~6-9 per arm); interaction MDES would be enormous; descriptive means only,
+Country of birth / Nationality,NOT TESTED,high-cardinality (33 countries) and redundant with residence/first-language,
+Fluent languages,NOT TESTED,multilingualism collinear with first-language English; heterogeneous combinations,
+Authenticity check: Bots,NOT TESTABLE / NO EXCLUSIONS,all non-missing values are 'high' (no variance); nobody to exclude,
+Submission ids / timestamps / time-taken / completion code / status,NOT MODERATORS,"tracking metadata, not demographics (status used as sensitivity filter)",

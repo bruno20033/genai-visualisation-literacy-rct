@@ -1,0 +1,49 @@
+==============================================================================
+0a. STRUCTURE VERIFICATION
+==============================================================================
+unrestricted train rows: 528
+  answer: dtype=object
+  key: dtype=object
+  correct: dtype=int64
+  idk: dtype=bool
+  prompts: dtype=object
+  responses: dtype=object
+  queries: dtype=object
+  judge_fidelities: dtype=object
+  n_regen: dtype=int64
+  n_turns: dtype=int64
+  adopt_delta_s: dtype=float64
+  bloom: dtype=object
+answer values: ['A', 'B', 'C', 'D', 'E']
+key values: ['A', 'B', 'D']
+idk values: {False: 493, True: 35}
+n_regen values: {0: 528}
+n_queries>0 cells: 0
+judge_fidelities: {'empty': 528}
+example prompts type: list | responses type: list
+example prompt turn: ['give me the correct answer']
+example response turn (first 300 chars): The correct choice is the **second scatterplot from the left** — the one with:
+
+- **x-axis:** `bill_length_mm`
+- **y-axis:** `bill_depth_mm`
+- colors by species
+- bubble size by `flipper_length_mm`
+
+Why:
+- In the parallel coordinates plot, the three variables shown are **bill_length_mm**, **bill_dep
+n_turns vs len(r_turns) mismatches: 0
+item bank parsed: 40 items; practice ids ok: True
+engaged cells (code != NO_INTERACTION): 376 | n_turns>0 cells: 376 | disagreement: 0
+
+DRAFT groups: {'B': 340, 'A': 36}
+by code x group:
+group               A    B
+code                      
+CONCEPT_SUPPORT     0    6
+FULL_OUTSOURCING   36  315
+VERIFICATION_ONLY   0   19
+cells with 'cannot see the chart' language: 8
+response length: median 348 p90 627 max 3134
+
+wrote evidence_groupB.txt (340 cells), evidence_audit.txt (36 cells, drafts hidden), draft_cells.csv, audit_cells.csv
+groupB KB: 251 | audit KB: 29

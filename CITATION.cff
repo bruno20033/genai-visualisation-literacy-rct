@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: >-
+  Does GenAI use impair the acquisition of visualisation literacy?
+  Replication package
+message: If you use this material, please cite it as below.
+type: dataset
+authors:
+  - family-names: Kneffel
+    given-names: Bruno
+abstract: >-
+  Replication package for a pre-registered three-arm randomised controlled
+  trial testing whether generative-AI assistance during practice impairs the
+  acquisition of parallel-coordinates-plot literacy, as distinct from
+  performance while that assistance is available. Contains the
+  pre-registration and statistical analysis plan, the full experimental
+  apparatus, the anonymised Qualtrics exports, and the analysis code.
+keywords:
+  - generative AI
+  - cognitive offloading
+  - visualisation literacy
+  - randomised controlled trial
+  - skill acquisition
+  - pre-registered
+license: CC-BY-4.0
+identifiers:
+  - type: url
+    value: https://osf.io/yw3nm
+    description: OSF pre-registration
+# TODO before publishing:
+#   - add `repository-code:` once the repo is public
+#   - add `doi:` once archived (Zenodo / OSF)
+#   - add `date-released:` and `version:`
+#   - add ORCID under authors

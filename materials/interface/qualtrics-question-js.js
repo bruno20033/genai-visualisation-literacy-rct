@@ -1,0 +1,427 @@
+/* ====================================================================
+ * QUALTRICS QUESTION JAVASCRIPT — paste this entire file into the
+ * "Add JavaScript" panel of BOTH the LLM and SEARCH questions.
+ *
+ * Architecture (modeled on Simple Chat,
+ * Bermudez Schettino, Dasmeh & Brinkmann, arXiv:2511.19123):
+ *
+ *   Qualtrics question text  =  one <iframe> tag, nothing else
+ *   This script              =  a postMessage bridge:
+ *      iframe -> {type: 'rct_log_update', payload: <log>}  -> Embedded Data
+ *      iframe -> {type: 'rct_complete'}                    -> show Next
+ *      iframe -> {type: 'rct_height',  value: <px>}        -> resize iframe
+ *
+ * The iframe (embed.html, served from a public URL) holds the entire
+ * experimental UI. Qualtrics never sees that HTML/CSS, so its rich-text
+ * editor cannot mangle it. This is the fix for the "Qualtrics breaks
+ * the layout" problem.
+ *
+ * SECURITY NOTE — restrict the iframe origin in production:
+ *   var EXPECTED_ORIGIN = 'https://yourname.github.io';   (your host)
+ * and check event.origin === EXPECTED_ORIGIN below. Leaving it permissive
+ * is fine while you're testing.
+ * ==================================================================== */
+
+Qualtrics.SurveyEngine.addOnReady(function () {
+  var qThis = this;
+  var EXPECTED_ORIGIN = null;   // e.g. 'https://yourname.github.io' — null = accept any
+
+  qThis.hideNextButton();
+
+  // Qualtrics Text Entry questions wrap Question Text in <label for="...">,
+  // which intercepts all clicks inside the iframe. Remove the association.
+  var labelEl = qThis.questionContainer
+    ? qThis.questionContainer.querySelector('label.QuestionText')
+    : null;
+  if (labelEl && labelEl.getAttribute('for')) {
+    labelEl.removeAttribute('for');
+  }
+
+  function handleMessage(event) {
+    if (EXPECTED_ORIGIN && event.origin !== EXPECTED_ORIGIN) return;
+    var data = event.data;
+    if (!data || typeof data !== 'object' || !data.type) return;
+
+    if (data.type === 'rct_log_update' && data.payload) {
+      var log = data.payload;
+      var Q = Qualtrics.SurveyEngine;
+      try {
+        // Determine field prefix from log.phase. The training phase
+        // (default / null) writes to unprefixed fields for backward compat;
+        // posttest/delayed phases prefix with the phase name so their
+        // data doesn't overwrite the training-phase fields.
+        var phase = log.phase || '';
+        var pfx = (!phase || phase === 'train') ? '' : phase + '_';
+
+        Q.setEmbeddedData(pfx + 'InteractionLog', JSON.stringify(log));
+        // Analyst-friendly per-condition dictionary view (see README §
+        // "interaction_log dictionary schema" for the exact shape).
+        // Written alongside the rich InteractionLog JSON so analysts can
+        // read prompts → responses (or queries → click lists) straight
+        // out of CSV export without parsing the events array.
+        Q.setEmbeddedData(pfx + 'interaction_log', JSON.stringify(buildInteractionLogDict(log)));
+        Q.setEmbeddedData('condition',       log.condition || '');
+        Q.setEmbeddedData('participant_id',  log.participant_id || '');
+        Q.setEmbeddedData('model_used',      log.model_used || '');
+        Q.setEmbeddedData(pfx + 'prompt_count',    String(log.prompt_count   || 0));
+        Q.setEmbeddedData(pfx + 'response_count',  String(log.response_count || 0));
+        Q.setEmbeddedData(pfx + 'session_id',      log.session_id || '');
+        // arm: 'socratic' | 'unrestricted' for LLM condition; '' for SEARCH.
+        Q.setEmbeddedData('arm',             log.arm || '');
+        // Judge metadata (Socratic arm only — empty for other arms).
+        Q.setEmbeddedData(pfx + 'judge_model',         log.judge_model || '');
+        Q.setEmbeddedData(pfx + 'judge_mode',          log.judge_mode  || '');
+        Q.setEmbeddedData(pfx + 'judge_call_count',    String(log.judge_call_count    || 0));
+        Q.setEmbeddedData(pfx + 'judge_failure_count', String(log.judge_failure_count || 0));
+        // Multi-question progress — written on every interaction so
+        // analysts can see how far each participant got (and split
+        // drop-outs by which question they abandoned on).
+        Q.setEmbeddedData(pfx + 'current_question_index', String(log.current_question_index != null ? log.current_question_index : 0));
+        Q.setEmbeddedData(pfx + 'question_count',         String(log.question_count        != null ? log.question_count        : 0));
+        if (log.answers) {
+          Object.keys(log.answers).forEach(function (qid) {
+            var v = log.answers[qid];
+            // Answer fields use the question ID as the key (e.g. A-E1_answer,
+            // F-E1_answer). IDs are unique across sets, so no prefix needed.
+            Q.setEmbeddedData(qid + '_answer', v === null || v === undefined ? '' : String(v));
+          });
+        }
+
+        // -------------------------------------------------------------
+        // Per-turn fields and aggregates. Only written for the training
+        // phase (LLM/SEARCH conditions have chat/search interactions).
+        // Posttest/delayed phases have no interactions to flatten, and
+        // writing them would overwrite training-phase data.
+        // -------------------------------------------------------------
+        // Parse events BEFORE the pfx guard — events array is also
+        // needed by the CR-mode per-item timing block below (which
+        // runs for all phases, not just training).
+        var events = log.events || [];
+
+        if (!pfx) {
+        var MAX_TURNS = 20;
+        var prompts        = [];
+        var responses      = [];
+        var llmLatencies   = [];   // response latency_ms     (LLM conditions)
+        var queries        = [];
+        var clicks         = [];   // result_click events    (SEARCH condition)
+        var dwells         = [];   // result_dwell events    (SEARCH condition)
+        var judgements     = [];   // judge_result events on initial drafts (Socratic arm)
+        for (var i = 0; i < events.length; i++) {
+          var ev = events[i];
+          if      (ev.type === 'prompt'               && ev.content) prompts.push(ev.content);
+          else if (ev.type === 'response'             && ev.content) { responses.push(ev.content); llmLatencies.push(ev.latency_ms != null ? ev.latency_ms : ''); }
+          else if (ev.type === 'search_query'         && ev.query)   queries.push(ev.query);
+          else if (ev.type === 'result_click'         && ev.url)     clicks.push(ev);
+          else if (ev.type === 'result_dwell'         && ev.url)     dwells.push(ev);
+          // Only the initial-draft Judge result is mirrored to per-turn
+          // fields. Judgements on regenerated responses (is_regen_score
+          // === true) stay in the InteractionLog JSON for analyst use
+          // but don't compete for a flat-field slot.
+          else if (ev.type === 'judge_result'         && !ev.is_regen_score) judgements.push(ev);
+        }
+
+        // Per-turn fields — overwrite each one, and clear any that no
+        // longer have content (in case the participant deleted history).
+        for (var k = 1; k <= MAX_TURNS; k++) {
+          var c = clicks[k-1];
+          var d = dwells[k-1];
+          var j = judgements[k-1];
+          Q.setEmbeddedData('prompt_'                   + k, prompts[k-1]   || '');
+          Q.setEmbeddedData('response_'                 + k, responses[k-1] || '');
+          Q.setEmbeddedData('response_latency_ms_'      + k, llmLatencies[k-1] != null ? String(llmLatencies[k-1]) : '');
+          Q.setEmbeddedData('search_query_'             + k, queries[k-1]   || '');
+          Q.setEmbeddedData('search_click_'             + k, c ? (c.url   || '') : '');
+          Q.setEmbeddedData('search_click_title_'       + k, c ? (c.title || '') : '');
+          Q.setEmbeddedData('search_click_query_'       + k, c ? (c.query || '') : '');
+          Q.setEmbeddedData('search_click_index_'       + k, c ? String(c.index != null ? c.index : '') : '');
+          Q.setEmbeddedData('search_dwell_ms_'          + k, d && d.dwell_ms != null ? String(d.dwell_ms) : '');
+          // Judge per-turn fields (Socratic arm). Empty when no judge
+          // event for this turn yet (e.g. judge call still in flight in
+          // passive mode, or non-Socratic arm).
+          Q.setEmbeddedData('judge_fidelity_'           + k, j && j.fidelity_score != null ? String(j.fidelity_score) : '');
+          Q.setEmbeddedData('judge_intent_'             + k, j && j.intent_score   != null ? String(j.intent_score)   : '');
+          Q.setEmbeddedData('judge_fidelity_reasoning_' + k, j ? String(j.fidelity_reasoning || '').slice(0, 300) : '');
+          Q.setEmbeddedData('judge_intent_reasoning_'   + k, j ? String(j.intent_reasoning   || '').slice(0, 300) : '');
+          Q.setEmbeddedData('judge_status_'             + k, j ? (j.judge_status || '') : '');
+          Q.setEmbeddedData('judge_latency_ms_'         + k, j && j.judge_latency_ms != null ? String(j.judge_latency_ms) : '');
+          Q.setEmbeddedData('judge_active_regen_'       + k, j ? String(!!j.active_regen_triggered) : '');
+        }
+
+        // Last-turn convenience fields.
+        Q.setEmbeddedData('last_prompt',        prompts[prompts.length - 1]     || '');
+        Q.setEmbeddedData('last_response',      responses[responses.length - 1] || '');
+        Q.setEmbeddedData('last_search_query',  queries[queries.length - 1]     || '');
+
+        // Full transcripts (concatenated). Useful for a quick eyeball.
+        // Note: each Qualtrics Embedded Data field has a ~20 KB limit;
+        // for very long studies the per-turn fields above are safer.
+        Q.setEmbeddedData('all_prompts',        prompts.join('\n---\n'));
+        Q.setEmbeddedData('all_responses',      responses.join('\n---\n'));
+        Q.setEmbeddedData('all_search_queries', queries.join('\n---\n'));
+        Q.setEmbeddedData('all_clicked_urls',   clicks.map(function (x) { return x.url; }).join('\n'));
+
+        // Aggregates for the SEARCH condition.
+        var totalDwell = dwells.reduce(function (s, x) { return s + (x.dwell_ms || 0); }, 0);
+        Q.setEmbeddedData('total_clicks',   String(clicks.length));
+        Q.setEmbeddedData('total_dwell_ms', String(totalDwell));
+        Q.setEmbeddedData('query_count',    String(log.query_count || 0));
+        Q.setEmbeddedData('click_count',    String(log.click_count || 0));
+
+        // Judge aggregates for the Socratic arm. Computed only over OK
+        // judgements; failures are still counted in judge_failure_count
+        // (set by the embed and mirrored above). When there are no OK
+        // judgements yet, mins/avgs are written as the empty string
+        // rather than zero (so analysts can distinguish "no data" from
+        // "all turns scored zero").
+        var okJudgements = judgements.filter(function (x) { return x.judge_status === 'ok' && typeof x.fidelity_score === 'number'; });
+        var fidelitySum  = okJudgements.reduce(function (s, x) { return s + x.fidelity_score; }, 0);
+        var fidelityMin  = okJudgements.reduce(function (m, x) { return m == null || x.fidelity_score < m ? x.fidelity_score : m; }, null);
+        var belowThreshold = okJudgements.filter(function (x) { return x.fidelity_score < 3; }).length;
+        var extractionAttempts = okJudgements.filter(function (x) { return x.intent_score === 1 || x.intent_score === 2; }).length;
+        var totalJudgeLatency  = judgements.reduce(function (s, x) { return s + (x.judge_latency_ms || 0); }, 0);
+        Q.setEmbeddedData('judge_avg_fidelity',             okJudgements.length ? String((fidelitySum / okJudgements.length).toFixed(2)) : '');
+        Q.setEmbeddedData('judge_min_fidelity',             fidelityMin != null ? String(fidelityMin) : '');
+        Q.setEmbeddedData('judge_below_threshold_count',    String(belowThreshold));
+        Q.setEmbeddedData('judge_extraction_attempt_count', String(extractionAttempts));
+        Q.setEmbeddedData('judge_total_latency_ms',         String(totalJudgeLatency));
+        } // end if (!pfx) — per-turn + aggregate fields for training phase only
+
+        // ---------------------------------------------------------
+        // CR (Critical Reasoning) mode fields
+        // Written from the cr_* properties attached to the message
+        // by embed.html's computeCRScore(). These populate the
+        // cr_train_* / cr_post_* Embedded Data fields in Qualtrics.
+        // ---------------------------------------------------------
+        Q.setEmbeddedData('cr_phase', log.phase || '');
+        Q.setEmbeddedData('cr_set',   log.cr_set || '');
+
+        if (data.cr_items && Array.isArray(data.cr_items)) {
+          var prefix;
+          if (log.phase === 'train') prefix = 'cr_train';
+          else if (log.phase === 'delayed') prefix = 'cr_delayed';
+          else prefix = 'cr_post';
+
+          // Aggregate scores
+          Q.setEmbeddedData(prefix + '_total', String(data.cr_score != null ? data.cr_score : ''));
+          if (prefix !== 'cr_train') {
+            Q.setEmbeddedData(prefix + '_near', String(data.cr_near != null ? data.cr_near : ''));
+            Q.setEmbeddedData(prefix + '_far',  String(data.cr_far  != null ? data.cr_far  : ''));
+          }
+
+          // Per-item fields: answer, correctness, item ID (in presentation order)
+          for (var ci = 0; ci < data.cr_items.length; ci++) {
+            var crItem = data.cr_items[ci];
+            var slot = ci + 1;  // 1-based
+            Q.setEmbeddedData(prefix + '_' + slot,         crItem.answer || '');
+            Q.setEmbeddedData(prefix + '_correct_' + slot, String(crItem.isCorrect));
+            Q.setEmbeddedData(prefix + '_item_' + slot,    crItem.id || '');
+          }
+
+          // Per-item timing: extract from answer_final events
+          var answerFinals = events.filter(function (e) { return e.type === 'answer_final'; });
+          var questionAdvanced = events.filter(function (e) { return e.type === 'question_advanced'; });
+          // Build per-question timing by computing gaps between question_advanced events
+          // First question starts at log.started_at; each subsequent question starts at its question_advanced event
+          var startTimes = [log.started_at ? new Date(log.started_at).getTime() : 0];
+          for (var qi = 0; qi < questionAdvanced.length; qi++) {
+            startTimes.push(questionAdvanced[qi].ts ? new Date(questionAdvanced[qi].ts).getTime() : 0);
+          }
+          for (var ti = 0; ti < answerFinals.length; ti++) {
+            var finalTs = answerFinals[ti].ts ? new Date(answerFinals[ti].ts).getTime() : 0;
+            var startTs = startTimes[ti] || 0;
+            var duration = (finalTs && startTs) ? (finalTs - startTs) : 0;
+            Q.setEmbeddedData(prefix + '_time_' + (ti + 1), String(duration > 0 ? duration : ''));
+          }
+        }
+      } catch (e) {
+        console.warn('[RCT bridge] setEmbeddedData failed:', e);
+      }
+    }
+
+    // ---------------------------------------------------------
+    // VLAT / Mini-VLAT item-level and block-level handlers.
+    // The VLAT survey pages send vlat_item_response per item
+    // and vlat_block_complete after the last item. Each message
+    // carries the exact Embedded Data field names to write.
+    // ---------------------------------------------------------
+    if (data.type === 'vlat_item_response') {
+      var Q = Qualtrics.SurveyEngine;
+      try {
+        // Determine prefix: minivlat items use minivlat_, VLAT items use vlat_
+        var vPrefix = (data.block === 'minivlat') ? 'minivlat_' : 'vlat_';
+        Q.setEmbeddedData(vPrefix + data.itemId + '_response', String(data.response || ''));
+        Q.setEmbeddedData(vPrefix + data.itemId + '_rt',       String(data.rt       || 0));
+        Q.setEmbeddedData(vPrefix + data.itemId + '_timeout',  String(data.timeout  || false));
+      } catch (e) {
+        console.warn('[RCT bridge] vlat_item_response write failed:', e);
+      }
+    }
+
+    if (data.type === 'vlat_block_complete' && data.embeddedData) {
+      var Q = Qualtrics.SurveyEngine;
+      try {
+        // Write all pre-built Embedded Data fields from the VLAT page.
+        // These include per-item response/rt/timeout + block summaries.
+        Object.keys(data.embeddedData).forEach(function (k) {
+          Q.setEmbeddedData(k, String(data.embeddedData[k]));
+        });
+      } catch (e) {
+        console.warn('[RCT bridge] vlat_block_complete write failed:', e);
+      }
+    }
+
+    if (data.type === 'rct_complete') {
+      qThis.showNextButton();
+    }
+
+    if (data.type === 'rct_height' && typeof data.value === 'number') {
+      // Clamp to a sane range to prevent any feedback-loop growth.
+      // 600px floor leaves room for the chart + question + treatment;
+      // 1800px ceiling is plenty for desktop, with internal scroll for
+      // long chat / search histories handling overflow naturally.
+      var h = Math.max(600, Math.min(1800, data.value + 16));
+      var iframes = qThis.questionContainer
+        ? qThis.questionContainer.getElementsByTagName('iframe')
+        : document.querySelectorAll('.QuestionBody iframe');
+      for (var i = 0; i < iframes.length; i++) {
+        iframes[i].style.height = h + 'px';
+      }
+    }
+  }
+
+  /* =====================================================================
+   * buildInteractionLogDict — analyst-friendly per-condition view.
+   *
+   * Returns a plain object whose schema depends on condition + arm. The
+   * canonical schema is documented in README § "interaction_log
+   * dictionary schema". Briefly:
+   *
+   *   SEARCH:
+   *     { "<search term>": ["<clicked url>", "<clicked url>", ...], ... }
+   *   LLM + unrestricted:
+   *     { "<participant prompt>": [<feature_used 0|1>, "<llm response>"], ... }
+   *     feature_used = 1 iff the participant clicked "Share chart" for
+   *     the current question BEFORE this prompt was sent.
+   *   LLM + socratic:
+   *     { "<participant prompt>": {
+   *         response: "<llm response>",
+   *         judge_fidelity_score: <int 1-5 | null>,
+   *         judge_fidelity_reasoning: "...",
+   *         judge_intent_score: <int 1-4 | null>,
+   *         judge_intent_reasoning: "...",
+   *         judge_status: "ok" | "timeout" | "parse_error" | "api_error" | ...,
+   *         judge_latency_ms: <int | null>
+   *       }, ... }
+   *
+   * Duplicate keys (same prompt or same search query twice) collapse to
+   * the LAST occurrence — that's JSON-object semantics. For SEARCH,
+   * clicks across repeated queries accumulate into the same list. For
+   * the LLM arms, the rich InteractionLog event array preserves every
+   * turn losslessly.
+   * =================================================================== */
+  function buildInteractionLogDict(log) {
+    if (!log || !log.events) return {};
+    var condition = log.condition || '';
+    var arm = log.arm || '';
+    var events = log.events;
+
+    if (condition === 'SEARCH') {
+      var searchDict = {};
+      var currentQuery = null;
+      for (var i = 0; i < events.length; i++) {
+        var e = events[i];
+        if (e.type === 'search_query' && e.query) {
+          currentQuery = String(e.query);
+          if (!Object.prototype.hasOwnProperty.call(searchDict, currentQuery)) {
+            searchDict[currentQuery] = [];
+          }
+        } else if (e.type === 'result_click' && e.url && currentQuery) {
+          searchDict[currentQuery].push(String(e.url));
+        }
+      }
+      return searchDict;
+    }
+
+    if (condition === 'LLM' && arm === 'unrestricted') {
+      var unrDict = {};
+      var sharedByQid = {};
+      var pendingPrompt = null;
+      var pendingFeatureUsed = 0;
+      for (var i = 0; i < events.length; i++) {
+        var e = events[i];
+        if (e.type === 'context_share' && e.question_id) {
+          sharedByQid[e.question_id] = true;
+        } else if (e.type === 'prompt' && typeof e.content === 'string') {
+          pendingPrompt = e.content;
+          pendingFeatureUsed = (e.question_id && sharedByQid[e.question_id]) ? 1 : 0;
+        } else if (e.type === 'response' && pendingPrompt !== null && typeof e.content === 'string') {
+          unrDict[pendingPrompt] = [pendingFeatureUsed, e.content];
+          pendingPrompt = null;
+        }
+      }
+      return unrDict;
+    }
+
+    if (condition === 'LLM' && arm === 'socratic') {
+      // Walk events, build turn list keyed by turn_index so judge_result
+      // events (which can arrive interleaved due to passive-mode async)
+      // attach to the correct prompt.
+      var turns = [];                  // ordered for output
+      var byTurnIndex = {};            // 1-based turn_index → turn record
+      var promptOrdinal = 0;
+      for (var i = 0; i < events.length; i++) {
+        var e = events[i];
+        if (e.type === 'prompt' && typeof e.content === 'string') {
+          promptOrdinal += 1;
+          var rec = { prompt: e.content, response: '', judge: null };
+          turns.push(rec);
+          byTurnIndex[promptOrdinal] = rec;
+        } else if (e.type === 'response' && typeof e.content === 'string') {
+          // Attach to the most recent prompt that lacks a response.
+          for (var j = turns.length - 1; j >= 0; j--) {
+            if (!turns[j].response) { turns[j].response = e.content; break; }
+          }
+        } else if (e.type === 'judge_result' && !e.is_regen_score && e.turn_index) {
+          var tr = byTurnIndex[e.turn_index];
+          if (tr) {
+            tr.judge = {
+              fidelity_score:     e.fidelity_score     != null ? e.fidelity_score     : null,
+              fidelity_reasoning: e.fidelity_reasoning != null ? e.fidelity_reasoning : '',
+              intent_score:       e.intent_score       != null ? e.intent_score       : null,
+              intent_reasoning:   e.intent_reasoning   != null ? e.intent_reasoning   : '',
+              judge_status:       e.judge_status       != null ? e.judge_status       : '',
+              judge_latency_ms:   e.judge_latency_ms   != null ? e.judge_latency_ms   : null
+            };
+          }
+        }
+      }
+      var socDict = {};
+      turns.forEach(function (t) {
+        var entry = { response: t.response };
+        if (t.judge) {
+          entry.judge_fidelity_score     = t.judge.fidelity_score;
+          entry.judge_fidelity_reasoning = t.judge.fidelity_reasoning;
+          entry.judge_intent_score       = t.judge.intent_score;
+          entry.judge_intent_reasoning   = t.judge.intent_reasoning;
+          entry.judge_status             = t.judge.judge_status;
+          entry.judge_latency_ms         = t.judge.judge_latency_ms;
+        }
+        socDict[t.prompt] = entry;
+      });
+      return socDict;
+    }
+
+    return {};
+  }
+
+  window.addEventListener('message', handleMessage, false);
+
+  // Cleanup if the question is re-rendered.
+  qThis.questionclick = qThis.questionclick || function () {};
+  this.addOnUnload && this.addOnUnload(function () {
+    window.removeEventListener('message', handleMessage, false);
+  });
+
+  console.log('[RCT bridge] listening for iframe postMessage events.');
+});

@@ -1,0 +1,22 @@
+full (n=168): S x age +6.8 pp/decade [-0.3, 13.9] p=0.0591 | U x age -0.1 [-8.5, 8.2]
+age<=55 (n=158, drops 10): S x age +4.1 [-3.7, 11.9] p=0.3004  <- collapses
+rank-age (per SD): S x age +4.4 pp p=0.1533  <- collapses
+quadratic arm x age^2 joint p=0.417 (no curvature evidence)
+
+unadjusted accuracy % by arm x age band (pattern rests on the 11-person 42-63 socratic cell):
+                    mean  count
+band  arm                      
+25-31 google        75.5     25
+      socratic      73.2     21
+      unrestricted  74.3     17
+32-41 google        73.2     17
+      socratic      75.8     23
+      unrestricted  75.0     21
+42-63 google        72.4     12
+      socratic      83.5     11
+      unrestricted  64.6     21
+
+per-arm covariate-adjusted age slopes (pp/decade):
+  google       -2.1 [-7.7, 3.5] p=0.455
+  socratic     +4.7 [0.9, 8.5] p=0.014
+  unrestricted -2.5 [-8.6, 3.6] p=0.420
