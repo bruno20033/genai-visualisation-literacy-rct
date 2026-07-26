@@ -2,10 +2,22 @@
 
 ## What is published
 
-`public/` holds the **complete Qualtrics exports**, anonymised — not a reduced
-analysis extract. Every column and every row of the original export survives except
-the seven direct identifiers listed below. The three-row Qualtrics header is intact,
-so these are still genuine Qualtrics exports and the notebooks read them unchanged.
+**These are the exact Qualtrics exports** — every row, every remaining column, every
+cell value, in the original column order, three-row Qualtrics header intact — with
+exactly two kinds of change, both confined to identifiers:
+
+1. **Seven columns are removed outright**, not anonymised: `IPAddress`,
+   `RecipientFirstName`, `RecipientLastName`, `RecipientEmail`, `ExternalReference`,
+   `LocationLatitude`, `LocationLongitude`.
+2. **Five identifier columns keep their place but not their values** —
+   `PROLIFIC_PID`, `Participant_ID`, `ResponseId`, `SESSION_ID`, `STUDY_ID` (plus the
+   per-block session-id columns) are replaced with anonymous pseudonyms/tokens. See
+   *What was changed* below for exactly how.
+
+Nothing else is touched: every survey answer, every timestamp, every interaction
+transcript is unmodified. `public/` is not a reduced analysis extract — it is the
+complete export, so these are still genuine Qualtrics exports and the notebooks read
+them unchanged.
 
 | File | Rows | Columns | Contents |
 |---|---|---|---|
