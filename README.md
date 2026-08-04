@@ -100,27 +100,6 @@ Full detail, including the residual risks that were deliberately accepted, in
 
 ---
 
-## Before going public
-
-- [ ] Export `main_survey.qsf` from Qualtrics — **the package is incomplete without
-      it** (see [`materials/qualtrics/README.md`](materials/qualtrics/README.md))
-- [ ] Export printable PDFs of both surveys
-- [ ] Run `check_no_pii.py` one final time
-- [ ] Confirm no API keys in the exported `.qsf` question JavaScript
-- [ ] Fill in the citation details in `CITATION.cff`
-- [ ] Link the thesis PDF (or its DOI) from this README
-- [ ] Archive for a DOI (Zenodo, or an OSF component linked to the registration)
-- [ ] Add the repository URL to the OSF registration
-
----
-
-## Related
-
-- **Experiment interface, upstream:** [github.com/bruno20033/thesis-rct](https://github.com/bruno20033/thesis-rct) —
-  still live and still serving GitHub Pages. `materials/interface/` pins the fielded
-  commit `c1438217`; cite that, not `main`.
-- **Registration:** [osf.io/yw3nm](https://osf.io/yw3nm)
-
 ## Licence
 
 Code MIT; data, materials and text CC BY 4.0. See [`LICENSE`](LICENSE).
