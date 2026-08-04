@@ -4,9 +4,6 @@ title: >-
   Replication package
 message: If you use this material, please cite it as below.
 type: dataset
-authors:
-  - family-names: Kneffel
-    given-names: Bruno
 abstract: >-
   Replication package for a pre-registered three-arm randomised controlled
   trial testing whether generative-AI assistance during practice impairs the
